@@ -12,7 +12,7 @@ Machine learning is the study of how computers can simulate or realize human lea
 
 Machine learning as the heart of Artificial Intelligent helps people realize self-driving cars, effective speech recognition, efficient web search and greatly improves the understanding of the human genome.
 
-For example, Google’s AlphaGo is the first computer Go program to beat a professional Go player and the first to defeat a Go world champion. It works by deep learning. In addition, current popular self-driving cars are realized based on computer system-based intelligent driving device in the car.
+For example, Google’s AlphaGo is the first computer Go program to beat a professional Go player and the first to defeat a Go world champion. It works by deep learning. In addition, current popular self-driving cars are realized based on computer system-based intelligent driving device in the car.
 
 ### 8.1.3 Machine learning Classification 
 

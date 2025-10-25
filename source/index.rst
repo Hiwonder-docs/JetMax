@@ -21,3 +21,4 @@ JetMax
    docs/8_Deep_Learning_Lesson.md
    docs/9_Ros_Basic_Lesson.md
    docs/Appendix.md
+   Download <https://drive.google.com/drive/folders/1GBiwRRy0NYdtOc2z0U2wGOYut7UGFls6?usp=sharing>

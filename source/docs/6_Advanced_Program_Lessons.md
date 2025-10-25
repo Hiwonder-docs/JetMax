@@ -763,7 +763,7 @@ sudo mount -t ext4 /dev/sdc1 /media/fzyzm/linux_sys
 
 * **Electronic module function**
 
-<table>
+<table class="docutils-nobg" border="1">
 <colgroup>
 <col style="width: 50%" />
 <col style="width: 50%" />

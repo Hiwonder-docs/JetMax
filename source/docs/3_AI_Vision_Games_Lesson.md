@@ -1,5 +1,7 @@
 # 3. AI Vision Games Lesson
 
+<p id="anchor_3_1"></p>
+
 ## 3.1 Set Development Environment
 
 ### 3.1.1 Remote Tool Installation and Connection
@@ -16,25 +18,27 @@ Please prepare a laptop or desktop computer. If you are using desktop computer, 
 
 NoMachine is a graphical software for remote controlling. After connecting the computer to the Wi-Fi created by Jetson Nano, we can directly control the Jetson Nano on our computer. Next, I will show you how to install this software in several steps.
 
-1. Double click the “**[nomachine_7.1.3_1.exe]()**” file in this folder, then click “**Next**”
+1. Double click the "**[nomachine_8.4.2.exe](https://drive.google.com/drive/folders/1H8-GvIiYoX7tfdgVi2dDdVNzeJUe_a3W?usp=sharing)**" file in this folder, then click "**Next**"
 
-   <img class="common_img" src="../_static/media/chapter_3/section_1_1/media/image2.png" style="width:500px" />
+<img class="common_img" src="../_static/media/chapter_3/section_1_1/media/image2.png" style="width:500px" />
 
-2. Tick “**I accept the agreement**” and set the language as English.
+2. Tick "**I accept the agreement**" and set the language as English.
 
-   <img class="common_img" src="../_static/media/chapter_3/section_1_1/media/image3.png" style="width:500px" />
+<img class="common_img" src="../_static/media/chapter_3/section_1_1/media/image3.png" style="width:500px" />
 
-3. Select the folder to install the software, then click “**Next**”.
+3. Select the folder to install the software, then click "**Next**".
 
-   <img class="common_img" src="../_static/media/chapter_3/section_1_1/media/image4.png" style="width:500px" />
+<img class="common_img" src="../_static/media/chapter_3/section_1_1/media/image4.png" style="width:500px" />
 
-4. Wait to finish. Later on, the finishing prompt will pop up, then click “**Finish**”.
+4. Wait to finish. Later on, the finishing prompt will pop up, then click "**Finish**".
 
-   <img class="common_img" src="../_static/media/chapter_3/section_1_1/media/image5.png" style="width:500px" />
+<img class="common_img" src="../_static/media/chapter_3/section_1_1/media/image5.png" style="width:500px" />
 
-5. After the installation is completed, click “**Yes**” to restart the computer in the pop-up window. Please don’t skip this step!
+5. After the installation is completed, click "**Yes**" to restart the computer in the pop-up window. Please don't skip this step!
 
 <img class="common_img" src="../_static/media/chapter_3/section_1_1/media/image6.png" style="width:500px" />
+
+<p id="anchor_device_connection"></p>
 
 * **Device connection**
 
@@ -42,19 +46,19 @@ NoMachine is a graphical software for remote controlling. After connecting the c
 
 <img class="common_img" src="../_static/media/chapter_3/section_1_1/media/image7.png" style="width:300px"  />
 
-2)  Having connected, back to the NoMachine interface and double click the JetMax icon. Or you can enter “**192.168.149.1**” in the search box to login.
+2)  Having connected, back to the NoMachine interface and double click the JetMax icon. Or you can enter "**192.168.149.1**" in the search box to login.
 
 <img class="common_img" src="../_static/media/chapter_3/section_1_1/media/image8.png" style="width:500px" />
 
-3. The prompt will pop up to ask you to enter the Username and Password. The username is “**hiwonder**” and password is “**hiwonder**”. After entering, tick “**Save this password**” and click “**Login**”. Later, keep clicking “**OK**” in the subsequent pop-up windows, then the Jetson Nano desktop will show up.
+3. The prompt will pop up to ask you to enter the Username and Password. The username is "**hiwonder**" and password is "**hiwonder**". After entering, tick "**Save this password**" and click "**Login**". Later, keep clicking "**OK**" in the subsequent pop-up windows, then the Jetson Nano desktop will show up.
 
-   <img class="common_img" src="../_static/media/chapter_3/section_1_1/media/image9.png" style="width:500px" />
+<img class="common_img" src="../_static/media/chapter_3/section_1_1/media/image9.png" style="width:500px" />
 
-4. If the warning dialog box occurs, just click “**Cancel**". This is normal phenomenon. If black screen occurs, you can try to reboot up the Jetson Nano.
+4. If the warning dialog box occurs, just click "**Cancel**". This is normal phenomenon. If black screen occurs, you can try to reboot up the Jetson Nano.
 
-   <img class="common_img" src="../_static/media/chapter_3/section_1_1/media/image10.png" style="width:500px" />
+<img class="common_img" src="../_static/media/chapter_3/section_1_1/media/image10.png" style="width:500px" />
 
-   <img class="common_img" src="../_static/media/chapter_3/section_1_1/media/image11.png" style="width:50px" />For the instructions of starting the games, please refer to the subsequent chapters.
+For the instructions of starting the games, please refer to the subsequent chapters.
 
 * **Turn on remote NDIS compatible device**
 
@@ -62,17 +66,17 @@ If you are using desktop computer, you can turn on the NDIS compatible device fo
 
 1. Connect the controller to the computer with the Android cable.
 
-   <img class="common_img" src="../_static/media/chapter_3/section_1_1/media/image12.jpeg" style="width:500px"  />
+<img class="common_img" src="../_static/media/chapter_3/section_1_1/media/image12.jpeg" style="width:500px"  />
 
-2. Next, install the NDIS driver. Right click “**Computer**” and select “**Attribute**”. Then click “**Device Manager**” to find the NDIS driver and select “**Update driver**”.
+2. Next, install the NDIS driver. Right click "**Computer**" and select "**Attribute**". Then click "**Device Manager**" to find the NDIS driver and select "**Update driver**".
 
-   <img class="common_img" src="../_static/media/chapter_3/section_1_1/media/image13.png" style="width:500px" />
+<img class="common_img" src="../_static/media/chapter_3/section_1_1/media/image13.png" style="width:500px" />
 
-3. After the update is complete, follow step **[3.1.1 Remote Tool Installation and Connection->Device Connection]()** to log in to the system. 
+3. After the update is complete, follow step **[3.1.1 Remote Tool Installation and Connection->Device Connection](#anchor_device_connection)** to log in to the system. 
 
-   > [!NOTE]
-   >
-   > The login address needs to be changed to "**192.168.55.1**".
+> [!NOTE]
+>
+> The login address needs to be changed to "**192.168.55.1**".
 
 ### 3.1.2 System Directory Introduction
 
@@ -80,36 +84,36 @@ If you are using desktop computer, you can turn on the NDIS compatible device fo
 
 The remote Jetson Nano system desktop is as follow.
 
-<img class="common_img" src="../_static/media/chapter_3\section_1_2\media\image2.png" style="width:500px"  />
+<img class="common_img" src="../_static/media/chapter_3/section_1_2/media/image2.png" style="width:500px"  />
 
 These 6 icons need to be focused on.
 
 |                           **Icon**                           |                  **Function**                  |
 | :----------------------------------------------------------: | :--------------------------------------------: |
-| <img class="common_img" src="../_static/media/chapter_3\section_1_2/media/image3.png" style="width:90px" /> |          Color value adjustment tool           |
-| <img class="common_img" src="../_static/media/chapter_3\section_1_2/media/image4.png" style="width:90px" /> |                  Collect data                  |
-| <img class="common_img" src="../_static/media/chapter_3\section_1_2/media/image5.png" style="width:90px" /> |                Set servo angle                 |
-| <img class="common_img" src="../_static/media/chapter_3\section_1_2/media/image6.png" style="width:90px" /> |              Set servo deviation               |
-| <img class="common_img" src="../_static/media/chapter_3\section_1_2/media/image7.png" style="width:90px" /> |              Calibrate the camera              |
-| <img class="common_img" src="../_static/media/chapter_3\section_1_2/media/image8.png" style="width:90px" /> | Command line terminal for entering the command |
+| <img src="../_static/media/chapter_3/section_1_2/media/image3.png" style="width:90px" /> |          Color value adjustment tool           |
+| <img src="../_static/media/chapter_3/section_1_2/media/image4.png" style="width:90px" /> |                  Collect data                  |
+| <img src="../_static/media/chapter_3/section_1_2/media/image5.png" style="width:90px" /> |                Set servo angle                 |
+| <img src="../_static/media/chapter_3/section_1_2/media/image6.png" style="width:90px" /> |              Set servo deviation               |
+| <img src="../_static/media/chapter_3/section_1_2/media/image7.png" style="width:90px" /> |              Calibrate the camera              |
+| <img src="../_static/media/chapter_3/section_1_2/media/image8.png" style="width:90px" /> | Command line terminal for entering the command |
 
 * **System structure introduction**
 
 The entered commands must be case-sensitive and space sensitive. Keywords can be complemented by the TAB key.
 
-1. Click <img class="common_img" src="../_static/media/chapter_3\section_1_2\media\image8.png" style="width:50px"  /> to open terminal.
+1. Click <img src="../_static/media/chapter_3/section_1_2/media/image8.png" style="width:50px"  /> to open terminal.
 
-   <img class="common_img" src="../_static/media/chapter_3\section_1_2\media\image9.png" style="width:500px" />
+<img class="common_img" src="../_static/media/chapter_3/section_1_2/media/image9.png" style="width:500px" />
 
-2. Enter command “**cd ros/src/**” to enter the src folder.
+2. Enter command "**cd ros/src/**" to enter the src folder.
 
-   ```py
-   cd ros/src/
-   ```
+```bash
+cd ros/src/
+```
 
-3. Enter “**ls**” command and press “**Enter**” to list all the files. And we mainly focus on these three directories.
+3. Enter "**ls**" command and press "**Enter**" to list all the files. And we mainly focus on these three directories.
 
-<img class="common_img" src="../_static/media/chapter_3\section_1_2\media\image11.png" style="width:500px"  />
+<img class="common_img" src="../_static/media/chapter_3/section_1_2/media/image11.png" style="width:500px"  />
 
 |         Name         |                           Function                           |
 | :------------------: | :----------------------------------------------------------: |
@@ -118,11 +122,11 @@ The entered commands must be case-sensitive and space sensitive. Keywords can be
 |     jetmax_demos     |        Program for robotic arm individual controlling        |
 |        Sensor        | Control program of Jetson Nano expansion board and external sensor/ module |
 
-4. Next, enter the directory of games and program source codes. In **Ai_JetMax** directory, enter “**cd Ai_JetMax/scripts/**” command. Then enter “ls” command to list all the folders and files in this directory. The files in red frame are game files.
+4. Next, enter the directory of games and program source codes. In **Ai_JetMax** directory, enter "**cd Ai_JetMax/scripts/**" command. Then enter "ls" command to list all the folders and files in this directory. The files in red frame are game files.
 
-   <img class="common_img" src="../_static/media/chapter_3\section_1_2\media\image12.png" style="width:500px"  />
+<img class="common_img" src="../_static/media/chapter_3/section_1_2/media/image12.png" style="width:500px"  />
 
-   The games for each game file are listed below.
+The games for each game file are listed below.
 
 |        File name        |                Games                 |
 | :---------------------: | :----------------------------------: |
@@ -138,12 +142,13 @@ The entered commands must be case-sensitive and space sensitive. Keywords can be
 |     color_angle.py      |       Color angle recognition        |
 |       auto_reg.py       | Suction cup position auto adjustment |
 
-5. In **jetmax_demos** directory, enter command “**cd jetmax_demos/scripts/**”. Then enter “**ls**” command to list all the folders and files in this directory. The files in red frame are game files.
+5. In **jetmax_demos** directory, enter command "**cd jetmax_demos/scripts/**". Then enter "**ls**" command to list all the folders and files in this directory. The files in red frame are game files.
 
-   <img class="common_img" src="../_static/media/chapter_3\section_1_2\media\image13.png" style="width:500px"  />
+<img class="common_img" src="../_static/media/chapter_3/section_1_2/media/image13.png" style="width:500px"  />
 
-   The games for each game file are listed below.
-<table  class="docutils-nobg" style="margin:0 auto" border="1">
+The games for each game file are listed below.
+
+<table class="docutils-nobg" border="1">
 <colgroup>
 <col style="width: 35%" />
 <col style="width: 65%" />
@@ -281,12 +286,11 @@ The entered commands must be case-sensitive and space sensitive. Keywords can be
 </tbody>
 </table>
 
+6. In sensor directory, enter "**cd Sensor/scripts/**" command first. Then enter "ls" command to list all the files and folders in this directory. The files in the red frame are game files.
 
-6. In sensor directory, enter “**cd Sensor/scripts/**” command first. Then enter “ls” command to list all the files and folders in this directory. The files in the red frame are game files.
+<img class="common_img" src="../_static/media/chapter_3/section_1_2/media/image14.png" style="width:500px"  />
 
-   <img class="common_img" src="../_static/media/chapter_3\section_1_2\media\image14.png" style="width:500px"  />
-
-   The game for each file is listed below.
+The game for each file is listed below.
 
 |         File name         |                             Game                             |
 | :-----------------------: | :----------------------------------------------------------: |
@@ -311,17 +315,17 @@ The entered commands must be case-sensitive and space sensitive. Keywords can be
 |   hand_gesture_tube.py    |         Gesture recognition and digital tube display         |
 |     touch_control.py      |                        Touch control                         |
 
-7. In “**jetmax_buildin_funcs**” directory, enter “**cd jetmax_buildin_funcs/**” command, then enter “**ls**” command to check the folder storing different AI game files.
+7. In "**jetmax_buildin_funcs**" directory, enter "**cd jetmax_buildin_funcs/**" command, then enter "**ls**" command to check the folder storing different AI game files.
 
-   <img class="common_img" src="../_static/media/chapter_3\section_1_2\media\image15.png" style="width:500px"  />
+<img class="common_img" src="../_static/media/chapter_3/section_1_2/media/image15.png" style="width:500px"  />
 
-   Enter the corresponding folder, then enter the **scripts** folder to find the corresponding game file. For example, enter **waste_classification** folder to find the game file of waste sorting.
+Enter the corresponding folder, then enter the **scripts** folder to find the corresponding game file. For example, enter **waste_classification** folder to find the game file of waste sorting.
 
-   <img class="common_img" src="../_static/media/chapter_3\section_1_2\media\image16.png" style="width:500px"  />
+<img class="common_img" src="../_static/media/chapter_3/section_1_2/media/image16.png" style="width:500px"  />
 
-   The game for each game file is listed below.
+The game for each game file is listed below.
 
-<table  class="docutils-nobg" style="margin:0 auto" border="1">
+<table class="docutils-nobg" border="1">
 <colgroup>
 <col style="width: 35%" />
 <col style="width: 65%" />
@@ -430,51 +434,51 @@ Calculate the angle of the robotic arm relative to the central axis and control 
 
 The source code of the program is located in **/Home/ros/src/jetmax_buildin_funcs/waste_classification/ scripts/waste_classification_main.p**
 
-<img class="common_img" src="../_static/media/chapter_3\section_2\media\image2.png" style="width:500px"  />
+<img class="common_img" src="../_static/media/chapter_3/section_2/media/image2.png" style="width:500px"  />
 
 ### 3.2.2 Preparation
 
-1)  Please place the robotic arm on the map, then switch on it and calibrate its position. You can calibrate the robotic arm via the mobile APP. For the detailed instruction, you can refer to the **[2. Quick User Experience]()**. Then place the waste cards to the recognition area. Ensure the cards are not too close to each other and don’t place them to edge of the recognition area.
+1)  Please place the robotic arm on the map, then switch on it and calibrate its position. You can calibrate the robotic arm via the mobile APP. For the detailed instruction, you can refer to the **[2. Quick User Experience](https://wiki.hiwonder.com/projects/JetMax/en/latest/docs/2_Quick_User_Experience.html)**. Then place the waste cards to the recognition area. Ensure the cards are not too close to each other and don't place them to edge of the recognition area.
 
-2)  Install and open the No Machine remote tool. For detailed instruction, you can refer to “**[3. AI Vision Games->3.1 Set Development Environment->3.1.1 Remote Tool Installation and Connection]()**”.
+2)  Install and open the No Machine remote tool. For detailed instruction, you can refer to "**[3. AI Vision Games->3.1 Set Development Environment->3.1.1 Remote Tool Installation and Connection](https://wiki.hiwonder.com/projects/JetMax/en/latest/docs/3_AI_Vision_Games_Lesson.html#remote-tool-installation-and-connection)**".
 
 ### 3.2.3 Operation steps
 
-<img class="common_img" src="../_static/media/chapter_3\section_2\media\image3.png" style="width:50px" />The entered command should be case-sensitive. And the keywords can be complemented by the Tab key.
+The entered command should be case-sensitive. And the keywords can be complemented by the Tab key.
 
 * **Enter the game**
 
 1)  Turn on JetMax, then connect to the system desktop through No Machine.
 
-2)  Click <img class="common_img" src="../_static/media/chapter_3\section_2\media\image4.png" style="width:50px"  />.
+2)  Click <img src="../_static/media/chapter_3/section_2/media/image4.png" style="width:50px"  />.
 
-3)  Enter the game. Then enter command “**rosservice call /waste_classification/enter “{}”**” and press Enter.
+3)  Enter the game. Then enter command "**rosservice call /waste_classification/enter "{}"**" and press Enter.
 
-<img class="common_img" src="../_static/media/chapter_3\section_2\media\image5.png" style="width:500px"  />
+<img class="common_img" src="../_static/media/chapter_3/section_2/media/image5.png" style="width:500px"  />
 
 * **Turn on camera**
 
-Turn on camera. Double click <img class="common_img" src="../_static/media/chapter_3\section_2\media\image6.png" style="width:50px"  />, then enter the address, **192.168.149.1:8080/** and press Enter. Next, select “**/waste_classification/image_result(Snapshot)**”.
+Turn on camera. Double click <img src="../_static/media/chapter_3/section_2/media/image6.png" style="width:50px"  />, then enter the address, **192.168.149.1:8080/** and press Enter. Next, select "**/waste_classification/image_result(Snapshot)**".
 
-<img class="common_img" src="../_static/media/chapter_3\section_2\media\image7.png" style="width:500px"  />
+<img class="common_img" src="../_static/media/chapter_3/section_2/media/image7.png" style="width:500px"  />
 
-<img class="common_img" src="../_static/media/chapter_3\section_2\media\image8.png" style="width:500px"  />
+<img class="common_img" src="../_static/media/chapter_3/section_2/media/image8.png" style="width:500px"  />
 
 * **Start the game**
 
-Start the game. Enter command “**rosservice call /waste_classification/set_running “data: true”**” and press Enter.
+Start the game. Enter command "**rosservice call /waste_classification/set_running "data: true"**" and press Enter.
 
-<img class="common_img" src="../_static/media/chapter_3\section_2\media\image5.png" style="width:500px"  />
+<img class="common_img" src="../_static/media/chapter_3/section_2/media/image5.png" style="width:500px"  />
 
 * **Stop and exit the game** 
 
-1. If you want to stop the game, you can enter command “**rosservice call /waste_classification/ set_running “data: true”**” and press Enter.
+1. If you want to stop the game, you can enter command "**rosservice call /waste_classification/ set_running "data: true"**" and press Enter.
 
-   <img class="common_img" src="../_static/media/chapter_3\section_2\media\image9.jpeg" style="width:500px"  />
+<img class="common_img" src="../_static/media/chapter_3/section_2/media/image9.jpeg" style="width:500px"  />
 
-2. If you want to exit the game, you can enter command “**rosservice call /waste_classification/exit“{}”**” and press Enter.
+2. If you want to exit the game, you can enter command "**rosservice call /waste_classification/exit"{}"**" and press Enter.
 
-   <img class="common_img" src="../_static/media/chapter_3/section_2/media/image10.png" style="width:500px"  />
+<img class="common_img" src="../_static/media/chapter_3/section_2/media/image10.png" style="width:500px"  />
 
 ### 3.2.4 Function Realization
 
@@ -517,27 +521,27 @@ The source code of the program locates in **/Home/ros/src/jetmax_buildin_funcs/a
 
 ### 3.3.2 Preparation
 
-1)  Place the robotic arm on the map. Then switch on the robotic arm and calibrate its position. It is recommended to calibrate its position via mobile APP. For more details, you can refer to “**[2.Quick User Experience->2.1 APP Control]()**”. Then place the alphabet card in the recognition area. Please keep certain interval between the cards and don’t place the cards on the edge of the recognition area.
+1)  Place the robotic arm on the map. Then switch on the robotic arm and calibrate its position. It is recommended to calibrate its position via mobile APP. For more details, you can refer to "**[2.Quick User Experience->2.1 APP Control](https://wiki.hiwonder.com/projects/JetMax/en/latest/docs/2_Quick_User_Experience.html#app-control)**". Then place the alphabet card in the recognition area. Please keep certain interval between the cards and don't place the cards on the edge of the recognition area.
 
-2)  According to the “**[3.AI Vision Games Lesson->3.1 Set Development Environment->3.1.1 Remote Tool Installation and Connection]()**”, install and open NoMachine.
+2)  According to the "**[3.AI Vision Games Lesson->3.1 Set Development Environment->3.1.1 Remote Tool Installation and Connection](https://wiki.hiwonder.com/projects/JetMax/en/latest/docs/3_AI_Vision_Games_Lesson.html#remote-tool-installation-and-connection)**", install and open NoMachine.
 
 ### 3.3.3 Operation steps
 
-<img class="common_img" src="../_static/media/chapter_3/section_3/media/image3.png" style="width:50px" />The entered command should be case sensitive. And the keywords can be complemented by Tab key.
+The entered command should be case sensitive. And the keywords can be complemented by Tab key.
 
 * **Enter the game** 
 
 1. Turn on JetMax and connect to the system desktop through NoMachine.
 
-2. Double click <img class="common_img" src="../_static/media/chapter_3/section_3/media/image4.png" style="width:50px"  /> to open command line terminal.
+2. Double click <img src="../_static/media/chapter_3/section_3/media/image4.png" style="width:50px"  /> to open command line terminal.
 
-3. Enter command “**rosservice call /alphabetically/enter "{}"**” and press Enter to enter the game.
+3. Enter command "**rosservice call /alphabetically/enter "{}"**" and press Enter to enter the game.
 
-   <img class="common_img" src="../_static/media/chapter_3/section_3/media/image5.png" style="width:500px"  />
+<img class="common_img" src="../_static/media/chapter_3/section_3/media/image5.png" style="width:500px"  />
 
 * **Turn on camera**
 
-Double click <img class="common_img" src="../_static/media/chapter_3/section_3/media/image6.png" style="width:50px"  />. Then enter the address “**192.168.149.1:8080/**” in the address bar and press Enter. Next, select “/**alphabetically/image_result(Snapshot)**” to turn on camera.
+Double click <img src="../_static/media/chapter_3/section_3/media/image6.png" style="width:50px"  />. Then enter the address "**192.168.149.1:8080/**" in the address bar and press Enter. Next, select "/**alphabetically/image_result(Snapshot)**" to turn on camera.
 
 <img class="common_img" src="../_static/media/chapter_3/section_3/media/image7.png" style="width:500px"  />
 
@@ -545,15 +549,15 @@ Double click <img class="common_img" src="../_static/media/chapter_3/section_3/m
 
 * **Start the game.**
 
-1)  Enter command “**rosservice call /alphabetically/set_running_char "data: true"**” and press Enter to turn on the recognition check function to check whether the alphabet is recognized.
+1)  Enter command "**rosservice call /alphabetically/set_running_char "data: true"**" and press Enter to turn on the recognition check function to check whether the alphabet is recognized.
 
 <img class="common_img" src="../_static/media/chapter_3/section_3/media/image9.png" style="width:500px"  />
 
-2)  Enter command “**rosservice call /alphabetically/set_running_char "data: true"**” again and press Enter to start sucking.
+2)  Enter command "**rosservice call /alphabetically/set_running_char "data: true"**" again and press Enter to start sucking.
 
 <img class="common_img" src="../_static/media/chapter_3/section_3/media/image9.png" style="width:500px"  />
 
-3)  We can enter this command “**rosservice call /alphabetically/set_running_char "data: true"**” continuously to turn on recognition check and sucking function.
+3)  We can enter this command "**rosservice call /alphabetically/set_running_char "data: true"**" continuously to turn on recognition check and sucking function.
 
 <img class="common_img" src="../_static/media/chapter_3/section_3/media/image9.png" style="width:500px"  />
 
@@ -563,21 +567,21 @@ Double click <img class="common_img" src="../_static/media/chapter_3/section_3/m
 
 * **Stop and exit the game** 
 
-1. If you want to stop recognition check and sucking function, enter “**rosservice**
+1. If you want to stop recognition check and sucking function, enter "**rosservice**
 
-   **call /alphabetically/set_running_char "data: false"**” and press Enter.
+**call /alphabetically/set_running_char "data: false"**" and press Enter.
 
-   <img class="common_img" src="../_static/media/chapter_3/section_3/media/image10.png" style="width:500px"  />
+<img class="common_img" src="../_static/media/chapter_3/section_3/media/image10.png" style="width:500px"  />
 
-2. If you want to exit the game, you can enter command “**rosservice call /alphabetically/exit "{}"**” and press Enter.
+2. If you want to exit the game, you can enter command "**rosservice call /alphabetically/exit "{}"**" and press Enter.
 
-   <img class="common_img" src="../_static/media/chapter_3/section_3/media/image11.png" style="width:500px"  />
+<img class="common_img" src="../_static/media/chapter_3/section_3/media/image11.png" style="width:500px"  />
 
 ### 3.3.4 Function realization
 
 After the game starts and the camera recognize the alphabet cards, the robotic arm will suck them in order, then place them in the placing area.
 
-<img class="common_img" src="../_static/media/chapter_3\section_3/media/image12.png" style="width:500px"  />
+<img class="common_img" src="../_static/media/chapter_3/section_3/media/image12.png" style="width:500px"  />
 
 ## 3.4 Color Sorting
 
@@ -609,29 +613,29 @@ The source code of the program is located in **/Home/ros/src/jetmax_buildin_func
 
 ### 3.4.2 Preparation
 
-1)  Please place the robotic arm on the map, then switch on it and calibrate its position. You can calibrate the robotic arm via the mobile APP. For the detailed instruction, you can refer to the **[2. Quick User Experience]()**. Then place the colored blocks to the recognition area. Ensure the blocks are not too close to each other and don’t place them to edge of the recognition area.
+1)  Please place the robotic arm on the map, then switch on it and calibrate its position. You can calibrate the robotic arm via the mobile APP. For the detailed instruction, you can refer to the **[2. Quick User Experience](https://wiki.hiwonder.com/projects/JetMax/en/latest/docs/2_Quick_User_Experience.html)**. Then place the colored blocks to the recognition area. Ensure the blocks are not too close to each other and don't place them to edge of the recognition area.
 
-2)  Install and open the NoMachine remote tool. For detailed instruction, you can refer to “**[3. AI Vision Games->3.1 Set Development Environment->3.1.1 Remote Tool Installation and Connection]()**”.
+2)  Install and open the NoMachine remote tool. For detailed instruction, you can refer to "**[3. AI Vision Games->3.1 Set Development Environment->3.1.1 Remote Tool Installation and Connection](https://wiki.hiwonder.com/projects/JetMax/en/latest/docs/3_AI_Vision_Games_Lesson.html#remote-tool-installation-and-connection)**".
 
 ### 3.4.3 Operation Steps
 
-<img class="common_img" src="../_static/media/chapter_3/section_4/media/image3.png" style="width:50px" />The entered command should be case sensitive. And the keywords can be complemented by Tab key.
+The entered command should be case sensitive. And the keywords can be complemented by Tab key.
 
 * **Enter the game**
 
 1. Turn on JetMax, then connect to the system desktop through No Machine.
 
-2. Double click <img class="common_img" src="../_static/media/chapter_3/section_4/media/image4.png" style="width:50px"  /> to open command line terminal.
+2. Double click <img src="../_static/media/chapter_3/section_4/media/image4.png" style="width:50px"  /> to open command line terminal.
 
-3. Enter the game. Enter command “ **rosservice call /color_sorting/enter "{}"**” and press Enter.
+3. Enter the game. Enter command "**rosservice call /color_sorting/enter "{}"**" and press Enter.
 
-   ```py
-   rosservice call /color_sorting/enter "{}"
-   ```
+```bash
+rosservice call /color_sorting/enter "{}"
+```
 
 * **Turn on camera**
 
-Double click <img class="common_img" src="../_static/media/chapter_3/section_4/media/image6.png" style="width:50px"  />, then enter the address, **192.168.149.1:8080/** and press Enter. Next, select “**color_sorting/image_result(Snapshot)**”to turn on the camera.
+Double click <img src="../_static/media/chapter_3/section_4/media/image6.png" style="width:50px" />, then enter the address, **192.168.149.1:8080/** and press Enter. Next, select "**color_sorting/image_result(Snapshot)**"to turn on the camera.
 
 <img class="common_img" src="../_static/media/chapter_3/section_4/media/image7.png" style="width:500px"  />
 
@@ -639,23 +643,23 @@ Double click <img class="common_img" src="../_static/media/chapter_3/section_4/m
 
 * **Start the game**
 
-1. Enter the command “**rosservice call /color_sorting/set_target "color_name: 'red': is_enable: true"**" and press Enter to set the target color. Here we set the target color as red.
+1. Enter the command "**rosservice call /color_sorting/set_target "color_name: 'red': is_enable: true"**" and press Enter to set the target color. Here we set the target color as red.
 
-   <img class="common_img" src="../_static/media/chapter_3/section_4/media/image9.png" style="width:500px"  />
+<img class="common_img" src="../_static/media/chapter_3/section_4/media/image9.png" style="width:500px"  />
 
-2. Enter command “**rosservice call /color_sorting/set_running "data: true"**" and press Enter to start the game.
+2. Enter command "**rosservice call /color_sorting/set_running "data: true"**" and press Enter to start the game.
 
-   <img class="common_img" src="../_static/media/chapter_3/section_4/media/image10.png" style="width:500px"  />
+<img class="common_img" src="../_static/media/chapter_3/section_4/media/image10.png" style="width:500px"  />
 
 * **Stop and exit the game**
 
-1. If you want to stop the game, you can enter command “**rosservice call /color_sorting/set_running "data: false"**” and press Enter.
+1. If you want to stop the game, you can enter command "**rosservice call /color_sorting/set_running "data: false"**" and press Enter.
 
-   <img class="common_img" src="../_static/media/chapter_3/section_4/media/image11.png" style="width:500px"  />
+<img class="common_img" src="../_static/media/chapter_3/section_4/media/image11.png" style="width:500px"  />
 
-2. If you want to exit the game, enter command “**rosservice call /color_sorting/exit "{}"**" and press Enter.
+2. If you want to exit the game, enter command "**rosservice call /color_sorting/exit "{}"**" and press Enter.
 
-   <img class="common_img" src="../_static/media/chapter_3/section_4/media/image12.png" style="width:500px"  />
+<img class="common_img" src="../_static/media/chapter_3/section_4/media/image12.png" style="width:500px"  />
 
 ### 3.4.4 Function Realization 
 
@@ -845,9 +849,9 @@ At last, call the OpenCV built-in function `cv2.circle()` to frame the target. T
 
 ### 3.5.2 Preparation 
 
-1)  Please place the robotic arm on the map, then switch on it and calibrate its position. You can calibrate the robotic arm via the mobile APP. For the detailed instruction, you can refer to the **[2. Quick User Experience]()**. Then place the colored blocks to the recognition area.
+1)  Please place the robotic arm on the map, then switch on it and calibrate its position. You can calibrate the robotic arm via the mobile APP. For the detailed instruction, you can refer to the **[2. Quick User Experience](https://wiki.hiwonder.com/projects/JetMax/en/latest/docs/2_Quick_User_Experience.html)**. Then place the colored blocks to the recognition area.
 
-2)  Install and open the No Machine remote tool. For detailed instruction, you can refer to “**[3. AI Vision Games->3.1 Set Development Environment->3.1.1 Remote Tool Installation and Connection]()**”.
+2)  Install and open the No Machine remote tool. For detailed instruction, you can refer to "**[3. AI Vision Games->3.1 Set Development Environment->3.1.1 Remote Tool Installation and Connection](https://wiki.hiwonder.com/projects/JetMax/en/latest/docs/3_AI_Vision_Games_Lesson.html#remote-tool-installation-and-connection)**".
 
 ### 3.5.3 Operation Steps
 
@@ -857,37 +861,37 @@ At last, call the OpenCV built-in function `cv2.circle()` to frame the target. T
 
 1)  Turn on JetMax, then connect to the system desktop through No Machine.
 
-2)  Double click <img class="common_img" src="../_static/media/chapter_3/section_5/media/image4.png" style="width:50px"  /> to open command line terminal.
+2)  Double click <img src="../_static/media/chapter_3/section_5/media/image4.png" style="width:50px"  /> to open command line terminal.
 
-3)  Enter command “**rosservice call /object_tracking/enter "{}"**" and press Enter to enter the game.
+3)  Enter command "**rosservice call /object_tracking/enter "{}"**" and press Enter to enter the game.
 
 <img class="common_img" src="../_static/media/chapter_3/section_5/media/image5.png" style="width:500px"  />
 
 * **Turn on Camera**
 
-Double click <img class="common_img" src="../_static/media/chapter_3/section_5/media/image6.png" style="width:50px"  /> and enter the address “**192.168.149.1:8080/**”, then press Enter. After that, select “ **/object_tracking/image_result(Snapshot)**” to turn on the camera.
+Double click <img src="../_static/media/chapter_3/section_5/media/image6.png" style="width:50px"  /> and enter the address "**192.168.149.1:8080/**", then press Enter. After that, select " **/object_tracking/image_result(Snapshot)**" to turn on the camera.
 
 <img class="common_img" src="../_static/media/chapter_3/section_5/media/image7.png" style="width:500px"  />
 
 * **Start the game**
 
-1. Enter command “**rosservice call /object_tracking/set_target "color_name: 'blue'"** ” to set the color to be tracked and press Enter. Take tracking blue for example.
+1. Enter command "**rosservice call /object_tracking/set_target "color_name: 'blue'"** " to set the color to be tracked and press Enter. Take tracking blue for example.
 
-   <img class="common_img" src="../_static/media/chapter_3/section_5/media/image8.png" style="width:500px"  />
+<img class="common_img" src="../_static/media/chapter_3/section_5/media/image8.png" style="width:500px"  />
 
-2. Enter command “**rosservice call /object_tracking/set_running_color "data: true"** “ and press Enter to start color tracking.
+2. Enter command "**rosservice call /object_tracking/set_running_color "data: true"** " and press Enter to start color tracking.
 
-   <img class="common_img" src="../_static/media/chapter_3/section_5/media/image5.png" style="width:500px"  />
+<img class="common_img" src="../_static/media/chapter_3/section_5/media/image5.png" style="width:500px"  />
 
 * **Stop and exit the game** 
 
-1. If you want to stop the game, you can enter command “**rosservice call /object_tracking/set_running_color "data: false"** " and press Enter.
+1. If you want to stop the game, you can enter command "**rosservice call /object_tracking/set_running_color "data: false"** " and press Enter.
 
-   <img class="common_img" src="../_static/media/chapter_3/section_5/media/image9.png" style="width:500px"  />
+<img class="common_img" src="../_static/media/chapter_3/section_5/media/image9.png" style="width:500px"  />
 
-2. If you want to exit the game, you can enter command “ **rosservice call /object_tracking/exit "{}" ”** and press Enter.
+2. If you want to exit the game, you can enter command " **rosservice call /object_tracking/exit "{}" "** and press Enter.
 
-   <img class="common_img" src="../_static/media/chapter_3/section_5/media/image10.png" style="width:500px"  />
+<img class="common_img" src="../_static/media/chapter_3/section_5/media/image10.png" style="width:500px"  />
 
 ### 3.5.4 Function realization
 
@@ -899,7 +903,7 @@ Double click <img class="common_img" src="../_static/media/chapter_3/section_5/m
 
 After the game starts, the robotic arm will move with the target block.
 
-<img class="common_img" src="../_static/media/chapter_3\section_5/media/image11.png" style="width:500px"  />
+<img class="common_img" src="../_static/media/chapter_3/section_5/media/image11.png" style="width:500px"  />
 
 ## 3.6 Numeric calculation
 
@@ -915,7 +919,7 @@ Then, convert the coordinates of recognized number cards into the origin image c
 
 **Step 2: recognize and calculate**
 
-Firstly, sequence the recognized number cards from left to right to form a equation. Next browse the number library, then convert the equation into a text formula and calculate. Pay attention a complete equation should contain “=”. If the equation is not complete, the terminal will display the wrong result.
+Firstly, sequence the recognized number cards from left to right to form a equation. Next browse the number library, then convert the equation into a text formula and calculate. Pay attention a complete equation should contain "=". If the equation is not complete, the terminal will display the wrong result.
 
 Next, call the built-in function `eval()` of Python to get the result. And convert the result into character string.
 
@@ -933,9 +937,9 @@ The source code of the program lies in **/Home/ros/src/jetmax_demos/scripts/visu
 
 ### 3.6.2 Preparation
 
-1)  Switch on the robotic arm and calibrate its position. It is recommended to calibrate its position via mobile APP. For more details, you can refer to “**[2. Quick User Experience->2.1 APP Control]()**”. Then place the number cards within the camera vision. Please keep certain interval between the cards.
+1)  Switch on the robotic arm and calibrate its position. It is recommended to calibrate its position via mobile APP. For more details, you can refer to "**[2. Quick User Experience->2.1 APP Control](https://wiki.hiwonder.com/projects/JetMax/en/latest/docs/2_Quick_User_Experience.html)**". Then place the number cards within the camera vision. Please keep certain interval between the cards.
 
-2)  According to the “**[3. AI Vision Games Lesson->3.1 Set Development Environment->3.1.1 Remote Tool Installation and Connection]()**”, install and open NoMachine.
+2)  According to the "**[3. AI Vision Games Lesson->3.1 Set Development Environment->3.1.1 Remote Tool Installation and Connection](https://wiki.hiwonder.com/projects/JetMax/en/latest/docs/3_AI_Vision_Games_Lesson.html#remote-tool-installation-and-connection)**", install and open NoMachine.
 
 ### 3.6.3 Operation steps
 
@@ -943,35 +947,35 @@ The source code of the program lies in **/Home/ros/src/jetmax_demos/scripts/visu
 
 1. Turn on JetMax and connect to the system desktop through NoMachine.
 
-2. Double click <img class="common_img" src="../_static/media/chapter_3/section_6/media/image4.png" style="width:50px"  /> to open command line terminal.
+2. Double click <img src="../_static/media/chapter_3/section_6/media/image4.png" style="width:50px"  /> to open command line terminal.
 
-3. Enter command “**cd ros/src/jetmax_demos/scripts**” and press Enter to enter the directory storing the game program.
+3. Enter command "**cd ros/src/jetmax_demos/scripts**" and press Enter to enter the directory storing the game program.
 
-   ```py
-   cd ros/src/jetmax_demos/scripts
-   ```
+```bash
+cd ros/src/jetmax_demos/scripts
+```
 
-4. To avoid the memory being occupied and affect the game, you need to enter command “**./kill_app_funcs.sh**” to close other games.
+4. To avoid the memory being occupied and affect the game, you need to enter command "**./kill_app_funcs.sh**" to close other games.
 
-   <img class="common_img" src="../_static/media/chapter_3/section_6/media/image6.png" style="width:500px"  />
+<img class="common_img" src="../_static/media/chapter_3/section_6/media/image6.png" style="width:500px"  />
 
-5. Then enter the password to grant the permission to execute the previous command. The password is “**hiwonder**”.
+5. Then enter the password to grant the permission to execute the previous command. The password is "**hiwonder**".
 
-   <img class="common_img" src="../_static/media/chapter_3/section_6/media/image6.png" style="width:500px"  />
+<img class="common_img" src="../_static/media/chapter_3/section_6/media/image6.png" style="width:500px"  />
 
-6. Lastly, enter command “**rosrun jetmax_demos visual_calculator.py**” and press Enter to start the game.
+6. Lastly, enter command "**rosrun jetmax_demos visual_calculator.py**" and press Enter to start the game.
 
-   ```py
-   rosrun jetmax_demos visual_calculator.py
-   ```
+```bash
+rosrun jetmax_demos visual_calculator.py
+```
 
-7. If you want to exit this game, press “**Ctrl+C**”. If it fails to exit, you can try again.
+7. If you want to exit this game, press "**Ctrl+C**". If it fails to exit, you can try again.
 
 ### 3.6.4 Function realization
 
 After the game starts, JetMax will calculate the equation result. And display the result on the image transmitted by camera. Then it move to find the number card corresponding to the result and place it to the back of the equal sign.
 
-<img class="common_img" src="../_static/media/chapter_3\section_6/media/image8.png" style="width:500px"  />
+<img class="common_img" src="../_static/media/chapter_3/section_6/media/image8.png" style="width:500px"  />
 
 ## 3.7 Block Stacking
 
@@ -991,7 +995,7 @@ Next, it is necessary to judge the obtained AprilTag information. Due to the var
 
 **Step 3: stack**
 
-Decode the recognized AprilTag, and convert its angle value to Euler angle as well as its coordinate to world coordinate. After converting the coordinate, calculate distance between the tag block’s current position and the stacking area to control the speed. At last, calculate the angle of the robotic arm relative to the central axis and control the corresponding angle of the suction cup rotation.
+Decode the recognized AprilTag, and convert its angle value to Euler angle as well as its coordinate to world coordinate. After converting the coordinate, calculate distance between the tag block's current position and the stacking area to control the speed. At last, calculate the angle of the robotic arm relative to the central axis and control the corresponding angle of the suction cup rotation.
 
 The source code of the program is located in **/Home/ros/src/jetmax_buildin_funcs/palletizing/**
 
@@ -1001,9 +1005,9 @@ The source code of the program is located in **/Home/ros/src/jetmax_buildin_func
 
 ### 3.7.2 Preparation
 
-1)  Please place the robotic arm on the map, then switch on it and calibrate its position. You can calibrate the robotic arm via the mobile APP. For the detailed instruction, you can refer to the **[2. Quick User Experience]()**. Then place the tag blocks to the recognition area. Ensure these blocks are not too close to each other and don’t place the blocks to the edge to the recognition area.
+1)  Please place the robotic arm on the map, then switch on it and calibrate its position. You can calibrate the robotic arm via the mobile APP. For the detailed instruction, you can refer to the **[2. Quick User Experience](https://wiki.hiwonder.com/projects/JetMax/en/latest/docs/2_Quick_User_Experience.html)**. Then place the tag blocks to the recognition area. Ensure these blocks are not too close to each other and don't place the blocks to the edge to the recognition area.
 
-2)  Install and open the NoMachine remote tool. For detailed instruction, you can refer to “**[3. AI Vision Games->3.1 Set Development Environment->3.1.1 Remote Tool Installation and Connection]()**”.
+2)  Install and open the NoMachine remote tool. For detailed instruction, you can refer to "**[3. AI Vision Games->3.1 Set Development Environment->3.1.1 Remote Tool Installation and Connection](https://wiki.hiwonder.com/projects/JetMax/en/latest/docs/3_AI_Vision_Games_Lesson.html#remote-tool-installation-and-connection)**".
 
 ### 3.7.3 Operation Steps
 
@@ -1013,15 +1017,15 @@ The source code of the program is located in **/Home/ros/src/jetmax_buildin_func
 
 1)  Turn on JetMax, then connect to the system desktop through No Machine.
 
-2)  Double click <img class="common_img" src="../_static/media/chapter_3/section_7/media/image4.png" style="width:50px"  /> to open command line terminal.
+2)  Double click <img src="../_static/media/chapter_3/section_7/media/image4.png" style="width:50px"  /> to open command line terminal.
 
-3)  Enter command “**rosservice call /palletizing/enter "{}"** ” and press Enter to enter the game.
+3)  Enter command "**rosservice call /palletizing/enter "{}"** " and press Enter to enter the game.
 
 <img class="common_img" src="../_static/media/chapter_3/section_7/media/image5.png" style="width:500px"  />
 
 * **Turn on the camera**
 
-Double click <img class="common_img" src="../_static/media/chapter_3/section_7/media/image6.png" style="width:50px"  /> and input the address “**192.168.149.1:8080/**”, then press Enter. After that, select “**/palletizing/image_result(Snapshot)**” to turn on the camera.
+Double click <img src="../_static/media/chapter_3/section_7/media/image6.png" style="width:50px"  /> and input the address "**192.168.149.1:8080/**", then press Enter. After that, select "**/palletizing/image_result(Snapshot)**" to turn on the camera.
 
 <img class="common_img" src="../_static/media/chapter_3/section_7/media/image7.png" style="width:500px"  />
 
@@ -1029,31 +1033,31 @@ Double click <img class="common_img" src="../_static/media/chapter_3/section_7/m
 
 * **Start the game**
 
-Enter commend “**rosservice call /palletizing/set_running "data: true"** ” and press Enter to start the game.
+Enter commend "**rosservice call /palletizing/set_running "data: true"** " and press Enter to start the game.
 
 <img class="common_img" src="../_static/media/chapter_3/section_7/media/image5.png" style="width:500px"  />
 
 * **Stop and exit the game** 
 
-1. If you wan to stop the game, you can enter command “**rosservice call /palletizing/set_running "data: false"** ” and press Enter.
+1. If you wan to stop the game, you can enter command "**rosservice call /palletizing/set_running "data: false"** " and press Enter.
 
-   <img class="common_img" src="../_static/media/chapter_3/section_7/media/image9.png" style="width:500px"  />
+<img class="common_img" src="../_static/media/chapter_3/section_7/media/image9.png" style="width:500px"  />
 
-2. If you want to exit the game, you can enter command **“rosservice call /palletizing/exit "{}"** “ and press Enter.
+2. If you want to exit the game, you can enter command **"rosservice call /palletizing/exit "{}"** " and press Enter.
 
-   <img class="common_img" src="../_static/media/chapter_3/section_7/media/image10.png" style="width:500px"  />
+<img class="common_img" src="../_static/media/chapter_3/section_7/media/image10.png" style="width:500px"  />
 
 ### 3.7.4 Function realization
 
 After the game starts, place the tag block to the recognition area of the map. Having recognized the tag block, the robotic arm will suck and stack them one by one in the stacking area.
 
-<img class="common_img" src="../_static/media/chapter_3\section_7/media/image11.png" style="width:500px"  />
+<img class="common_img" src="../_static/media/chapter_3/section_7/media/image11.png" style="width:500px"  />
 
 ## 3.8 Face Tracking
 
 ### 3.8.1 Preparation
 
-When playing this game, you need to install the camera of the robotic arm horizontally. For installation details, you can refer to the “**[3.8.6 Camera Horizontal Installation]()**” in this folder.
+When playing this game, you need to install the camera of the robotic arm horizontally. For installation details, you can refer to the "**[3.8.6 Camera Horizontal Installation](#anchor_3_8_6)**" in this folder.
 
 ### 3.8.2 Program logic
 
@@ -1093,29 +1097,29 @@ The source code of the program is located in **/Home/ros/src/ jetmax_buildin_fun
 
 2)  Double click <img class="common_img" src="../_static/media/chapter_3/section_8/media/image4.png" style="width:50px"  /> to open command line terminal.
 
-3)  Enter command “**rosservice call /object_tracking/enter "{}"** ” and press Enter to enter the game.
+3)  Enter command "**rosservice call /object_tracking/enter "{}"** " and press Enter to enter the game.
 
 <img class="common_img" src="../_static/media/chapter_3/section_8/media/image5.png" style="width:500px"  />
 
 * **Turn on the camera**
 
-Double click <img class="common_img" src="../_static/media/chapter_3/section_8/media/image6.png" style="width:50px"  /> and input the address “**192.168.149.1:8080/**”, then press Enter. After that, select “**/object_tracking/image_result(Snapshot)**” to turn on the camera.
+Double click <img src="../_static/media/chapter_3/section_8/media/image6.png" style="width:50px"  /> and input the address "**192.168.149.1:8080/**", then press Enter. After that, select "**/object_tracking/image_result(Snapshot)**" to turn on the camera.
 
 <img class="common_img" src="../_static/media/chapter_3/section_8/media/image7.png" style="width:500px"  />
 
 * **Start the game**
 
-1)  Enter command “**rosservice call /object_tracking/set_running_face "data: true"** “ and press Enter to start the game.
+1)  Enter command "**rosservice call /object_tracking/set_running_face "data: true"** " and press Enter to start the game.
 
 <img class="common_img" src="../_static/media/chapter_3/section_8/media/image8.png" style="width:500px"  />
 
 * **Stop and exit the game**
 
-1)  If you want to stop the game, you can enter command “**rosservice call /object_tracking/set_running_face "data: false"** ” and press Enter.
+1)  If you want to stop the game, you can enter command "**rosservice call /object_tracking/set_running_face "data: false"** " and press Enter.
 
 <img class="common_img" src="../_static/media/chapter_3/section_8/media/image9.png" style="width:500px"  />
 
-2)  If you want to exit the game, you can enter command “**rosservice call /object_tracking/exit "{}"** ” and press Enter.
+2)  If you want to exit the game, you can enter command "**rosservice call /object_tracking/exit "{}"** " and press Enter.
 
 <img class="common_img" src="../_static/media/chapter_3/section_8/media/image10.png" style="width:500px"  />
 
@@ -1213,15 +1217,17 @@ The first parameter `(jetmax.position[0], jetmax.position[1], z)` represents the
 
 The second parameter `0.02` represents the servo runs for 0.02s.
 
+<p id="anchor_3_8_6"></p>
+
 ### 3.8.6 Camera Horizontal Installation
 
-<img src="../_static/media/chapter_3\section_8_1/media/image1.png" style="width:500px" />
+<img src="../_static/media/chapter_3/section_8_1/media/image1.png" style="width:500px" />
 
 ## 3.9 Emotion Recognition
 
 ### 3.9.1 Preparation
 
-Before playing this game, you need to install the pen to the end of the robotic arm. For the installation instruction, you can refer to “ **[5. Various End-of-tools-> 5.3 Pen]()**”
+Before playing this game, you need to install the pen to the end of the robotic arm. For the installation instruction, you can refer to " **[5. Various End-of-tools-> 5.3 Pen](https://wiki.hiwonder.com/projects/JetMax/en/latest/docs/5_Various_End-of-tools.html#pen)**"
 
 ### 3.9.2 Program logic 
 
@@ -1253,29 +1259,29 @@ The source code of the program is located in **/Home/ros/src/jetmax_demos/script
 
 <img class="common_img" src="../_static/media/chapter_3/section_9/media/image3.png" style="width:50px" />The entered command should be case sensitive. And the keywords can be complemented by Tab key.
 
-1)  Connect to the system desktop through NoMachine. For detailed instruction, you can refer to “**[3.1 Set Development Environment]()**”. Then double click <img class="common_img" src="../_static/media/chapter_3/section_9/media/image4.png" style="width:50px"  /> to open the terminal.
+1)  Connect to the system desktop through NoMachine. For detailed instruction, you can refer to "**[3.1 Set Development Environment](#anchor_3_1)**". Then double click <img src="../_static/media/chapter_3/section_9/media/image4.png" style="width:50px"  /> to open the terminal.
 
-2. Enter command “**cd ros/src/jetmax_demos/scripts**” and press Enter to enter the directory storing the game programs.
+2. Enter command "**cd ros/src/jetmax_demos/scripts**" and press Enter to enter the directory storing the game programs.
 
-   ```py
-   cd ros/src/jetmax_demos/scripts
-   ```
+```bash
+cd ros/src/jetmax_demos/scripts
+```
 
-3)  In order to avoid memory being occupied and affecting the start of emotion recognition game, you need to enter command “**./kill_app_funcs.sh**” to quit other games.
-
-<img class="common_img" src="../_static/media/chapter_3/section_9/media/image6.png" style="width:500px"  />
-
-4)  At this time, enter password to grant the permission to execute the previous command. And the password is “**hiwonder**”. Pay attention to that the input interface will not show up when you enter the password.
+3)  In order to avoid memory being occupied and affecting the start of emotion recognition game, you need to enter command "**./kill_app_funcs.sh**" to quit other games.
 
 <img class="common_img" src="../_static/media/chapter_3/section_9/media/image6.png" style="width:500px"  />
 
-5. At last, enter command “**rosrun jetmax_demos face_expression.py**” and press Enter to start the game.
+4)  At this time, enter password to grant the permission to execute the previous command. And the password is "**hiwonder**". Pay attention to that the input interface will not show up when you enter the password.
 
-   ```py
-   rosrun jetmax_demos face_expression.py
-   ```
+<img class="common_img" src="../_static/media/chapter_3/section_9/media/image6.png" style="width:500px"  />
 
-6)  If you want to exit this game, you can press “**Ctrl+C**” in the terminal interface. If it fails to exit, you can try again.
+5. At last, enter command "**rosrun jetmax_demos face_expression.py**" and press Enter to start the game.
+
+```bash
+rosrun jetmax_demos face_expression.py
+```
+
+6)  If you want to exit this game, you can press "**Ctrl+C**" in the terminal interface. If it fails to exit, you can try again.
 
 ### 3.9.4 Function realization
 
@@ -1299,17 +1305,17 @@ The corresponding display content of your emotion is as follow.
 |     Disgust      | Disgust emoji  |
 |    Poker Face    | Neutral emoji  |
 
-<img class="common_img" src="../_static/media/chapter_3\section_9/media/image8.jpeg" style="width:500px"  />
+<img class="common_img" src="../_static/media/chapter_3/section_9/media/image8.jpeg" style="width:500px"  />
 
 ### 3.9.5 Camera Horizontal Installation
 
-<img class="common_img" src="../_static/media/chapter_3\section_9_1/media/image1.png" style="width:500px" />
+<img class="common_img" src="../_static/media/chapter_3/section_9_1/media/image1.png" style="width:500px" />
 
 ## 3.10 Gesture Recognition
 
 ### 3.10.1 Preparation
 
-When playing this game, please install the camera of the robotic arm horizontally. For installation details, you can refer to “**[3.10.5 Camera Horizontal Installation]()**” in this folder.
+When playing this game, please install the camera of the robotic arm horizontally. For installation details, you can refer to "**[3.10.5 Camera Horizontal Installation](#anchor_3_10_5)**" in this folder.
 
 ### 3.10.2 Program logic
 
@@ -1317,7 +1323,7 @@ The process of gesture recognition is divided into 2 parts.
 
 **Step 1: process the image**
 
-Firstly, register and initialize the node of gesture recognition game to ensure the program can run under the ROS framework. Then, subscribe to the topic “**/usb_cam/image_rect_color**”, released by the camera, to obtain the image data of the human face.
+Firstly, register and initialize the node of gesture recognition game to ensure the program can run under the ROS framework. Then, subscribe to the topic "**/usb_cam/image_rect_color**", released by the camera, to obtain the image data of the human face.
 
 Next, transform the form of the image data from ROS image to numpy form. Through image flipping and color space transformation, the initially processed inspection screen will be obtained.
 
@@ -1333,37 +1339,37 @@ At last, call API function `draw_landmarks()` of MediaPipe and connect these 21 
 
 The source code of the program is located in **/Home/ros/src/jetmax_demos/scripts/hand_gesture.py**
 
-<img class="common_img" src="../_static/media/chapter_3\section_10\media\image2.png" style="width:500px"  />
+<img class="common_img" src="../_static/media/chapter_3/section_10/media/image2.png" style="width:500px"  />
 
 ### 3.10.3 Operation steps
 
-<img class="common_img" src="../_static/media/chapter_3\section_10\media\image3.png" style="width:50px" />The entered command should be case sensitive and the keywords can be complemented by Tab key.
+<img class="common_img" src="../_static/media/chapter_3/section_10/media/image3.png" style="width:50px" />The entered command should be case sensitive and the keywords can be complemented by Tab key.
 
-1. Connect to the system desktop through No Machine. For detailed instruction, you can refer to “**[3.1 Set Development Environment]()**”.
+1. Connect to the system desktop through No Machine. For detailed instruction, you can refer to "**[3.1 Set Development Environment](#anchor_3_1)**".
 
-   Then double click <img class="common_img" src="../_static/media/chapter_3\section_10\media\image4.png" style="width:50px"  /> to open the terminal.
+Then double click <img src="../_static/media/chapter_3/section_10/media/image4.png" style="width:50px"  /> to open the terminal.
 
-2. Enter command “**cd ros/src/jetmax_demos/scripts**” and press Enter to enter the directory storing the game programs.
+2. Enter command "**cd ros/src/jetmax_demos/scripts**" and press Enter to enter the directory storing the game programs.
 
-   ```py
-   cd ros/src/jetmax_demos/scripts
-   ```
+```bash
+cd ros/src/jetmax_demos/scripts
+```
 
-3)  In order to avoid memory being occupied and affecting the start of gesture recognition game, please enter command “**./kill_app_funcs.sh**” to exit other games.
+3)  In order to avoid memory being occupied and affecting the start of gesture recognition game, please enter command "**./kill_app_funcs.sh**" to exit other games.
 
-<img class="common_img" src="../_static/media/chapter_3\section_10\media\image6.png" style="width:500px"  />
+<img class="common_img" src="../_static/media/chapter_3/section_10/media/image6.png" style="width:500px"  />
 
-4)  At this time, enter password to grant the permission to execute the previous command. And the password is “**hiwonder**”. Pay attention to that the input interface will not show up when you enter the password.
+4)  At this time, enter password to grant the permission to execute the previous command. And the password is "**hiwonder**". Pay attention to that the input interface will not show up when you enter the password.
 
-<img class="common_img" src="../_static/media/chapter_3\section_10\media\image6.png" style="width:500px"  />
+<img class="common_img" src="../_static/media/chapter_3/section_10/media/image6.png" style="width:500px"  />
 
-5. At last, enter command “**rosrun jetmax_demos hand_gesture.py**” and press Enter to start the game.
+5. At last, enter command "**rosrun jetmax_demos hand_gesture.py**" and press Enter to start the game.
 
-   ```py
-   rosrun jetmax_demos hand_gesture.py
-   ```
+```bash
+rosrun jetmax_demos hand_gesture.py
+```
 
-6)  If you want to exit this game, you can press “**Ctrl+C**”. If it fails to exit the game, you can try again.
+6)  If you want to exit this game, you can press "**Ctrl+C**". If it fails to exit the game, you can try again.
 
 ### 3.10.4 Function realization
 
@@ -1383,6 +1389,8 @@ The corresponding gesture name of your gesture is as follow.
 | Make OK gesture  |     OK     |
 |   Make a heart   | hand_heart |
 
+<p id="anchor_3_10_5"></p>
+
 ### 3.10.5 Camera Horizontal Installation
 
-<img class="common_img" src="../_static/media/chapter_3\section_10_1/media/image1.png" style="width:500px" />
+<img class="common_img" src="../_static/media/chapter_3/section_10_1/media/image1.png" style="width:500px" />
