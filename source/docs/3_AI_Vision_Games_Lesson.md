@@ -855,7 +855,7 @@ At last, call the OpenCV built-in function `cv2.circle()` to frame the target. T
 
 ### 3.5.3 Operation Steps
 
-<img class="common_img" src="../_static/media/chapter_3/section_5/media/image3.png" style="width:50px" />The entered command should be case sensitive. And the keywords can be complemented by Tab key.
+The entered command should be case sensitive. And the keywords can be complemented by Tab key.
 
 * **Enter the game** 
 
@@ -943,7 +943,7 @@ The source code of the program lies in **/Home/ros/src/jetmax_demos/scripts/visu
 
 ### 3.6.3 Operation steps
 
-<img class="common_img" src="../_static/media/chapter_3/section_6/media/image3.png" style="width:50px" />The entered command should be case sensitive. And the keywords can be complemented by Tab key.
+The entered command should be case sensitive. And the keywords can be complemented by Tab key.
 
 1. Turn on JetMax and connect to the system desktop through NoMachine.
 
@@ -1011,7 +1011,7 @@ The source code of the program is located in **/Home/ros/src/jetmax_buildin_func
 
 ### 3.7.3 Operation Steps
 
-<img class="common_img" src="../_static/media/chapter_3/section_7/media/image3.png" style="width:50px" />The entered command should be case sensitive. And the keywords can be complemented by Tab key.
+The entered command should be case sensitive. And the keywords can be complemented by Tab key.
 
 * **Enter the game** 
 
@@ -1089,7 +1089,7 @@ The source code of the program is located in **/Home/ros/src/ jetmax_buildin_fun
 
 ### 3.8.3 Operation steps
 
-<img class="common_img" src="../_static/media/chapter_3/section_8/media/image3.png" style="width:50px" />The entered command should be case sensitive. And the keywords can be complemented by Tab key.
+The entered command should be case sensitive. And the keywords can be complemented by Tab key.
 
 * **Enter the game**
 
@@ -1221,7 +1221,7 @@ The second parameter `0.02` represents the servo runs for 0.02s.
 
 ### 3.8.6 Camera Horizontal Installation
 
-<img src="../_static/media/chapter_3/section_8_1/media/image1.png" style="width:500px" />
+<img class="common_img" src="../_static/media/chapter_3/section_8_1/media/image1.png" style="width:500px" />
 
 ## 3.9 Emotion Recognition
 
@@ -1257,7 +1257,7 @@ The source code of the program is located in **/Home/ros/src/jetmax_demos/script
 
 ### 3.9.3 Operation steps
 
-<img class="common_img" src="../_static/media/chapter_3/section_9/media/image3.png" style="width:50px" />The entered command should be case sensitive. And the keywords can be complemented by Tab key.
+The entered command should be case sensitive. And the keywords can be complemented by Tab key.
 
 1)  Connect to the system desktop through NoMachine. For detailed instruction, you can refer to "**[3.1 Set Development Environment](#anchor_3_1)**". Then double click <img src="../_static/media/chapter_3/section_9/media/image4.png" style="width:50px"  /> to open the terminal.
 
@@ -1343,7 +1343,7 @@ The source code of the program is located in **/Home/ros/src/jetmax_demos/script
 
 ### 3.10.3 Operation steps
 
-<img class="common_img" src="../_static/media/chapter_3/section_10/media/image3.png" style="width:50px" />The entered command should be case sensitive and the keywords can be complemented by Tab key.
+The entered command should be case sensitive and the keywords can be complemented by Tab key.
 
 1. Connect to the system desktop through No Machine. For detailed instruction, you can refer to "**[3.1 Set Development Environment](#anchor_3_1)**".
 

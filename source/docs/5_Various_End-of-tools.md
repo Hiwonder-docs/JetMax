@@ -2,15 +2,17 @@
 
 ## 5.1 Big Gripper
 
+<p id="anchor_5_1_1"></p>
+
 ### 5.1.1 Big Gripper Installation
 
-<img class="common_img" src="../_static/media/chapter_5\section_1/media/image1.png" style="width:500px" />
+<img class="common_img" src="../_static/media/chapter_5/section_1/media/image1.png" style="width:500px" />
 
 ### 5.1.2 Object Sorting
 
 * **Preparation** 
 
-In this lesson, you need to install the big gripper on the end of the robotic arm. For the installation details, you can refer to “**[5.1.1 Big Gripper Installation]()**” in this folder.
+In this lesson, you need to install the big gripper on the end of the robotic arm. For the installation details, you can refer to "**[5.1.1 Big Gripper Installation](#anchor_5_1_1)**" in this folder.
 
 * **Program logic** 
 
@@ -36,53 +38,55 @@ Then, the rotation angle of the servo can be obtained through the inverse kinema
 
 The source code of the program is stored in **/Home/ros/src/jetmax_demos/scripts/obj_classification.py**
 
-<img class="common_img" src="../_static/media/chapter_5\section_1_1\media\image2.png" style="width:500px"  />
+<img class="common_img" src="../_static/media/chapter_5/section_1_1/media/image2.png" style="width:500px"  />
 
 * **Operation steps**
 
-<img class="common_img" src="../_static/media/chapter_5\section_1_1\media\image3.png" style="width:50px" />The entered command should be case sensitive and the keywords can be completed by Tab key.
+<img class="common_img" src="../_static/media/chapter_5/section_1_1/media/image3.png" style="width:50px" />The entered command should be case sensitive and the keywords can be completed by Tab key.
 
-1. According to the previous tutorial, connect the computer to system desktop through NoMachine and double click <img class="common_img" src="../_static/media/chapter_5\section_1_1\media\image4.png" style="width:50px"  /> to open the terminal.
+1. According to the previous tutorial, connect the computer to system desktop through NoMachine and double click <img src="../_static/media/chapter_5/section_1_1/media/image4.png" style="width:50px"  /> to open the terminal.
 
-2. Enter commend “**cd ros/src/jetmax_demos/scripts**” and press Enter to enter the directory storing the game program.
+2. Enter commend "**cd ros/src/jetmax_demos/scripts**" and press Enter to enter the directory storing the game program.
 
-   ```py
-   cd ros/src/jetmax_demos/scripts
-   ```
+```bash
+cd ros/src/jetmax_demos/scripts
+```
 
-3)  To avoid occupying the memory and affect the starting of object sorting game, please enter command “ **./kill_app_funcs.sh**” to exit other games.
+3)  To avoid occupying the memory and affect the starting of object sorting game, please enter command " **./kill_app_funcs.sh**" to exit other games.
 
-<img class="common_img" src="../_static/media/chapter_5\section_1_1\media\image6.png" style="width:500px"  />
+<img class="common_img" src="../_static/media/chapter_5/section_1_1/media/image6.png" style="width:500px"  />
 
-4)  At this time, enter password to grant the permission to execute the previous command. And the password is “**hiwonder**”. Pay attention to that the pass word will be hidden when you enter the password.
+4)  At this time, enter password to grant the permission to execute the previous command. And the password is "**hiwonder**". Pay attention to that the pass word will be hidden when you enter the password.
 
-<img class="common_img" src="../_static/media/chapter_5\section_1_1\media\image6.png" style="width:500px"  />
+<img class="common_img" src="../_static/media/chapter_5/section_1_1/media/image6.png" style="width:500px"  />
 
-5. Lastly, enter commend “**rosrun jetmax_demos obj_classification.py**” and press Enter to start the game.
+5. Lastly, enter commend "**rosrun jetmax_demos obj_classification.py**" and press Enter to start the game.
 
-   ```py
-   rosrun jetmax_demos obj_classification.py
-   ```
+```bash
+rosrun jetmax_demos obj_classification.py
+```
 
-6)  If you want to exit this game, you can press “**Ctrl+C**”. If it fails to exit, please try again.
+6)  If you want to exit this game, you can press "**Ctrl+C**". If it fails to exit, please try again.
 
 * **Function realization**
 
 After starting the game, the robotic arm will begin to recognize the vegetable and fruit within its vision, then pick them to the corresponding basket.
 
-<img class="common_img" src="../_static/media/chapter_5\section_1_1/media/image8.jpeg" style="width:500px"  />
+<img class="common_img" src="../_static/media/chapter_5/section_1_1/media/image8.jpeg" style="width:500px"  />
 
 ## 5.2 Electromagnetic Suction Cup
 
+<p id="anchor_5_2_1"></p>
+
 ### 5.2.1 Electromagnetic Suction Cup Installation
 
-<img class="common_img" src="../_static/media/chapter_5\section_2_1/media/image1.png" style="width:500px" />
+<img class="common_img" src="../_static/media/chapter_5/section_2_1/media/image1.png" style="width:500px" />
 
 ### 5.2.2 Screw Sorting
 
 * **Preparation** 
 
-Before playing this game, you need to install the electromagnetic suction cup on the end of the robotic arm. For installation details, please refer to “**[5.2.1 Electromagnetic Suction Cup]()**” in this folder.
+Before playing this game, you need to install the electromagnetic suction cup on the end of the robotic arm. For installation details, please refer to "**[5.2.1 Electromagnetic Suction Cup](#anchor_5_2_1)**" in this folder.
 
 * **Program logic**
 
@@ -100,59 +104,61 @@ Having distinguished the screws from the nuts, start the sorting sub thread of t
 
 Then, in order to improve the efficiency to suck the object, we need to calculate the distance between the object current position and the placing position and set the rotation speed based on the distance.
 
-Finally, calculate the angle of the robotic arm relative to the central axis. Then control the corresponding angle of the suction cup rotation and control the robotic arm rotate to the object and suck it to the placing area. After that, the terminal will display “**FINISHED**” as the successful sorting feedback.
+Finally, calculate the angle of the robotic arm relative to the central axis. Then control the corresponding angle of the suction cup rotation and control the robotic arm rotate to the object and suck it to the placing area. After that, the terminal will display "**FINISHED**" as the successful sorting feedback.
 
 The source code of the program is stored in **/Home/ros/src/jetmax_demos/scripts/screw_nut.py**
 
-<img class="common_img" src="../_static/media/chapter_5\section_2_2\media\image2.png" style="width:500px"  />
+<img class="common_img" src="../_static/media/chapter_5/section_2_2/media/image2.png" style="width:500px"  />
 
 * **Operation steps**
 
-<img class="common_img" src="../_static/media/chapter_5\section_2_2\media\image3.png" style="width:50px" />The entered command should be case sensitive and the key words can be complemented by Tab key.
+<img class="common_img" src="../_static/media/chapter_5/section_2_2/media/image3.png" style="width:50px" />The entered command should be case sensitive and the key words can be complemented by Tab key.
 
-1. According to the previous tutorial, connect the computer to system desktop through NoMachine. Double click <img class="common_img" src="../_static/media/chapter_5\section_2_2\media\image4.png" style="width:50px"  /> and open the terminal.
+1. According to the previous tutorial, connect the computer to system desktop through NoMachine. Double click <img src="../_static/media/chapter_5/section_2_2/media/image4.png" style="width:50px"  /> and open the terminal.
 
-2. Enter command “**cd ros/src/jetmax_demos/scripts**” and press Enter to enter the directory storing the game program.
+2. Enter command "**cd ros/src/jetmax_demos/scripts**" and press Enter to enter the directory storing the game program.
 
-   ```py
-   cd ros/src/jetmax_demos/scripts
-   ```
+```bash
+cd ros/src/jetmax_demos/scripts
+```
 
-3)  In order to avoid occupying the memory and affect the screw sorting game, please enter command “**./kill_app_funcs.sh**” to exit other game.
+3)  In order to avoid occupying the memory and affect the screw sorting game, please enter command "**./kill_app_funcs.sh**" to exit other game.
 
-<img class="common_img" src="../_static/media/chapter_5\section_2_2\media\image6.png" style="width:500px"  />
+<img class="common_img" src="../_static/media/chapter_5/section_2_2/media/image6.png" style="width:500px"  />
 
-4)  At this time, you need to input the password to grant the permission to execute the previous command. The password is “**hiwonder**”. Pay attention to that the password will be hidden when you enter the password.
+4)  At this time, you need to input the password to grant the permission to execute the previous command. The password is "**hiwonder**". Pay attention to that the password will be hidden when you enter the password.
 
-<img class="common_img" src="../_static/media/chapter_5\section_2_2\media\image6.png" style="width:500px"  />
+<img class="common_img" src="../_static/media/chapter_5/section_2_2/media/image6.png" style="width:500px"  />
 
-5. Lastly, enter command “ **rosrun jetmax_demos screw_nut.py**” and press Enter to start the game.
+5. Lastly, enter command " **rosrun jetmax_demos screw_nut.py**" and press Enter to start the game.
 
-   ```py
-   rosrun jetmax_demos screw_nut.py
-   ```
+```bash
+rosrun jetmax_demos screw_nut.py
+```
 
-6)  If you want to exit this game, you can press “**Ctrl+C**”. If it fails to exit, please try again.
+6)  If you want to exit this game, you can press "**Ctrl+C**". If it fails to exit, please try again.
 
 * **Function realization**
 
 When the game starts, the robotic arm will recognize the screws and nuts within vision. Then they will be sorted separately.
 
-<img class="common_img" src="../_static/media/chapter_5\section_2_2/media/image8.jpeg" style="width:500px"  />
+<img class="common_img" src="../_static/media/chapter_5/section_2_2/media/image8.jpeg" style="width:500px"  />
+
+<p id="anchor_5_3"></p>
 
 ## 5.3 Pen
 
 ### 5.3.1 Pen Installation
 
-<img class="common_img" src="../_static/media/chapter_5\section_3_1\media\image1.png" style="width:500px" />
+<img class="common_img" src="../_static/media/chapter_5/section_3_1/media/image1.png" style="width:500px" />
 
-<img class="common_img" src="../_static/media/chapter_5\section_3_1/media/image2.jpeg" style="width:500px" />
+<img class="common_img" src="../_static/media/chapter_5/section_3_1/media/image2.jpeg" style="width:500px" />
 
 ### 5.3.2 Draw Stick Figure
 
 * **Preparation**
 
-Before starting this game, you need to install the pen on the end of the robotic arm. For installation details, you can refer to “**[5.3.1 Pen Installation]()**”.
+Before starting this game, you need to install the pen on the end of the robotic arm. For installation details, you can refer to "**[5.3.1 Pen Installation](#anchor_5_3)**".
 
 * **Program logic**
 
@@ -172,51 +178,51 @@ Call the function `line_interpolation()` to interpolate the path between the sta
 
 The source code of the program is stored in **/Home/ros/src/jetmax_demos/scripts/simple_draw.py**
 
-<img class="common_img" src="../_static/media/chapter_5\section_3_2\media\image2.jpeg" style="width:500px"  />
+<img class="common_img" src="../_static/media/chapter_5/section_3_2/media/image2.jpeg" style="width:500px"  />
 
 * **Operation steps**
 
-1. According to the previous tutorial, connect the computer to Jetson Nano desktop through NoMachine and double click <img class="common_img" src="../_static/media/chapter_5\section_3_2\media\image3.png" style="width:50px"  /> to open the command line terminal.
+1. According to the previous tutorial, connect the computer to Jetson Nano desktop through NoMachine and double click <img src="../_static/media/chapter_5/section_3_2/media/image3.png" style="width:50px"  /> to open the command line terminal.
 
-2. Firstly, enter “**cd ros/src/jetmax_demos/scripts**” command and press Enter to enter the directory storing the game program.
+2. Firstly, enter "**cd ros/src/jetmax_demos/scripts**" command and press Enter to enter the directory storing the game program.
 
-   ```py
-   cd ros/src/jetmax_demos/scripts
-   ```
+```bash
+cd ros/src/jetmax_demos/scripts
+```
 
-3. Next, enter “**python3**” to enter the python interface.
+3. Next, enter "**python3**" to enter the python interface.
 
-   ```py
-   python3
-   ```
+```bash
+python3
+```
 
-4. Then, enter “**import simple_draw**” command to import the picture drawing module.
+4. Then, enter "**import simple_draw**" command to import the picture drawing module.
 
-   ```py
-   import simple_draw
-   ```
+```bash
+import simple_draw
+```
 
-5. Lastly, enter “**simple_draw.draw_ngc('gcode/tony.ngc')**” command and press Enter. Then the robotic arm finishes drawing the picture.
+5. Lastly, enter "**simple_draw.draw_ngc('gcode/tony.ngc')**" command and press Enter. Then the robotic arm finishes drawing the picture.
 
-   ```py
-   simple_draw.draw_ngc('gcode/tony.ngc')
-   ```
+```bash
+simple_draw.draw_ngc('gcode/tony.ngc')
+```
 
-6)  If you want to close the python interface, you can enter “**exit()**”.
+6)  If you want to close the python interface, you can enter "**exit()**".
 
-<img class="common_img" src="../_static/media/chapter_5\section_3_2\media\image8.png" style="width:500px"  />
+<img class="common_img" src="../_static/media/chapter_5/section_3_2/media/image8.png" style="width:500px"  />
 
 * **Function realization**
 
-After the command is entered, the robotic arm will control the pen to draw the stick figure of iron man’s head.
+After the command is entered, the robotic arm will control the pen to draw the stick figure of iron man's head.
 
-<img class="common_img" src="../_static/media/chapter_5\section_3_2/media/image9.jpeg" style="width:500px"  />
+<img class="common_img" src="../_static/media/chapter_5/section_3_2/media/image9.jpeg" style="width:500px"  />
 
 ### 5.3.3 Emotion Recognition and Drawing
 
 * **Preparation**
 
-Before playing this game, you need to install the pen to the end of the robotic arm. For the installation instruction, you can refer to “**[5. Various End-of-tools-> 5.3 Pen]()**”
+Before playing this game, you need to install the pen to the end of the robotic arm. For the installation instruction, you can refer to "**[5. Various End-of-tools-> 5.3 Pen](#anchor_5_3)**"
 
 * **Program logic** 
 
@@ -242,35 +248,35 @@ Firstly, extract the recognized face data and the grayscale will be obtained by 
 
 The source code of the program is located in **/Home/ros/src/jetmax_demos/scripts/face_expression_draw.py**
 
-<img class="common_img" src="../_static/media/chapter_5\section_3_3\media\image2.png" style="width:500px"  />
+<img class="common_img" src="../_static/media/chapter_5/section_3_3/media/image2.png" style="width:500px"  />
 
 * **Operation steps**
 
-<img class="common_img" src="../_static/media/chapter_5\section_3_3\media\image3.png" style="width:50px" />The entered command should case sensitive and the keywords can be complemented by **Tab** key.
+<img class="common_img" src="../_static/media/chapter_5/section_3_3/media/image3.png" style="width:50px" />The entered command should case sensitive and the keywords can be complemented by **Tab** key.
 
-1. Connect to the system desktop through NoMachine. For detailed instruction, you can refer to “**[3.1 Set Development Environment]()**”. Double click <img class="common_img" src="../_static/media/chapter_5\section_3_3\media\image4.png" style="width:50px"  /> to open the terminal.
+1. Connect to the system desktop through NoMachine. For detailed instruction, you can refer to "**[3.1 Set Development Environment](https://wiki.hiwonder.com/projects/JetMax/en/latest/docs/3_AI_Vision_Games_Lesson.html#set-development-environment)**". Double click <img src="../_static/media/chapter_5/section_3_3/media/image4.png" style="width:50px"  /> to open the terminal.
 
-2. Enter command “**cd ros/src/jetmax_demos/scripts**” and press Enter to enter the directory storing the game program.
+2. Enter command "**cd ros/src/jetmax_demos/scripts**" and press Enter to enter the directory storing the game program.
 
-   ```py
-   cd ros/src/jetmax_demos/scripts
-   ```
+```bash
+cd ros/src/jetmax_demos/scripts
+```
 
-3)  In order to avoid memory being occupied and affecting the start of emotion recognition and drawing game, you need to enter command “**./kill_app_funcs.sh**” to exit other games.
+3)  In order to avoid memory being occupied and affecting the start of emotion recognition and drawing game, you need to enter command "**./kill_app_funcs.sh**" to exit other games.
 
-<img class="common_img" src="../_static/media/chapter_5\section_3_3\media\image6.png" style="width:500px"  />
+<img class="common_img" src="../_static/media/chapter_5/section_3_3/media/image6.png" style="width:500px"  />
 
-4)  At this time, you need to enter the password to grant the permission to execute the previous command. The password is “**hiwonder**”. Pay attention to that the password will be hidden when you input the password.
+4)  At this time, you need to enter the password to grant the permission to execute the previous command. The password is "**hiwonder**". Pay attention to that the password will be hidden when you input the password.
 
-<img class="common_img" src="../_static/media/chapter_5\section_3_3\media\image6.png" style="width:500px"  />
+<img class="common_img" src="../_static/media/chapter_5/section_3_3/media/image6.png" style="width:500px"  />
 
-5. Enter command “**rosrun jetmax_demos face_expression_draw.py**” and press Enter to start the game.
+5. Enter command "**rosrun jetmax_demos face_expression_draw.py**" and press Enter to start the game.
 
-   ```py
-   rosrun jetmax_demos face_expression_draw.py
-   ```
+```bash
+rosrun jetmax_demos face_expression_draw.py
+```
 
-6)  If you want to exit this game, you can press “**Ctrl+C**”. If it fails to exit the game, you can try again.
+6)  If you want to exit this game, you can press "**Ctrl+C**". If it fails to exit the game, you can try again.
 
 * **Function Realization**
 
@@ -290,14 +296,14 @@ The corresponding display content of your emotion is as follow.
 |      Happy       |  Happy emoji  |
 |    Poker face    | Neutral emoji |
 
-<img class="common_img" src="../_static/media/chapter_5\section_3_3/media/image8.jpeg" style="width:500px"  />
+<img class="common_img" src="../_static/media/chapter_5/section_3_3/media/image8.jpeg" style="width:500px"  />
 
 ## 5.4 Small Gripper
 
 ### 5.4.1 FlatView
 
-<img class="common_img" src="../_static/media/chapter_5\section_4/media/image1.png" style="width:500px" />
+<img class="common_img" src="../_static/media/chapter_5/section_4/media/image1.png" style="width:500px" />
 
 ### 5.4.2 TopView
 
-<img class="common_img" src="../_static/media/chapter_5\section_4_1/media/image1.png" style="width:500px" />
+<img class="common_img" src="../_static/media/chapter_5/section_4_1/media/image1.png" style="width:500px" />

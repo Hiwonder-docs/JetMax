@@ -30,27 +30,27 @@ There are two main forms of using OpencCV module, command line call and program 
 
 * **Command Line Call**
 
-1. First, enter “**python3**” command in command line terminal and press “**Enter**” to start the interactive environment of Python. (Take the terminal interface after connecting SSH as an example )
+1. First, enter "**python3**" command in command line terminal and press "**Enter**" to start the interactive environment of Python. (Take the terminal interface after connecting SSH as an example )
 
-   <img class="common_img" src="../_static/media/chapter_7\section_2\media\image2.png" style="width:500px"  />
+<img class="common_img" src="../_static/media/chapter_7/section_2/media/image2.png" style="width:500px"  />
 
-2. Then, enter “**import cv2**” command to import OpenCV module, and then you can directly call the function in it.
+2. Then, enter "**import cv2**" command to import OpenCV module, and then you can directly call the function in it.
 
-   <img class="common_img" src="../_static/media/chapter_7\section_2\media\image3.png" style="width:500px"  />
+<img class="common_img" src="../_static/media/chapter_7/section_2/media/image3.png" style="width:500px"  />
 
 * **Program Call**
 
-1. First, you need to create a new program file with suffix .py, such as “**test.py**”.
+1. First, you need to create a new program file with suffix .py, such as "**test.py**".
 
-   <img class="common_img" src="../_static/media/chapter_7\section_2\media\image4.png" style="width:200px"  />
+<img class="common_img" src="../_static/media/chapter_7/section_2/media/image4.png" style="width:200px"  />
 
-2. Then, enter “**import cv2**” command in .py file and then import module before using OpenCV function.
+2. Then, enter "**import cv2**" command in .py file and then import module before using OpenCV function.
 
-   <img class="common_img" src="../_static/media/chapter_7\section_2\media\image5.png" style="width:500px"  />
+<img class="common_img" src="../_static/media/chapter_7/section_2/media/image5.png" style="width:500px"  />
 
 ### 7.2.3 OpenCV Module and Common Function
 
-In the following lesson, let’s learn about some functions commonly used by OpenCV：
+In the following lesson, let's learn about some functions commonly used by OpenCV：
 
 1)  **`cv2.imread(filepath,flags)` function for read a image.**
 
@@ -110,7 +110,7 @@ Read the image: `cv2.imread(Location, Model)`
 
 `Model`——Image loading mode, the first is cv2.IMREAD_COLOR, which is used to load a color image, but does not load its own Alpha channel (recording transparency); the second is cv2.IMREAD_GRAYSCALE, which is used to load one Grayscale image; the third type is cv2.IMREAD_UNCHANGED, which loads the Alpha channel while loading the image.
 
-Display image: `cv2.imshow(‘Name’,Pic)`
+Display image: `cv2.imshow('Name',Pic)`
 
 `Name`——The name of the window displaying the image.
 
@@ -118,7 +118,7 @@ Display image: `cv2.imshow(‘Name’,Pic)`
 
 Example: Create a new py file, and put a picture with the full name `camera.png` in the same folder of the py file, enter the following code, you can see the image displayed after running, press any key to display the image hide.
 
-<img class="common_img" src="../_static/media/chapter_7\section_3\media\image2.jpeg" style="width:400px" />
+<img class="common_img" src="../_static/media/chapter_7/section_3/media/image2.jpeg" style="width:400px" />
 
 > [!NOTE]
 >
@@ -134,37 +134,37 @@ Camera initialization: `cv2.VideoCapture(Number)`.
 
 > [!NOTE]
 >
-> **Before running the program, run “sudo systemctl stop roscore” command to close Ros.**
+> **Before running the program, run "sudo systemctl stop roscore" command to close Ros.**
 
-When you complete the operations in this lesson, you need run “**sudo systemctl start roscore**” command to open Ros again. If it is opened, other games will be affected.
+When you complete the operations in this lesson, you need run "**sudo systemctl start roscore**" command to open Ros again. If it is opened, other games will be affected.
 
-If the robotic arm connects to the computer in direct connection mode, please set Number as “**http://192.168.149.1:8080/stream?topic=/usb_cam/image_rect_color**”. If the robotic arm connects to the computer in LAN mode, just modify 192.168.149.1 as IP address obtained in LAN mode.
+If the robotic arm connects to the computer in direct connection mode, please set Number as "**http://192.168.149.1:8080/stream?topic=/usb_cam/image_rect_color**". If the robotic arm connects to the computer in LAN mode, just modify 192.168.149.1 as IP address obtained in LAN mode.
 
 You can follow the steps below to connect to the computer remotely in LAN mode.
 
-**Step 1**: according to the tutorial in “**[2. Quick User Experience-> 2.1 APP Control-> 2.1.4 LAN Mode Connection]()**”, enter the LAN mode to obtain the corresponding IP address.
+**Step 1**: according to the tutorial in "**[2. Quick User Experience-> 2.1 APP Control-> 2.1.4 LAN Mode Connection](https://wiki.hiwonder.com/projects/JetMax/en/latest/docs/2_Quick_User_Experience.html#lan-mode-connection-optional)**", enter the LAN mode to obtain the corresponding IP address.
 
-<img class="common_img" src="../_static/media/chapter_7\section_3\media\image3.png" style="width:500px" />
+<img class="common_img" src="../_static/media/chapter_7/section_3/media/image3.png" style="width:500px" />
 
 Step 2: connect your computer to the WiFi.
 
-<img class="common_img" src="../_static/media/chapter_7\section_3\media\image4.png" style="width:500px"  />
+<img class="common_img" src="../_static/media/chapter_7/section_3/media/image4.png" style="width:500px"  />
 
 Step3: search the obtained IP address in NoMachine to connect the robotic arm remotely, The rest steps are the same as the direct connection mode.
 
-<img class="common_img" src="../_static/media/chapter_7\section_3\media\image5.png" style="width:500px"  />
+<img class="common_img" src="../_static/media/chapter_7/section_3/media/image5.png" style="width:500px"  />
 
 Read the first frame of the camera
 
 Capture-----it refers to camera object defined before.
 
-For example: display the camera image on the desktop. And you can press “**q**” key to remove the image.
+For example: display the camera image on the desktop. And you can press "**q**" key to remove the image.
 
-<img class="common_img" src="../_static/media/chapter_7\section_3\media\image6.png" style="width:500px"  />
+<img class="common_img" src="../_static/media/chapter_7/section_3/media/image6.png" style="width:500px"  />
 
 > [!NOTE]
 >
-> **`cv2.waitKey(delay)`** is waiting for keyboard input and can refresh the image in the video. `delay` in the bracket refers to wait time. After one frame is displayed, the next frame will be displayed in “**delay**” ms.
+> **`cv2.waitKey(delay)`** is waiting for keyboard input and can refresh the image in the video. `delay` in the bracket refers to wait time. After one frame is displayed, the next frame will be displayed in "**delay**" ms.
 
 ## 7.4 Image processing methods Introduction
 
@@ -228,13 +228,13 @@ The Canny edge detection algorithm actually uses the following 5 steps to proces
 
 3) Use Non-Maximum Suppression on the edge to eliminate spurious response caused by edge detection.
 
-4) Use dual thresholds on the detected edges to remove false positives, that is, determine which of the gradient values ​​are between Minval and Maxval are edges and which should be discarded.
+4) Use dual thresholds on the detected edges to remove false positives, that is, determine which of the gradient values are between Minval and Maxval are edges and which should be discarded.
 
 5) Analyze all edges and the connections between them, suppress isolated weak edges, to ensure that true edges are left and unobvious edges are eliminated.
 
 Example: Create a new py file, and put a picture with the full name "**camera.png**" in the same folder of the py file, enter the following code, after running, you can see the white outline of the image appears on the screen, and other places change It is black, and the image is hidden after pressing any key.
 
-<img class="common_img" src="../_static/media/chapter_7\section_4\media\image2.png" style="width:500px" />
+<img class="common_img" src="../_static/media/chapter_7/section_4/media/image2.png" style="width:500px" />
 
 ### 7.4.4 Contour detection
 
@@ -312,7 +312,7 @@ OpenCV can use the HoughCircles function to detect circles, which is similar to 
 
 Example: Create a new py file, and put a picture with the full name "camera.png" in the same folder of the py file, enter the following code, after running, you can see that the detected circle is marked with a green line on the screen Circle the outline and mark the center of the circle. Press any key to close the image window.
 
-<img class="common_img" src="../_static/media/chapter_7\section_4\media\image3.png" style="width:500px" />
+<img class="common_img" src="../_static/media/chapter_7/section_4/media/image3.png" style="width:500px" />
 
 If you want to detect polygons, you can combine the `cv2.findContours` function and the `cv2.approxPloyDP` function.
 
@@ -332,7 +332,7 @@ Before programming the facial recognition, copy the facial recognition XML file 
 
 Example: Detect a face through the camera and circle the face in a rectangle.
 
-<img class="common_img" src="../_static/media/chapter_7\section_5\media\image2.png" style="width:500px" />
+<img class="common_img" src="../_static/media/chapter_7/section_5/media/image2.png" style="width:500px" />
 
 Face recognition generally uses scripts to generate original sampled images at first. Detects human faces, crop the gray frame area, adjust it to a fixed size, and finally save it in a folder. This face data will be used to train the face recognition model later.
 
@@ -374,13 +374,15 @@ OpenCV belongs to the field of artificial intelligence. The above courses are ju
 
 ## 7.6 Color Recognition
 
+<p id="anchor_7_6_1"></p>
+
 ### 7.6.1 Camera Horizontal Installation
 
-<img class="common_img" src="../_static/media/chapter_7\section_6_1/media/image1.png" style="width:500px" />
+<img class="common_img" src="../_static/media/chapter_7/section_6_1/media/image1.png" style="width:500px" />
 
 ### 7.6.2 Getting Ready
 
-In this section, you need to adjust JetMax robotic arm to the flat view. For installation detail, you can refer to “**[7.6.1 Camera Horizontal Installation]()**” in this folder.
+In this section, you need to adjust JetMax robotic arm to the flat view. For installation detail, you can refer to "**[7.6.1 Camera Horizontal Installation](#anchor_7_6_1)**" in this folder.
 
 ### 7.6.3 Project Logic
 
@@ -392,7 +394,7 @@ Step 2: Image binarization
 
 OpenCV represents all pixels in an image with 0 and 1 and displays the pixel with a value of 0 in black and the pixel with a value 1 in white.
 
-Step 3: Dilation and Erosion
+Step 3: Dilation and Erosion
 
 The purpose of erosion process is to debur the boundaries of the image. Dilation process will expand the boundaries of the image to fill the non-targeted pixel points at the boundaries or inside of the targeted object.
 
@@ -406,27 +408,27 @@ Convert the recognized color objects (red, green and blue) into the coordinates 
 
 The source code of the program is located in **/Home/ros/src/Ai_JetMax/scripts/color_detect.py**
 
-<img class="common_img" src="D:/线上资料整理/1.Jetson系列/4. JetMax/7.OpenCV Basic Lesson/chapter_7/section_6/media/image2.png" style="width:500px" />
+<img class="common_img" src="../_static/media/chapter_7/section_6/media/image2.png" style="width:500px" />
 
 ### 7.6.4 Project Process
 
-<img class="common_img" src="D:/线上资料整理/1.Jetson系列/4. JetMax/7.OpenCV Basic Lesson/chapter_7/section_6/media/image3.png" style="width:50px" />The entered command must be strictly distinguished among uppercase, lowercase and spaces. In addition, you can press “**Tab**” to complete the keyword.
+<img class="common_img" src="../_static/media/chapter_7/section_6/media/image3.png" style="width:50px" />The entered command must be strictly distinguished among uppercase, lowercase and spaces. In addition, you can press "**Tab**" to complete the keyword.
 
-1. Double-click <img class="common_img" src="D:/线上资料整理/1.Jetson系列/4. JetMax/7.OpenCV Basic Lesson/chapter_7/section_6/media/image4.png" style="width:50px"  /> on system desktop.
+1. Double-click <img src="../_static/media/chapter_7/section_6/media/image4.png" style="width:50px"  /> on system desktop.
 
-2. Enter “**cd ros/src/Ai_JetMax**” command, and then press “Enter”to come to the category of game programming.
+2. Enter "**cd ros/src/Ai_JetMax**" command, and then press "Enter"to come to the category of game programming.
 
-   ```py
-   cd ros/src/Ai_JetMax
-   ```
+```bash
+cd ros/src/Ai_JetMax
+```
 
-3. Then, enter “**rosrun Ai_JetMax color_detect.py**” command and press “Enter” to start the game.
+3. Then, enter "**rosrun Ai_JetMax color_detect.py**" command and press "Enter" to start the game.
 
-   ```py
-   rosrun Ai_JetMax color_detect.py
-   ```
+```bash
+rosrun Ai_JetMax color_detect.py
+```
 
-4. If you want to exit the game programming, press “**Ctrl+C**” in the terminal interface. If the exit fails, you can press it multiple times.
+4. If you want to exit the game programming, press "**Ctrl+C**" in the terminal interface. If the exit fails, you can press it multiple times.
 
 ### 7.6.5 Project Outcome
 
@@ -436,15 +438,15 @@ The source code of the program is located in **/Home/ros/src/Ai_JetMax/scripts/c
 
 After running the program, JetMax will recognize the color of the objects within the detected range. When the object in red, green or blue is recognized, the terminal interface will frame the object and display the color name.
 
-<img class="common_img" src="D:/线上资料整理/1.Jetson系列/4. JetMax/7.OpenCV Basic Lesson/chapter_7/section_6/media/image7.png" style="width:500px"  />
+<img class="common_img" src="../_static/media/chapter_7/section_6/media/image7.png" style="width:500px"  />
 
 ### 7.6.6 Project Analyst
 
 After running the program, turn on the camera first through calling **`rospy.Subscriber`** function and retrieve the picture taken by the camera.
 
-<img class="common_img" src="D:/线上资料整理/1.Jetson系列/4. JetMax/7.OpenCV Basic Lesson/chapter_7/section_6/media/image8.png" style="width:500px"  />
+<img class="common_img" src="../_static/media/chapter_7/section_6/media/image8.png" style="width:500px"  />
 
-<img class="common_img" src="D:/线上资料整理/1.Jetson系列/4. JetMax/7.OpenCV Basic Lesson/chapter_7/section_6/media/image9.png" style="width:500px"  />
+<img class="common_img" src="../_static/media/chapter_7/section_6/media/image9.png" style="width:500px"  />
 
 After the camera is turned on, call **`image_proc(img)`** function, and then perform a series of operation, including Lab conversion, image binaryzation, corrosion, dilation, outline locating, colored object framing and giving recognition information feedback.
 
@@ -454,7 +456,7 @@ In the image information read by OpenCV, each frame is arranged by pixels compos
 
 Through calling **`cv2.cvtColor`** function, convert RGB color space into Lab color space. The program is as follow.
 
-  <img class="common_img" src="D:/线上资料整理/1.Jetson系列/4. JetMax/7.OpenCV Basic Lesson/chapter_7/section_6/media/image10.png" style="width:500px" />
+<img class="common_img" src="../_static/media/chapter_7/section_6/media/image10.png" style="width:500px" />
 
 Before conversion, the program reduce noise of the picture, that is use **`cv2.GaussianBlur`** function for Gaussian filter.
 
@@ -472,17 +474,17 @@ OpenCV represents all pixels in an image with 0 and 1. It displays the pixel wit
 
 Image binaryzation is performed through calling **`cv2.inRange`** function. The program is as follow:
 
-<img class="common_img" src="D:/线上资料整理/1.Jetson系列/4. JetMax/7.OpenCV Basic Lesson/chapter_7/section_6/media/image11.png" style="width:500px"  />
+<img class="common_img" src="../_static/media/chapter_7/section_6/media/image11.png" style="width:500px"  />
 
-- **Dilation and Erosion**
+- **Dilation and Erosion**
 
-In order to reduce interference and make the image smoother, we process the grayscale image obtained after the binarization by dilation and erosion.
+In order to reduce interference and make the image smoother, we process the grayscale image obtained after the binarization by dilation and erosion.
 
 The purpose of erosion process is to debur the boundaries of the image. Dilation process will expand the boundaries of the image to fill the targeted pixel points at the boundaries or inside of the non-targeted object.
 
 Call **`cv2.erode`** function for erosion and call **`cv2.dilate`** function for dilation. The program is as follow.
 
-<img class="common_img" src="D:/线上资料整理/1.Jetson系列/4. JetMax/7.OpenCV Basic Lesson/chapter_7/section_6/media/image12.png" style="width:500px"  />
+<img class="common_img" src="../_static/media/chapter_7/section_6/media/image12.png" style="width:500px"  />
 
 **`getStructuringElement`** function is used in processing. This function is used to generate structure element of different shapes.
 
@@ -496,13 +498,13 @@ All the previous steps on image is to obtain the location of the targeted object
 
 The contour is located through calling **`cv2.findContours`** function. The specific program as follow:
 
-<img class="common_img" src="D:/线上资料整理/1.Jetson系列/4. JetMax/7.OpenCV Basic Lesson/chapter_7/section_6/media/image13.png" style="width:500px" />
+<img class="common_img" src="../_static/media/chapter_7/section_6/media/image13.png" style="width:500px" />
 
 - **Frame the colored object**
 
 After locating the contour, by using **`cv2.circle`** function, draw 2 circles. One serves as center, the other is used to frame the colored object.
 
-<img class="common_img" src="D:/线上资料整理/1.Jetson系列/4. JetMax/7.OpenCV Basic Lesson/chapter_7/section_6/media/image14.png" style="width:500px"  />
+<img class="common_img" src="../_static/media/chapter_7/section_6/media/image14.png" style="width:500px"  />
 
 Take **`cv2.circle(img, (int(center_x), int(center_y)), int(r), hiwonder.COLORS[color_name.upper()], 2)`** for example.
 
@@ -518,29 +520,29 @@ The fifth parameter `2` represents the width of the circle line. The larger the 
 
 - **Recognition information feedback**
 
-  After the colored object is recognized, the following information will be given.
+After the colored object is recognized, the following information will be given.
 
 1. In the program, through using **`cv2.putText`** function, add the obtained color information.
 
-   <img class="common_img" src="D:/线上资料整理/1.Jetson系列/4. JetMax/7.OpenCV Basic Lesson/chapter_7/section_6/media/image15.png" style="width:500px"  />
+<img class="common_img" src="../_static/media/chapter_7/section_6/media/image15.png" style="width:500px"  />
 
-   The first parameter **`img`** represents the specific colored image with word explanation.
+The first parameter **`img`** represents the specific colored image with word explanation.
 
-   The second parameter **`color_name.upper()`** represents the color name of the detected object.
+The second parameter **`color_name.upper()`** represents the color name of the detected object.
 
-   The third parameter **`(int(center_x), int(center_y))`** represents the coordinate of the added words.
+The third parameter **`(int(center_x), int(center_y))`** represents the coordinate of the added words.
 
-   The fourth parameter **`cv2.FONT_HERSHEY_SIMPLEX`** represents the font of the added words.
+The fourth parameter **`cv2.FONT_HERSHEY_SIMPLEX`** represents the font of the added words.
 
-   The fifth parameter **`1.2`** represents the size of the added words.
+The fifth parameter **`1.2`** represents the size of the added words.
 
-   The sixth parameter **`(255, 255, 255)`** represents the color of the added words. These three values all ranges from 0 to 255. The words consist of three colors, including red, green and blue. The first value 255 represents red value, the second is green value, and the third is blue value.
+The sixth parameter **`(255, 255, 255)`** represents the color of the added words. These three values all ranges from 0 to 255. The words consist of three colors, including red, green and blue. The first value 255 represents red value, the second is green value, and the third is blue value.
 
-   The seventh parameter **`2`** represents the font weight of the added words.
+The seventh parameter **`2`** represents the font weight of the added words.
 
 2. In program, use **`cv2.line`** function to draw 2 straight line and a cross to offer location of the colored object.
 
-   <img class="common_img" src="D:/线上资料整理/1.Jetson系列/4. JetMax/7.OpenCV Basic Lesson/chapter_7/section_6/media/image16.png" style="width:500px"  />
+<img class="common_img" src="../_static/media/chapter_7/section_6/media/image16.png" style="width:500px"  />
 
 Take **`cv2.line(img, (int(img_w / 2), int(img_h / 2 - 10)), (int(img_w / 2), int(img_h / 2 + 10)), (0, 255, 255), 2)`** for example.
 
@@ -548,11 +550,11 @@ The first parameter **`img`** represents the specific colored image of the drawn
 
 The second parameter **`(int(img_w / 2), int(img_h / 2 - 10))`** represents the starting coordinate of the straight line
 
-The third parameter “**`(int(img_w / 2), int(img_h / 2 + 10))`**” represents the ending coordinate of the straight line.
+The third parameter "**`(int(img_w / 2), int(img_h / 2 + 10))`**" represents the ending coordinate of the straight line.
 
-The fourth parameter “**(0, 255, 255)**” represents the color of the straight line. The setting method is the same as that of the sixth parameter in **Recognition information feedback**
+The fourth parameter "**(0, 255, 255)**" represents the color of the straight line. The setting method is the same as that of the sixth parameter in **Recognition information feedback**
 
-The fifth parameter “**2**” represents the width of the line.
+The fifth parameter "**2**" represents the width of the line.
 
 ## 7.7 Color Threshold Adjustment
 
@@ -562,13 +564,13 @@ To solve this problem above, we will learn LacConfigClient tool in this section 
 
 ### 7.7.1 Start LacConfigClient
 
-1)  Open NoMachine software and double-click to open “**LacConfigClient**” in the interface.
+1)  Open NoMachine software and double-click to open "**LacConfigClient**" in the interface.
 
-<img class="common_img" src="../_static/media/chapter_7\section_7\media\image2.png" style="width:100px"  />
+<img class="common_img" src="../_static/media/chapter_7/section_7/media/image2.png" style="width:100px"  />
 
 2)  After entering the software, you can see the LacConfigClient interface shown as follow:
 
-<img class="common_img" src="../_static/media/chapter_7\section_7\media\image3.png" style="width:500px"  />
+<img class="common_img" src="../_static/media/chapter_7/section_7/media/image3.png" style="width:500px"  />
 
 > [!NOTE]
 >
@@ -580,14 +582,14 @@ The disLacConfigClient interface is divided into image display area and recognit
 
 |     **Area Name**      |                    **Area Distribution**                     |
 | :--------------------: | :----------------------------------------------------------: |
-|     Image display      | <img class="common_img" src="../_static/media/chapter_7\section_7/media/image4.png" style="width:500px"  /> |
-| Recognition adjustment | <img class="common_img" src="../_static/media/chapter_7\section_7/media/image5.png" style="width:500px"  /> |
+|     Image display      | <img src="../_static/media/chapter_7/section_7/media/image4.png" style="width:500px"  /> |
+| Recognition adjustment | <img src="../_static/media/chapter_7/section_7/media/image5.png" style="width:500px"  /> |
 
 - **Image Display Area**
 
 |                           **Icon**                           |                   **Function Instruction**                   |
 | :----------------------------------------------------------: | :----------------------------------------------------------: |
-| <img class="common_img" src="../_static/media/chapter_7\section_7/media/image4.png" style="width:500px"  /> | The left side is the image processed. The right side is the original image. |
+| <img src="../_static/media/chapter_7/section_7/media/image4.png" style="width:500px"  /> | The left side is the image processed. The right side is the original image. |
 
 - **Recognition Adjustment Area**
 
@@ -595,23 +597,23 @@ In recognition adjustment area, the color properties can be adjusted. The corres
 
 |                           **Icon**                           |                   **Function Instruction**                   |
 | :----------------------------------------------------------: | :----------------------------------------------------------: |
-| <img class="common_img" src="../_static/media/chapter_7\section_7/media/image6.png" style="width:500px"  /> | Used to adjust the value of the L component of the image. (The function of A and B sliders bar is similar to this, both for adjusting the value of the corresponding component of the image.) |
-| <img class="common_img" src="../_static/media/chapter_7\section_7/media/image7.png" style="width:500px"  /> |         Select the recognition color to be adjusted          |
-| <img class="common_img" src="../_static/media/chapter_7\section_7/media/image8.png" style="width:500px"  /> |            Used to save the adjusted effect value            |
-| <img class="common_img" src="../_static/media/chapter_7\section_7/media/image9.png" style="width:500px"  /> |        Used to add the types of the color recognized         |
-| <img class="common_img" src="../_static/media/chapter_7\section_7/media/image10.png" style="width:500px"  /> |           Used to apply the adjusted effect value            |
+| <img src="../_static/media/chapter_7/section_7/media/image6.png" style="width:500px"  /> | Used to adjust the value of the L component of the image. (The function of A and B sliders bar is similar to this, both for adjusting the value of the corresponding component of the image.) |
+| <img src="../_static/media/chapter_7/section_7/media/image7.png" style="width:500px"  /> |         Select the recognition color to be adjusted          |
+| <img src="../_static/media/chapter_7/section_7/media/image8.png" style="width:500px"  /> |            Used to save the adjusted effect value            |
+| <img src="../_static/media/chapter_7/section_7/media/image9.png" style="width:500px"  /> |        Used to add the types of the color recognized         |
+| <img src="../_static/media/chapter_7/section_7/media/image10.png" style="width:500px"  /> |           Used to apply the adjusted effect value            |
 
 ### 7.7.3 Adjust the Default Color Effect
 
 Take adjusting red as an example and the same method to other colors. The specific adjustment steps as follow:
 
-1)  Start LacConfigClient on the system desktop. After camera is connected, select “**red**” in the color selection box of the recognition adjustment area.
+1)  Start LacConfigClient on the system desktop. After camera is connected, select "**red**" in the color selection box of the recognition adjustment area.
 
-<img class="common_img" src="../_static/media/chapter_7\section_7\media\image11.jpeg" style="width:500px"  />
+<img class="common_img" src="../_static/media/chapter_7/section_7/media/image11.jpeg" style="width:500px"  />
 
 2)  Point the camera at the color you want to adjust. Then, drag the slider of L,A and B in recognition adjustment area to adjust threshold until the color area to be recognized in the left screen becomes white and other areas become black.
 
-<img class="common_img" src="../_static/media/chapter_7\section_7\media\image12.jpeg" style="width:500px"  />
+<img class="common_img" src="../_static/media/chapter_7/section_7/media/image12.jpeg" style="width:500px"  />
 
 LAB threshold adjustment parameters table:
 
@@ -625,13 +627,13 @@ Adjustment Tips:
 
 1.  Firstly, adjust the value of L,A and B in the left side of adjustment area to 0 and the right side to 225.
 
-2.  For example, we need to recognize red here. All red colors are near “**+a**” so keep the value of “**A**” component in the right side unchanged and drag the left slider to increase the A value.
+2.  For example, we need to recognize red here. All red colors are near "**+a**" so keep the value of "**A**" component in the right side unchanged and drag the left slider to increase the A value.
 
-3.  Then, modify the value of “**L**” and “**B**” components according to the surrounding. If the red is lighter, increase the value of “**L**” component in the left side. If the it is darker, decrease the value of "**L**" component in the right side. If the red is warmer, increase the value of "**B**" component in the left side; If it is colder, decrease the value of "**B**" component in the right side.
+3.  Then, modify the value of "**L**" and "**B**" components according to the surrounding. If the red is lighter, increase the value of "**L**" component in the left side. If the it is darker, decrease the value of "**L**" component in the right side. If the red is warmer, increase the value of "**B**" component in the left side; If it is colder, decrease the value of "**B**" component in the right side.
 
-4.  Next, click “**Save**” button in recognition area to save the adjusted parameter values.
+4.  Next, click "**Save**" button in recognition area to save the adjusted parameter values.
 
-<img class="common_img" src="../_static/media/chapter_7\section_7\media\image13.jpeg" style="width:500px"  />
+<img class="common_img" src="../_static/media/chapter_7/section_7/media/image13.jpeg" style="width:500px"  />
 
 ### 7.7.4 Add New Recognition Color 
 
@@ -639,20 +641,20 @@ In addition to the three built-in recognition colors, we can also add other colo
 
 1.  Adjust the LAB value of default colors to the LAB value of actual color.
 
-2.  Use “**Add**” button to add new recognition color.
+2.  Use "**Add**" button to add new recognition color.
 
 Based on the principle of easiest operation and fastest effect, this lesson only introduces the first method, we will introduce the first method in this lesson.
 
-We’ll take adding purple as an example. The specific steps as follow:
+We'll take adding purple as an example. The specific steps as follow:
 
-1)  Click “**LAB_Tool**” in the system desktop. After the camera is connected, select “**black**” in the red box.
+1)  Click "**LAB_Tool**" in the system desktop. After the camera is connected, select "**black**" in the red box.
 
-<img class="common_img" src="../_static/media/chapter_7\section_7\media\image14.jpeg" style="width:500px"  />
+<img class="common_img" src="../_static/media/chapter_7/section_7/media/image14.jpeg" style="width:500px"  />
 
 2)  Point the camera at purple color. Then, drag the corresponding sliders of L, A, and B until the color area to be recognized in the left screen becomes white and other areas become black.
 
-<img class="common_img" src="../_static/media/chapter_7\section_7\media\image15.jpeg" style="width:500px"  />
+<img class="common_img" src="../_static/media/chapter_7/section_7/media/image15.jpeg" style="width:500px"  />
 
-3. Click “**Save**” button in recognition area to save the adjusted parameter values.
+3. Click "**Save**" button in recognition area to save the adjusted parameter values.
 
-   <img class="common_img" src="../_static/media/chapter_7\section_7/media/image16.jpeg" style="width:500px"  />
+<img class="common_img" src="../_static/media/chapter_7/section_7/media/image16.jpeg" style="width:500px"  />

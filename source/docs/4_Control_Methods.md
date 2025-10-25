@@ -75,8 +75,8 @@ The robotic arm control area is the coordinate control area. You can control its
 
 <table class="docutils-nobg" border="1">
 <colgroup>
-<col style="width: 69%" />
-<col style="width: 30%" />
+<col style="width: 50%" />
+<col style="width: 50%" />
 </colgroup>
 <tbody>
 <tr>
@@ -228,7 +228,7 @@ In this area, you can control different end-of-tools to rotate. And the function
 </tr>
 <tr>
 <td colspan="2" style="text-align: center;">
-<p><strong>Buttons under small gripper/ big gripper mode</strong></p>
+<strong>Buttons under small gripper/ big gripper mode</strong>
 </td>
 </tr>
 <tr>

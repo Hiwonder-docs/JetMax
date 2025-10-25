@@ -12,7 +12,7 @@ Machine learning is the study of how computers can simulate or realize human lea
 
 Machine learning as the heart of Artificial Intelligent helps people realize self-driving cars, effective speech recognition, efficient web search and greatly improves the understanding of the human genome.
 
-For example, Google’s AlphaGo is the first computer Go program to beat a professional Go player and the first to defeat a Go world champion. It works by deep learning. In addition, current popular self-driving cars are realized based on computer system-based intelligent driving device in the car.
+For example, Google's AlphaGo is the first computer Go program to beat a professional Go player and the first to defeat a Go world champion. It works by deep learning. In addition, current popular self-driving cars are realized based on computer system-based intelligent driving device in the car.
 
 ### 8.1.3 Machine learning Classification 
 
@@ -64,19 +64,21 @@ Unlike the commonly used learning frameworks such as TensorFlow, PyTorch and Caf
 
 **Working process：**
 
-The deployment of TensorRT contains two part “**build**” and “**runtime**.”
+The deployment of TensorRT contains two part "**build**" and "**runtime**."
 
 <img class="common_img" src="../_static/media/chapter_8/section_2/media/image2.png" style="width:500px"  />
 
-The “**build**” stage mainly completes model conversion from caffe or TensorFlow to TensorRT. When the model is converted, the inter-layer fusion and accuracy calibration in the optimization process will be completed. The output of this step is an optimized TensorRT model for a specific GPU platform and network model, which can be serialized and stored on disk or in memory. The file stored to disk called “plan file”.
+The "**build**" stage mainly completes model conversion from caffe or TensorFlow to TensorRT. When the model is converted, the inter-layer fusion and accuracy calibration in the optimization process will be completed. The output of this step is an optimized TensorRT model for a specific GPU platform and network model, which can be serialized and stored on disk or in memory. The file stored to disk called "plan file".
 
 <img class="common_img" src="../_static/media/chapter_8/section_2/media/image3.png" style="width:500px"  />
 
-The “**runtime**” stage mainly completes inference process. Kernel Auto-Tuning and Dynamic Tensor Memory are supposed to be completed in this stage. Firstly, de-serialize the plan file from the previous step and create a runtime engine. Then, input data (such as the images outside the test set or data set). Last, output classification vector and detection results.
+The "**runtime**" stage mainly completes inference process. Kernel Auto-Tuning and Dynamic Tensor Memory are supposed to be completed in this stage. Firstly, de-serialize the plan file from the previous step and create a runtime engine. Then, input data (such as the images outside the test set or data set). Last, output classification vector and detection results.
+
+<p id="anchor_8_3"></p>
 
 ## 8.3 Image Card Training
 
-<img class="common_img" src="../_static/media/chapter_8/section_3/media/image2.png" style="width:50px" />It is not recommended to use Jetson Nano for training when the data set is large, because the limit of I/O interface’s speed and memory makes the training process slow down. And it is recommended to use the computer with discrete graphics card for training under this situation. The training process on Jetson Nano and computer is the same, but you need to configure the related program operating environment.
+It is not recommended to use Jetson Nano for training when the data set is large, because the limit of I/O interface's speed and memory makes the training process slow down. And it is recommended to use the computer with discrete graphics card for training under this situation. The training process on Jetson Nano and computer is the same, but you need to configure the related program operating environment.
 
 The image models required in the games have already been trained before delivery. If you want to train your own model, you can refer to this tutorial. We train number cards of 7, 8 and 9 in this lesson.
 
@@ -84,7 +86,7 @@ The image models required in the games have already been trained before delivery
 
 1)  Prepare a laptop. If you are using desktop computer, wireless network card, mouse and other tools are needed.
 
-2)  Install and open the remote connection tool NoMachine, according to the tutorial in “**[3. AI Vision Games Lesson->3.1 Set Development Environment->3.1.1 Remote Tool Installation and Connection]()**” .
+2)  Install and open the remote connection tool NoMachine, according to the tutorial in "**[3. AI Vision Games Lesson->3.1 Set Development Environment->3.1.1 Remote Tool Installation and Connection](https://wiki.hiwonder.com/projects/JetMax/en/latest/docs/3_AI_Vision_Games_Lesson.html#set-development-environment)**" .
 
 ### 8.3.2 Training steps
 
@@ -92,159 +94,159 @@ The image models required in the games have already been trained before delivery
 
 1. Add a new folder, **My_Data**, for storing data set under any path. But to prevent the normal use of other files during training operations, we advise you to add it to **Home** under **Files**.
 
-   <img class="common_img" src="../_static/media/chapter_8/section_3/media/image3.png" style="width:500px" />
+<img class="common_img" src="../_static/media/chapter_8/section_3/media/image3.png" style="width:500px" />
 
-2. Create three directories in “**My_Data**” folder, namely Annotations, ImageSets and JPEGImages. “**Annotation**s” is used to store the annotated file. “**ImageSets**” is used to store path file of data set. And “**JPEGImages**” is used to store pictures of data set.
+2. Create three directories in "**My_Data**" folder, namely Annotations, ImageSets and JPEGImages. "**Annotation**s" is used to store the annotated file. "**ImageSets**" is used to store path file of data set. And "**JPEGImages**" is used to store pictures of data set.
 
-   <img class="common_img" src="../_static/media/chapter_8/section_3/media/image4.png" style="width:500px"  />
+<img class="common_img" src="../_static/media/chapter_8/section_3/media/image4.png" style="width:500px"  />
 
 * **Prepare data set**
 
-<img class="common_img" src="../_static/media/chapter_8/section_3/media/image2.png" style="width:50px" />The pictures can be obtained from the Internet. But you need to modify the resolution rate as 640\*480 to degrade the performance required for subsequent annotation and training. The resolution rate of pictures taken by “**Capture**” is 640\*480 by default.
+The pictures can be obtained from the Internet. But you need to modify the resolution rate as 640\*480 to degrade the performance required for subsequent annotation and training. The resolution rate of pictures taken by "**Capture**" is 640\*480 by default.
 
-We will use the pictures taken by “**Capture**” for training. If you want to use the pictures from Internet, you can refer to “**[8.9 Mask Image Training]()**”.
+We will use the pictures taken by "**Capture**" for training. If you want to use the pictures from Internet, you can refer to "**[8.9 Mask Image Training](#anchor_8_9)**".
 
-1. Double click “**Capture**” tool on the desktop. Then turn on the camera to take photos.
+1. Double click "**Capture**" tool on the desktop. Then turn on the camera to take photos.
 
-   <img class="common_img" src="../_static/media/chapter_8/section_3/media/image5.png" style="width:100px"  />
+<img class="common_img" src="../_static/media/chapter_8/section_3/media/image5.png" style="width:100px"  />
 
-2. Click “**Select**” at the lower right corner and select “**/home/hiwonder/My_Data/JPEGImages**” in the pop-up interface. Click “**Open**” to save the picture to this path.
+2. Click "**Select**" at the lower right corner and select "**/home/hiwonder/My_Data/JPEGImages**" in the pop-up interface. Click "**Open**" to save the picture to this path.
 
-   <img class="common_img" src="../_static/media/chapter_8/section_3/media/image6.png" style="width:500px"  />
+<img class="common_img" src="../_static/media/chapter_8/section_3/media/image6.png" style="width:500px"  />
 
-   <img class="common_img" src="../_static/media/chapter_8/section_3/media/image7.png" style="width:500px"  />
+<img class="common_img" src="../_static/media/chapter_8/section_3/media/image7.png" style="width:500px"  />
 
-3. Place the cards to be trained within the camera vision, then click “**Save**” to capture the current image.
+3. Place the cards to be trained within the camera vision, then click "**Save**" to capture the current image.
 
-   <img class="common_img" src="../_static/media/chapter_8/section_3/media/image8.png" style="width:500px"  />
+<img class="common_img" src="../_static/media/chapter_8/section_3/media/image8.png" style="width:500px"  />
 
 4. Move the cards, because card pictures at different angle can improve the credibility of the model.
 
 * **Annotate the picture**
 
-1. Double click “**labellmg**” icon on the desktop to open annotation tool.
+1. Double click "**labellmg**" icon on the desktop to open annotation tool.
 
-   <img class="common_img" src="../_static/media/chapter_8/section_3/media/image9.png" style="width:100px"  />
+<img class="common_img" src="../_static/media/chapter_8/section_3/media/image9.png" style="width:100px"  />
 
-2. Click “**Change Save Dir**” to set the path to save the annotated data. And I select “**/home/hiwonder/My_Data/Annotations**”, then click “Open”.
+2. Click "**Change Save Dir**" to set the path to save the annotated data. And I select "**/home/hiwonder/My_Data/Annotations**", then click "Open".
 
-   <img class="common_img" src="../_static/media/chapter_8/section_3/media/image10.png" style="width:500px"  />
+<img class="common_img" src="../_static/media/chapter_8/section_3/media/image10.png" style="width:500px"  />
 
-   <img class="common_img" src="../_static/media/chapter_8/section_3/media/image11.png" style="width:500px"  />
+<img class="common_img" src="../_static/media/chapter_8/section_3/media/image11.png" style="width:500px"  />
 
-3. Click “**Open Dir**” to open the folder saving the photos, select “**/home/hiwonder/My_Data/JPEGImage”**, then click **“Open”.**
+3. Click "**Open Dir**" to open the folder saving the photos, select "**/home/hiwonder/My_Data/JPEGImage"**, then click **"Open".**
 
-   <img class="common_img" src="../_static/media/chapter_8/section_3/media/image12.png" style="width:500px"  />
+<img class="common_img" src="../_static/media/chapter_8/section_3/media/image12.png" style="width:500px"  />
 
-   <img class="common_img" src="../_static/media/chapter_8/section_3/media/image13.png" style="width:500px"  />
+<img class="common_img" src="../_static/media/chapter_8/section_3/media/image13.png" style="width:500px"  />
 
-4. Click “**Create RectBox**” to create a annotation box.
+4. Click "**Create RectBox**" to create a annotation box.
 
-   <img class="common_img" src="../_static/media/chapter_8/section_3/media/image14.png" style="width:500px"  />
+<img class="common_img" src="../_static/media/chapter_8/section_3/media/image14.png" style="width:500px"  />
 
 5. Left press the mouse to drag the rectangular box to frame the object you want to train. Here, we will frame the number 7 card.
 
-   <img class="common_img" src="../_static/media/chapter_8/section_3/media/image15.png" style="width:500px" />
+<img class="common_img" src="../_static/media/chapter_8/section_3/media/image15.png" style="width:500px" />
 
-6. Release the mouse, and enter the name of this card in pop-up interface, then click “**OK**”. Names for 7, 8 and 9 cards respectively are “**num7**”, “num8” and “num9”.
+6. Release the mouse, and enter the name of this card in pop-up interface, then click "**OK**". Names for 7, 8 and 9 cards respectively are "**num7**", "num8" and "num9".
 
-   <img class="common_img" src="../_static/media/chapter_8/section_3/media/image16.png" style="width:500px" />
+<img class="common_img" src="../_static/media/chapter_8/section_3/media/image16.png" style="width:500px" />
 
-7. After annotating one picture, click “**save**”, then click “**Next Image**”.
+7. After annotating one picture, click "**save**", then click "**Next Image**".
 
-   <img class="common_img" src="../_static/media/chapter_8/section_3/media/image17.png" style="width:500px"  />
+<img class="common_img" src="../_static/media/chapter_8/section_3/media/image17.png" style="width:500px"  />
 
-8. When all the pictures are annotated, files which have the same name as the pictures, in **xml** format will be generated in “**Annotations**” folder. Pay attention to that only if the image materials reach a certain quantity, the model is reliable.
+8. When all the pictures are annotated, files which have the same name as the pictures, in **xml** format will be generated in "**Annotations**" folder. Pay attention to that only if the image materials reach a certain quantity, the model is reliable.
 
-   <img class="common_img" src="../_static/media/chapter_8/section_3/media/image18.png" style="width:500px"  />
+<img class="common_img" src="../_static/media/chapter_8/section_3/media/image18.png" style="width:500px"  />
 
 * **Generate related file**
 
-1. Copy “**txt_gen.py**” and “**xml2yolo.py**” files to “**Home/My_Data**” folder, and create file named “**classes.names**”.
+1. Copy "**txt_gen.py**" and "**xml2yolo.py**" files to "**Home/My_Data**" folder, and create file named "**classes.names**".
 
-   <img class="common_img" src="../_static/media/chapter_8/section_3/media/image19.png" style="width:500px"  />
+<img class="common_img" src="../_static/media/chapter_8/section_3/media/image19.png" style="width:500px"  />
 
-2. Double click “**Terminal**” icon to enter the terminal interface.
+2. Double click "**Terminal**" icon to enter the terminal interface.
 
-3. Enter command “**cd My_Data/**” and press Enter to enter the folder.
+3. Enter command "**cd My_Data/**" and press Enter to enter the folder.
 
-   ```py
-   cd My_Data/
-   ```
+```bash
+cd My_Data/
+```
 
-4. Enter command “**python3 txt_gen.py**” and press Enter to run the program. Scan the xml file and jpg file with the same name from “**Annotations**” and “ **JPEGImages**”, then write them to “**all.txt**” folder.
+4. Enter command "**python3 txt_gen.py**" and press Enter to run the program. Scan the xml file and jpg file with the same name from "**Annotations**" and " **JPEGImages**", then write them to "**all.txt**" folder.
 
-   ```py
-   python3 txt_gen.py
-   ```
+```bash
+python3 txt_gen.py
+```
 
-5. Next, the contents in “**all.txt**” file are randomly allocated into three files: “**train.txt**”, “**val.txt**” **and** “**test.txt**” at a ratio of 80%:15%:5.
+5. Next, the contents in "**all.txt**" file are randomly allocated into three files: "**train.txt**", "**val.txt**" **and** "**test.txt**" at a ratio of 80%:15%:5.
 
-   <img class="common_img" src="../_static/media/chapter_8/section_3/media/image22.png" style="width:500px"  />
+<img class="common_img" src="../_static/media/chapter_8/section_3/media/image22.png" style="width:500px"  />
 
-6. Enter the data set directory “**facemask**”, then modify the “**classes.names**” content with text editor as the picture shown. Pay attention to that enter one card name in one line only.
+6. Enter the data set directory "**facemask**", then modify the "**classes.names**" content with text editor as the picture shown. Pay attention to that enter one card name in one line only.
 
-   <img class="common_img" src="../_static/media/chapter_8/section_3/media/image23.png" style="width:500px" />
+<img class="common_img" src="../_static/media/chapter_8/section_3/media/image23.png" style="width:500px" />
 
-7. Enter command “**python3 xml2yolo.py**” and press Enter to run the program. Covert the xml files, corresponding to the pictures in “**all.txt**”, into txt files required by **yolo**. Then synchronize the txt files to “**JPEGImages**” folder.
+7. Enter command "**python3 xml2yolo.py**" and press Enter to run the program. Covert the xml files, corresponding to the pictures in "**all.txt**", into txt files required by **yolo**. Then synchronize the txt files to "**JPEGImages**" folder.
 
-   ```py
-   python3 xml2yolo.py
-   ```
+```bash
+python3 xml2yolo.py
+```
 
-8. When the files are generated, enter “**Home/yolov5/data**” under “**Files**” in File Explorer, then create “**My_Data.yaml**” file. And write the following content to this file.
+8. When the files are generated, enter "**Home/yolov5/data**" under "**Files**" in File Explorer, then create "**My_Data.yaml**" file. And write the following content to this file.
 
-   <img class="common_img" src="../_static/media/chapter_8/section_3/media/image25.png" style="width:500px" />
+<img class="common_img" src="../_static/media/chapter_8/section_3/media/image25.png" style="width:500px" />
 
-   Note: the parameter order of name should be consistent with “**classes.names**”.
+Note: the parameter order of name should be consistent with "**classes.names**".
 
 *  **Start training**
 
-1. Enter command “**cd yolov5/**” to enter yolov5 directory.
+1. Enter command "**cd yolov5/**" to enter yolov5 directory.
 
-   ```py
-   cd yolov5/
-   ```
+```bash
+cd yolov5/
+```
 
-2. Enter command “**python3 train.py --img-size 160 --weights yolov5s.pt --data data/My_Data.yaml --batch-size 4 --epochs 10**” and press Enter to start training.
+2. Enter command "**python3 train.py --img-size 160 --weights yolov5s.pt --data data/My_Data.yaml --batch-size 4 --epochs 10**" and press Enter to start training.
 
-   ```py
-   python3 train.py --img-size 160 --weights yolov5s.pt --data data/My_Data.yaml --batch-size 4 --epochs 10
-   ```
+```bash
+python3 train.py --img-size 160 --weights yolov5s.pt --data data/My_Data.yaml --batch-size 4 --epochs 10
+```
 
-3. When the training is completed, related files will be generated in “**yolov5/runs/train/**”.
+3. When the training is completed, related files will be generated in "**yolov5/runs/train/**".
 
-   <img class="common_img" src="../_static/media/chapter_8/section_3/media/image28.png" style="width:500px" />
+<img class="common_img" src="../_static/media/chapter_8/section_3/media/image28.png" style="width:500px" />
 
 * **change the format** 
 
 To ensure that the neural network data can convert in different architectures, we need to convert the weight file of pytorch into onnx format, then into tensorrt format.
 
-1. Enter command “**cd yolov5/**” to enter yolov5 directory.
+1. Enter command "**cd yolov5/**" to enter yolov5 directory.
 
-   ```py
-   cd yolov5/
-   ```
+```bash
+cd yolov5/
+```
 
-2. Enter command “**python3 models/export.py --weights runs/train/exp/weights/best.pt --img-size 160 --batch-size 1**” and press Enter to convert the weight file of pytorch into onnx format. Pay attention that “**exp**” in the command need to be modified according to the actual folder generated in “**yolov5/runs/train/**”.
+2. Enter command "**python3 models/export.py --weights runs/train/exp/weights/best.pt --img-size 160 --batch-size 1**" and press Enter to convert the weight file of pytorch into onnx format. Pay attention that "**exp**" in the command need to be modified according to the actual folder generated in "**yolov5/runs/train/**".
 
-   ```py
-   python3 models/export.py --weights runs/train/exp/weights/best.pt --img-size 160 --batch-size 1
-   ```
+```bash
+python3 models/export.py --weights runs/train/exp/weights/best.pt --img-size 160 --batch-size 1
+```
 
-3. After the file was converted into onnx format, “best.onnx” file will generated in “**Home/yolov5/runs/train/exp/weights**”.
+3. After the file was converted into onnx format, "best.onnx" file will generated in "**Home/yolov5/runs/train/exp/weights**".
 
-   <img class="common_img" src="../_static/media/chapter_8/section_3/media/image30.png" style="width:500px" />
+<img class="common_img" src="../_static/media/chapter_8/section_3/media/image30.png" style="width:500px" />
 
-4. Enter command “**onnx2trt runs/train/exp/weights/best.onnx -o best.trt**” and press Enter to convert the file in onnx format into tensorrt format. Pay attention that “**exp**” in the command need to be modified according to the actual folder generated in “**yolov5/runs/train/**”.
+4. Enter command "**onnx2trt runs/train/exp/weights/best.onnx -o best.trt**" and press Enter to convert the file in onnx format into tensorrt format. Pay attention that "**exp**" in the command need to be modified according to the actual folder generated in "**yolov5/runs/train/**".
 
-   ```py
-   onnx2trt runs/train/exp/weights/best.onnx -o best.trt
-   ```
+```bash
+onnx2trt runs/train/exp/weights/best.onnx -o best.trt
+```
 
-5. After the conversion, “**best.trt**” file will be generated in yolov5 directory.
+5. After the conversion, "**best.trt**" file will be generated in yolov5 directory.
 
-   <img class="common_img" src="../_static/media/chapter_8\section_3/media/image32.png" style="width:500px" />
+<img class="common_img" src="../_static/media/chapter_8/section_3/media/image32.png" style="width:500px" />
 
 ## 8.4 Number Card Recognition
 
@@ -252,7 +254,7 @@ To ensure that the neural network data can convert in different architectures, w
 
 **Step 1: obtain and process image**
 
-Firstly, subscribe to the real-time image data released by camera node “**/usb_cam/image_rect_color**”. Then, convert its format into numpy. Next, covert the color space to obtain the image in BGR format.
+Firstly, subscribe to the real-time image data released by camera node "**/usb_cam/image_rect_color**". Then, convert its format into numpy. Next, covert the color space to obtain the image in BGR format.
 
 **Step 2: recognize and process number**
 
@@ -270,21 +272,21 @@ The source code of the program lies in **/Home/ros/src/Ai_JetMax/scripts/number_
 
 <img class="common_img" src="../_static/media/chapter_8/section_4/media/image3.png" style="width:50px" />The entered command should be case sensitive. And the keywords can be complemented by Tab key.
 
-1. Double click <img class="common_img" src="../_static/media/chapter_8/section_4/media/image4.png" style="width:50px"  /> on the desktop.
+1. Double click <img src="../_static/media/chapter_8/section_4/media/image4.png" style="width:50px"  /> on the desktop.
 
-2. When into the interface, enter command “**cd ros/src/Ai_JetMax/scripts**” to enter the directory storing the game program.
+2. When into the interface, enter command "**cd ros/src/Ai_JetMax/scripts**" to enter the directory storing the game program.
 
-   ```py
-   cd ros/src/Ai_JetMax/scripts
-   ```
+```bash
+cd ros/src/Ai_JetMax/scripts
+```
 
-3. Then enter command “**rosrun Ai_JetMax number_recognition.py**” to run the game program
+3. Then enter command "**rosrun Ai_JetMax number_recognition.py**" to run the game program
 
-   ```py
-   rosrun Ai_JetMax number_recognition.py
-   ```
+```bash
+rosrun Ai_JetMax number_recognition.py
+```
 
-4. If you want to close this program, press “**Ctrl+C**”.
+4. If you want to close this program, press "**Ctrl+C**".
 
 ### 8.4.3 Function realization 
 
@@ -328,37 +330,37 @@ The process of processing image data is divided into the following steps.
 
 1. Transfer the scaled data from CPU to GPU.
 
-   <img class="common_img" src="../_static/media/chapter_8/section_4/media/image14.png" style="width:500px"  />
+<img class="common_img" src="../_static/media/chapter_8/section_4/media/image14.png" style="width:500px"  />
 
 2. Run yolov5 inference process and traverse the number material of the model to recognize the number cards of the image.
 
-   <img class="common_img" src="../_static/media/chapter_8/section_4/media/image15.png" style="width:500px"  />
+<img class="common_img" src="../_static/media/chapter_8/section_4/media/image15.png" style="width:500px"  />
 
 3. Transmit the obtained data from GPU back to CPU.
 
-   <img class="common_img" src="../_static/media/chapter_8/section_4/media/image16.png" style="width:500px"  />
+<img class="common_img" src="../_static/media/chapter_8/section_4/media/image16.png" style="width:500px"  />
 
 * **obtain information**
 
-   It is not convenient to use the detected result of the image directly. Hence, we need to convert and process the result with `post_process()` function later to obtain the visual information, including coordinate, confidence, category name, etc.
+It is not convenient to use the detected result of the image directly. Hence, we need to convert and process the result with `post_process()` function later to obtain the visual information, including coordinate, confidence, category name, etc.
 
-   <img class="common_img" src="../_static/media/chapter_8/section_4/media/image17.png" style="width:500px"  />
+<img class="common_img" src="../_static/media/chapter_8/section_4/media/image17.png" style="width:500px"  />
 
-   Parameter `boxes` represents the obtained coordinate of the card
+Parameter `boxes` represents the obtained coordinate of the card
 
-   Parameter `confs` represents the obtained recognition confidence of the card
+Parameter `confs` represents the obtained recognition confidence of the card
 
-   Parameter `classes` represents the category of the card
+Parameter `classes` represents the category of the card
 
-   Parameter `image` represents the detected image
+Parameter `image` represents the detected image
 
-   Parameter `outputs` represents the image information
+Parameter `outputs` represents the image information
 
-   Parameter `0.6` represents only when the recognition confidence is more than 0.6, the direct information can be obtained.
+Parameter `0.6` represents only when the recognition confidence is more than 0.6, the direct information can be obtained.
 
-   Likewise, `post_process()` function can be found in Yolov5TensorRT library of yolov5_tensorrt module.
+Likewise, `post_process()` function can be found in Yolov5TensorRT library of yolov5_tensorrt module.
 
-   The process in `yolov5.post_process()` is as follow.
+The process in `yolov5.post_process()` is as follow.
 
 1. Firstly, segment and fit the original data obtained by `detect()` function to get the data of each card.
 
@@ -386,7 +388,7 @@ After the detected information is obtained, the related information will be give
 
 The first parameter `image` represents the specific picture to which the text description is added.
 
-The second parameter `card_name +** ” “**+ str(float(cls_conf))[:4]` represents the added content. `card_name` represents the sequence of the number. `str(float(cls_conf))[:4]` represents the corresponding confidence of the number.
+The second parameter `card_name +** " "**+ str(float(cls_conf))[:4]` represents the added content. `card_name` represents the sequence of the number. `str(float(cls_conf))[:4]` represents the corresponding confidence of the number.
 
 The third parameter `(x1, y1 - 5)` represents the coordinate of the added text.
 
@@ -432,7 +434,7 @@ Parameter `card_name` represents the sequence of the number
 
 **Step 1: obtain and process image**
 
-Firstly, subscribe to the real-time image data released by camera node “**/usb_cam/image_rect_color**”. Then, convert its format into numpy. Next, covert the color space to obtain the image in BGR format.
+Firstly, subscribe to the real-time image data released by camera node "**/usb_cam/image_rect_color**". Then, convert its format into numpy. Next, covert the color space to obtain the image in BGR format.
 
 **Step 2: recognize and process waste**
 
@@ -444,33 +446,33 @@ Traverse the waste list to find out the waste category and name corresponding to
 
 The source code of this program lies in **/Home/ros/src/Ai_JetMax/scripts/waste_classification.py**
 
-<img class="common_img" src="../_static/media/chapter_8\section_5\media\image2.png" style="width:500px"  />
+<img class="common_img" src="../_static/media/chapter_8/section_5/media/image2.png" style="width:500px"  />
 
 ### 8.5.2 Operation steps
 
-<img class="common_img" src="../_static/media/chapter_8\section_5\media\image3.png" style="width:50px" />The entered command should be case sensitive. And the keywords can be complemented by Tab key.
+The entered command should be case sensitive. And the keywords can be complemented by Tab key.
 
-1. Double click <img class="common_img" src="../_static/media/chapter_8\section_5\media\image4.png" style="width:50px"  /> on the desktop.
+1. Double click <img src="../_static/media/chapter_8/section_5/media/image4.png" style="width:50px"  /> on the desktop.
 
-2. When into the interface, enter command “**cd ros/src/Ai_JetMax/**” to enter the directory storing the game program.
+2. When into the interface, enter command "**cd ros/src/Ai_JetMax/**" to enter the directory storing the game program.
 
-   ```py
-   cd ros/src/Ai_JetMax/
-   ```
+```bash
+cd ros/src/Ai_JetMax/
+```
 
-3. Then enter command “**rosrun Ai_JetMax waste_classification.py**” to run the game program
+3. Then enter command "**rosrun Ai_JetMax waste_classification.py**" to run the game program
 
-   ```py
-   rosrun Ai_JetMax waste_classification.py
-   ```
+```bash
+rosrun Ai_JetMax waste_classification.py
+```
 
-4)  If you want to close this program, press “**Ctrl+C**”.
+4)  If you want to close this program, press "**Ctrl+C**".
 
 ### 8.5.3 Function realization 
 
 When the game starts and the camera has recognized the waste cards, the waste name, category and confidence will be displayed on the transmitted image.
 
-<img class="common_img" src="../_static/media/chapter_8\section_5\media\image7.jpeg" style="width:500px"  />
+<img class="common_img" src="../_static/media/chapter_8/section_5/media/image7.jpeg" style="width:500px"  />
 
 |   **Category**   |                  **Card**                   |
 | :--------------: | :-----------------------------------------: |
@@ -485,9 +487,9 @@ Machine learning is to make comparison between collected information about the w
 
 After running the program, call `rospy.Subscriber()` function to open the camera and retrieve the picture taken by the camera.
 
-<img class="common_img" src="../_static/media/chapter_8\section_5\media\image8.png" style="width:500px"  />
+<img class="common_img" src="../_static/media/chapter_8/section_5/media/image8.png" style="width:500px"  />
 
-<img class="common_img" src="../_static/media/chapter_8\section_5\media\image9.png" style="width:500px"  />
+<img class="common_img" src="../_static/media/chapter_8/section_5/media/image9.png" style="width:500px"  />
 
 After the camera is turned on, call `image_proc()` function, then begin detecting the image, acquiring the information, and give feedback for acquired information. The specific analysis is as follow.
 
@@ -495,41 +497,41 @@ After the camera is turned on, call `image_proc()` function, then begin detectin
 
 After obtaining the image data collected by the camera, convert the data format and color space. Then pass the preliminary processed image data to `yolov5.detect()` function for target detection in order to extract the waste category in the image. Then output the detected result to the outputs variable.
 
-<img class="common_img" src="../_static/media/chapter_8\section_5\media\image10.png" style="width:500px"  />
+<img class="common_img" src="../_static/media/chapter_8/section_5/media/image10.png" style="width:500px"  />
 
 Import to Yolov5TensorRT library in yolov5_tensorrt module. This library involves `detect()` function.
 
-<img class="common_img" src="../_static/media/chapter_8\section_5\media\image11.png" style="width:500px"  />
+<img class="common_img" src="../_static/media/chapter_8/section_5/media/image11.png" style="width:500px"  />
 
 The `process in detect()` function is as follow.
 
 1. call `pre_process()` function to scale the size of waste cards to 640\*480.
 
-<img class="common_img" src="../_static/media/chapter_8\section_5\media\image12.png" style="width:500px"  />
+<img class="common_img" src="../_static/media/chapter_8/section_5/media/image12.png" style="width:500px"  />
 
 2. call `inference()` function to process image data
 
-<img class="common_img" src="../_static/media/chapter_8\section_5\media\image13.png" style="width:500px"  />
+<img class="common_img" src="../_static/media/chapter_8/section_5/media/image13.png" style="width:500px"  />
 
 The process of processing the image data is divided into a few steps.
 
 1. Transfer the scaled data from CPU to GPU
 
-   <img class="common_img" src="../_static/media/chapter_8\section_5\media\image14.png" style="width:500px"  />.
+<img class="common_img" src="../_static/media/chapter_8/section_5/media/image14.png" style="width:500px"  />.
 
 2. Run yolov5 inference process and traverse the waste card material of the model to recognize the waste cards in the image.
 
-   <img class="common_img" src="../_static/media/chapter_8\section_5\media\image14.png" style="width:500px"  />
+<img class="common_img" src="../_static/media/chapter_8/section_5/media/image14.png" style="width:500px"  />
 
 3. Transmit the obtained data from GPU back to CPU.
 
-   <img class="common_img" src="../_static/media/chapter_8\section_5\media\image15.png" style="width:500px"  />
+<img class="common_img" src="../_static/media/chapter_8/section_5/media/image15.png" style="width:500px"  />
 
 * **obtain information**
 
 It is not convenient to use the detected result of the image directly. Hence, we need to convert and process the result with `post_process()` function later to obtain the visual information, including coordinate, confidence, category name, etc. The program is as follow.
 
-<img class="common_img" src="../_static/media/chapter_8\section_5\media\image16.png" style="width:500px"  />
+<img class="common_img" src="../_static/media/chapter_8/section_5/media/image16.png" style="width:500px"  />
 
 Parameter `boxes` represents the coordinate of the waste card
 
@@ -549,19 +551,19 @@ The process in `yolov5.post_process()` is as follow.
 
 1. Firstly, segment and fit the original data obtained by `yolov5.detect()` function to get the data of each card.
 
-<img class="common_img" src="../_static/media/chapter_8\section_5\media\image17.png" style="width:500px"  />
+<img class="common_img" src="../_static/media/chapter_8/section_5/media/image17.png" style="width:500px"  />
 
 2. Segment the data of each card to acquire the box, confidence and classification parameter of each card.
 
-<img class="common_img" src="../_static/media/chapter_8\section_5\media\image18.png" style="width:500px"  />
+<img class="common_img" src="../_static/media/chapter_8/section_5/media/image18.png" style="width:500px"  />
 
 3. Then filter out the recognized cards which is below the confidence.
 
-<img class="common_img" src="../_static/media/chapter_8\section_5\media\image19.png" style="width:500px"  />
+<img class="common_img" src="../_static/media/chapter_8/section_5/media/image19.png" style="width:500px"  />
 
 4. Lastly, perform maximum value depression on on matched cards to ensure there is one recognition box.
 
-<img class="common_img" src="../_static/media/chapter_8\section_5\media\image20.png" style="width:500px"  />
+<img class="common_img" src="../_static/media/chapter_8/section_5/media/image20.png" style="width:500px"  />
 
 5. Feedback for obtained information
 
@@ -583,7 +585,7 @@ The fifth parameter `0.7` represents the font size of the added text.
 
 The sixth parameter `COLORS[waste_class_name]` represents the color of the added text. Please refer to the below program for the specific settings.
 
-Take`'hazardous_waste': (255, 0, 0)` for example. These 3 values all ranges from 0 to 255. This program represents that the text consists of three colors, including red, green and blue. The first parameter “255” represents red value, the second value `0` represents green value, and the third parameter “0” represents blue value.
+Take`'hazardous_waste': (255, 0, 0)` for example. These 3 values all ranges from 0 to 255. This program represents that the text consists of three colors, including red, green and blue. The first parameter "255" represents red value, the second value `0` represents green value, and the third parameter "0" represents blue value.
 
 The seventh parameter `2` represents the font weight of the added text.
 
@@ -623,51 +625,51 @@ The source code of the program lies in **/Home/ros/src/jetmax_buildin_funcs/wast
 
 **Script/swaste_classification_main.py**
 
-<img class="common_img" src="../_static/media/chapter_8\section_6\media\image2.png" style="width:500px"  />
+<img class="common_img" src="../_static/media/chapter_8/section_6/media/image2.png" style="width:500px"  />
 
 ### 8.6.2 Preparation
 
-1)  Please place the robotic arm on the map, then switch on it and calibrate its position. You can calibrate the robotic arm via the mobile APP. For the detailed instruction, you can refer to the **[2. Quick User Experience]()**. Then place the waste cards to the recognition area. Ensure the cards are not too close to each other and don’t place them to edge of the recognition area.
+1)  Please place the robotic arm on the map, then switch on it and calibrate its position. You can calibrate the robotic arm via the mobile APP. For the detailed instruction, you can refer to the **[2. Quick User Experience](https://wiki.hiwonder.com/projects/JetMax/en/latest/docs/2_Quick_User_Experience.html)**. Then place the waste cards to the recognition area. Ensure the cards are not too close to each other and don't place them to edge of the recognition area.
 
-2)  Install and open the No Machine remote tool. For detailed instruction, you can refer to “**[3. AI Vision Games->3.1 Set Development Environment->3.1.1 Remote Tool Installation and Connection]()**”.
+2)  Install and open the No Machine remote tool. For detailed instruction, you can refer to "**[3. AI Vision Games->3.1 Set Development Environment->3.1.1 Remote Tool Installation and Connection](https://wiki.hiwonder.com/projects/JetMax/en/latest/docs/3_AI_Vision_Games_Lesson.html#set-development-environment)**".
 
 ### 8.6.3 Operation steps
 
-<img class="common_img" src="../_static/media/chapter_8\section_6\media\image3.png" style="width:50px" />The entered command should be case-sensitive. And the keywords can be complemented by the Tab key.
+The entered command should be case-sensitive. And the keywords can be complemented by the Tab key.
 
 * **Enter the game**
 
 1)  Turn on JetMax, then connect to the system desktop through No Machine.
 
-2)  Click <img class="common_img" src="../_static/media/chapter_8\section_6\media\image4.png" style="width:50px"  />.
+2)  Click <img src="../_static/media/chapter_8/section_6/media/image4.png" style="width:50px"  />.
 
-3)  Enter the game. Then enter command “**rosservice call /waste_classification/enter “{}”**” and press Enter.
+3)  Enter the game. Then enter command "**rosservice call /waste_classification/enter "{}"**" and press Enter.
 
-<img class="common_img" src="../_static/media/chapter_8\section_6\media\image5.png" style="width:500px"  />
+<img class="common_img" src="../_static/media/chapter_8/section_6/media/image5.png" style="width:500px"  />
 
 * **Turn on camera**
 
-Turn on camera. Double click <img class="common_img" src="../_static/media/chapter_8\section_6\media\image6.png" style="width:100px"  />, then enter the address, **192.168.149.1:8080/** and press Enter. Next, select “**/waste_classification/image_result(Snapshot)**”.
+Turn on camera. Double click <img src="../_static/media/chapter_8/section_6/media/image6.png" style="width:100px"  />, then enter the address, **192.168.149.1:8080/** and press Enter. Next, select "**/waste_classification/image_result(Snapshot)**".
 
-<img class="common_img" src="../_static/media/chapter_8\section_6\media\image7.png" style="width:500px"  />
+<img class="common_img" src="../_static/media/chapter_8/section_6/media/image7.png" style="width:500px"  />
 
-<img class="common_img" src="../_static/media/chapter_8\section_6\media\image8.png" style="width:500px"  />
+<img class="common_img" src="../_static/media/chapter_8/section_6/media/image8.png" style="width:500px"  />
 
 * **Start the game**
 
-Start the game. Enter command “**rosservice call /waste_classification/set_running “data: true”**” and press Enter.
+Start the game. Enter command "**rosservice call /waste_classification/set_running "data: true"**" and press Enter.
 
-<img class="common_img" src="../_static/media/chapter_8\section_6\media\image5.png" style="width:500px"  />
+<img class="common_img" src="../_static/media/chapter_8/section_6/media/image5.png" style="width:500px"  />
 
 * **Stop and exit the game**
 
-1. If you want to stop the game, you can enter command “**rosservice call /waste_classification/ set_running “data: true”**”and press Enter.
+1. If you want to stop the game, you can enter command "**rosservice call /waste_classification/ set_running "data: true"**"and press Enter.
 
-   <img class="common_img" src="../_static/media/chapter_8\section_6\media\image9.jpeg" style="width:500px"  />
+<img class="common_img" src="../_static/media/chapter_8/section_6/media/image9.jpeg" style="width:500px"  />
 
-2. If you want to exit the game, you can enter command “**rosservice call /waste_classification/exit“{}”** ”and press Enter.
+2. If you want to exit the game, you can enter command "**rosservice call /waste_classification/exit"{}"** "and press Enter.
 
-   <img class="common_img" src="../_static/media/chapter_8\section_6\media\image10.png" style="width:500px"  />
+<img class="common_img" src="../_static/media/chapter_8/section_6/media/image10.png" style="width:500px"  />
 
 ### 8.6.4 Function realization
 
@@ -686,9 +688,9 @@ Machine learning is to make comparison between collected information about the w
 
 After running the program, call `rospy.Subscriber()` function first to turn on the camera, and retrieve the picture taken by the camera.
 
-<img class="common_img" src="../_static/media/chapter_8\section_6\media\image11.png" style="width:500px"  />
+<img class="common_img" src="../_static/media/chapter_8/section_6/media/image11.png" style="width:500px"  />
 
-<img class="common_img" src="../_static/media/chapter_8\section_6\media\image12.png" style="width:500px"  />
+<img class="common_img" src="../_static/media/chapter_8/section_6/media/image12.png" style="width:500px"  />
 
 After turning on the camera, call `image_proc()` function, and then detect the image, acquire the information, give feedback for the acquired information and execute action.
 
@@ -696,73 +698,73 @@ After turning on the camera, call `image_proc()` function, and then detect the i
 
 After obtaining the image data collected by the camera, convert the data format and color space. Then pass the preliminary processed image data to `yolov5.detect()` for target detection in order to extract the waste category in the image. Then output the detected result to the outputs variable.
 
-<img class="common_img" src="../_static/media/chapter_8\section_6\media\image13.png" style="width:500px"  />
+<img class="common_img" src="../_static/media/chapter_8/section_6/media/image13.png" style="width:500px"  />
 
 Import to Yolov5TensorRT library of `yolov5_tensorrt` module. This library involves `detect()` function.
 
-<img class="common_img" src="../_static/media/chapter_8\section_6\media\image14.png" style="width:500px"  />
+<img class="common_img" src="../_static/media/chapter_8/section_6/media/image14.png" style="width:500px"  />
 
 The process in `detect()` is as follow.
 
 1. call `pre_process()` function to scale the size of waste cards to 640\*480.
 
-<img class="common_img" src="../_static/media/chapter_8\section_6\media\image15.png" style="width:500px"  />
+<img class="common_img" src="../_static/media/chapter_8/section_6/media/image15.png" style="width:500px"  />
 
 2. call `inference()` function to process image data
 
-<img class="common_img" src="../_static/media/chapter_8\section_6\media\image16.png" style="width:500px"  />
+<img class="common_img" src="../_static/media/chapter_8/section_6/media/image16.png" style="width:500px"  />
 
 The process of processing the image data is divided into these steps.
 
 1. transfer the scaled data from CPU to GPU.
 
-   <img class="common_img" src="../_static/media/chapter_8\section_6\media\image17.png" style="width:500px"  />
+<img class="common_img" src="../_static/media/chapter_8/section_6/media/image17.png" style="width:500px"  />
 
 2. Run yolov5 inference process and traverse the waste card material of the model to recognize the waste cards in the image.
 
-   <img class="common_img" src="../_static/media/chapter_8\section_6\media\image18.png" style="width:500px"  />
+<img class="common_img" src="../_static/media/chapter_8/section_6/media/image18.png" style="width:500px"  />
 
 3. Transmit the obtained data from GPU back to CPU.
 
-   <img class="common_img" src="../_static/media/chapter_8\section_6\media\image19.png" style="width:500px"  />
+<img class="common_img" src="../_static/media/chapter_8/section_6/media/image19.png" style="width:500px"  />
 
 - obtain information
 
-  It is not convenient to use the detected result of the image directly. Hence, we need to convert and process the result with `post_process()` function later to obtain the visual information, including coordinate, confidence, category name, etc. The program is as follow.
+It is not convenient to use the detected result of the image directly. Hence, we need to convert and process the result with `post_process()` function later to obtain the visual information, including coordinate, confidence, category name, etc. The program is as follow.
 
-  <img class="common_img" src="../_static/media/chapter_8\section_6\media\image20.png" style="width:500px"  />
+<img class="common_img" src="../_static/media/chapter_8/section_6/media/image20.png" style="width:500px"  />
 
-  Parameter `boxes` represents the coordinate of the card.
+Parameter `boxes` represents the coordinate of the card.
 
-  Parameters `confs` represents the confidence of the card
+Parameters `confs` represents the confidence of the card
 
-  Parameter `classes` represents the category of the card
+Parameter `classes` represents the category of the card
 
-  Parameter `image` represents the image to be detected
+Parameter `image` represents the image to be detected
 
-  Parameter `outputs` represents the image information
+Parameter `outputs` represents the image information
 
-  Parameter `0.65` represents only when the confidence is more than 0.65, the direct information can be obtained.
+Parameter `0.65` represents only when the confidence is more than 0.65, the direct information can be obtained.
 
-  Likewise, `post_process()` function can be found in Yolov5TensorRT library of yolov5_tensorrt module.
+Likewise, `post_process()` function can be found in Yolov5TensorRT library of yolov5_tensorrt module.
 
-  The process in `yolov5.post_process()` is as follow.
+The process in `yolov5.post_process()` is as follow.
 
 1. Firstly, segment and fit the original data obtained by `yolov5.detect()` function to get the data of each card.
 
-<img class="common_img" src="../_static/media/chapter_8\section_6\media\image21.png" style="width:500px"  />
+<img class="common_img" src="../_static/media/chapter_8/section_6/media/image21.png" style="width:500px"  />
 
 2. Segment the data of each card to acquire the box, confidence and classification parameter of each card.
 
-<img class="common_img" src="../_static/media/chapter_8\section_6\media\image22.png" style="width:500px"  />
+<img class="common_img" src="../_static/media/chapter_8/section_6/media/image22.png" style="width:500px"  />
 
 3. Then filter out the recognized cards which is below the confidence.
 
-<img class="common_img" src="../_static/media/chapter_8\section_6\media\image23.png" style="width:500px"  />
+<img class="common_img" src="../_static/media/chapter_8/section_6/media/image23.png" style="width:500px"  />
 
 4. Lastly, perform maximum value depression on matched cards to ensure there is one recognition box.
 
-<img class="common_img" src="../_static/media/chapter_8\section_6\media\image24.png" style="width:500px"  />
+<img class="common_img" src="../_static/media/chapter_8/section_6/media/image24.png" style="width:500px"  />
 
 5. Feedback for obtained information
 
@@ -770,11 +772,11 @@ After obtaining the detected information, the related information will be given 
 
 6. Use `cv2.putText()` function to add text on picture. The text is about the waste name and recognition confidence.
 
-<img class="common_img" src="../_static/media/chapter_8\section_6\media\image25.png" style="width:500px"  />
+<img class="common_img" src="../_static/media/chapter_8/section_6/media/image25.png" style="width:500px"  />
 
 The first parameter `image` represents the specific picture to which the text explanation is added.
 
-The second parameter `waste_name +**” “ **+ str(float(cls_conf))[:4]` represents the added content. “waste_name” represents the waste name. `str(float(cls_conf))\[:4\]` represents the corresponding confidence of the waste.
+The second parameter `waste_name +**" " **+ str(float(cls_conf))[:4]` represents the added content. "waste_name" represents the waste name. `str(float(cls_conf))\[:4\]` represents the corresponding confidence of the waste.
 
 The third parameter `(x1, y1 - 5)` represents the coordinate of the added text.
 
@@ -784,15 +786,15 @@ The fifth parameter `0.7` represents the font size of the added text.
 
 The sixth parameter `COLORS[waste_class_name]` represents the color of the added text. Please refer to the below program for the specific settings.
 
-<img class="common_img" src="../_static/media/chapter_8\section_6\media\image26.png" style="width:500px"  />
+<img class="common_img" src="../_static/media/chapter_8/section_6/media/image26.png" style="width:500px"  />
 
-Take `'hazardous_waste': (255, 0, 0)` for example. These 3 values all ranges from 0 to 255. This program represents that the text consists of three colors, including red, green and blue. The first parameter `255` represents red value, the second value `0` represents green value, and the third parameter “0” represents blue value.
+Take `'hazardous_waste': (255, 0, 0)` for example. These 3 values all ranges from 0 to 255. This program represents that the text consists of three colors, including red, green and blue. The first parameter `255` represents red value, the second value `0` represents green value, and the third parameter "0" represents blue value.
 
 The seventh parameter `2` represents the font weight of the added text.
 
 7. use `cv2.rectangle()` function to draw the rectangle frame to frame the waste card.
 
-<img class="common_img" src="../_static/media/chapter_8\section_6\media\image27.png" style="width:500px"  />
+<img class="common_img" src="../_static/media/chapter_8/section_6/media/image27.png" style="width:500px"  />
 
 The first parameter `image` represents the specific image of the drawn frame.
 
@@ -808,11 +810,11 @@ The fifth parameter `3` represents the width of the rectangle border
 
 After the waste card is recognized, call threading.Thread() function to transfer the card and place it to the corresponding area.
 
-<img class="common_img" src="../_static/media/chapter_8\section_6\media\image28.png" style="width:500px"  />
+<img class="common_img" src="../_static/media/chapter_8/section_6/media/image28.png" style="width:500px"  />
 
 The first parameter `target=moving` represents action of transferring cards. The specific settings method is as the picture shown.
 
-<img class="common_img" src="../_static/media/chapter_8\section_6\media\image29.png" style="width:500px"  />
+<img class="common_img" src="../_static/media/chapter_8/section_6/media/image29.png" style="width:500px"  />
 
 The second parameter `daemon=True` represents daemon thread. If there is only daemon thread, the entire program will quit.
 
@@ -822,7 +824,7 @@ The second parameter `daemon=True` represents daemon thread. If there is only da
 
 **Step 1: recognize and sort**
 
-Firstly, subscribe to the real-time image data released by the camera node “**/usb_cam/image_rect_color**”. Then covert this data to Numpy form. After that, perform color space conversion to obtain the image in BGR format.
+Firstly, subscribe to the real-time image data released by the camera node "**/usb_cam/image_rect_color**". Then covert this data to Numpy form. After that, perform color space conversion to obtain the image in BGR format.
 
 **Step 2: recognize and process alphabet**
 
@@ -834,33 +836,33 @@ Traverse the alphabet list to locate the alphabet corresponding to the alphabet 
 
 The source code of this program lies in **/Home/ros/src/Ai_JetMax/scripts/letter_recognition.py**
 
-<img class="common_img" src="../_static/media/chapter_8\section_7\media\image2.png" style="width:500px"  />
+<img class="common_img" src="../_static/media/chapter_8/section_7/media/image2.png" style="width:500px"  />
 
 ### 8.7.2 Operation steps
 
-<img class="common_img" src="../_static/media/chapter_8\section_7\media\image3.png" style="width:50px" />The entered command should be case sensitive. And the keywords can be complemented by Tab key.
+<img class="common_img" src="../_static/media/chapter_8/section_7/media/image3.png" style="width:50px" />The entered command should be case sensitive. And the keywords can be complemented by Tab key.
 
-1. Double click <img class="common_img" src="../_static/media/chapter_8\section_7\media\image4.png" style="width:50px"  /> on the desktop.
+1. Double click <img src="../_static/media/chapter_8/section_7/media/image4.png" style="width:50px"  /> on the desktop.
 
-2. When into the interface, enter the command “**cd ros/src/Ai_JetMax/scripts/**” to enter the directory storing the game program and press Enter.
+2. When into the interface, enter the command "**cd ros/src/Ai_JetMax/scripts/**" to enter the directory storing the game program and press Enter.
 
-   ```py
-   cd ros/src/Ai_JetMax/scripts/
-   ```
+```bash
+cd ros/src/Ai_JetMax/scripts/
+```
 
-3. Then enter command “**rosrun Ai_JetMax letter_recognition.py**” to run the game program.
+3. Then enter command "**rosrun Ai_JetMax letter_recognition.py**" to run the game program.
 
-   ```py
-   rosrun Ai_JetMax letter_recognition.py
-   ```
+```bash
+rosrun Ai_JetMax letter_recognition.py
+```
 
-4)  If you want to close this program, you can press “**Ctrl+C**”.
+4)  If you want to close this program, you can press "**Ctrl+C**".
 
 ### 8.7.3 Function realization
 
 When the game starts and the alphabet cards are recognized by the camera, the alphabet and recognition confidence will be displayed in the transmitted image, and the alphabet coordinate will be displayed in the terminal.
 
-<img class="common_img" src="../_static/media/chapter_8\section_7\media\image7.jpeg" style="width:500px"  />
+<img class="common_img" src="../_static/media/chapter_8/section_7/media/image7.jpeg" style="width:500px"  />
 
 ### 8.7.4 Project analysis
 
@@ -868,9 +870,9 @@ Machine learning is to make comparison between collected information about the a
 
 After running the program, call `rospy.Subscriber()` function first to turn on the camera, and retrieve the picture taken by the camera. The program is as follow.
 
-<img class="common_img" src="../_static/media/chapter_8\section_7\media\image8.png" style="width:500px"  />
+<img class="common_img" src="../_static/media/chapter_8/section_7/media/image8.png" style="width:500px"  />
 
-<img class="common_img" src="../_static/media/chapter_8\section_7\media\image9.png" style="width:500px"  />
+<img class="common_img" src="../_static/media/chapter_8/section_7/media/image9.png" style="width:500px"  />
 
 After the camera is turned on, call `image_proc()` function for detecting the letter, acquiring the information and giving feedback for the obtained information. The specific analysis is as follow.
 
@@ -878,41 +880,41 @@ After the camera is turned on, call `image_proc()` function for detecting the le
 
 After obtaining the image data collected by the camera, convert the data format and color space. Then pass the preliminary processed image data to `yolov5_chars.detect()` function for target detection in order to extract the alphabet information in the image. Then output the detected result to the outputs variable. The program is as follow.
 
-<img class="common_img" src="../_static/media/chapter_8\section_7\media\image10.png" style="width:500px"  />
+<img class="common_img" src="../_static/media/chapter_8/section_7/media/image10.png" style="width:500px"  />
 
 Import to Yolov5TensorRT library of `yolov5_tensorrt` module. This library involves `detect()` function.
 
-<img class="common_img" src="../_static/media/chapter_8\section_7\media\image11.png" style="width:500px"  />
+<img class="common_img" src="../_static/media/chapter_8/section_7/media/image11.png" style="width:500px"  />
 
 The process in `detect()` function is as follow.
 
 1. call `pre_process()` function to scale the size of alphabet cards to 640\*480.
 
-<img class="common_img" src="../_static/media/chapter_8\section_7\media\image12.png" style="width:500px"  />
+<img class="common_img" src="../_static/media/chapter_8/section_7/media/image12.png" style="width:500px"  />
 
 2. call `inference()` function to process image data
 
-<img class="common_img" src="../_static/media/chapter_8\section_7\media\image13.png" style="width:500px"  />
+<img class="common_img" src="../_static/media/chapter_8/section_7/media/image13.png" style="width:500px"  />
 
 The process of processing image data is divided into these steps.
 
 1. Transfer the scaled data from the CPU to the GPU.
 
-   <img class="common_img" src="../_static/media/chapter_8\section_7\media\image14.png" style="width:500px"  />
+<img class="common_img" src="../_static/media/chapter_8/section_7/media/image14.png" style="width:500px"  />
 
 2. Run yolov5 inference process to traverse the alphabet material of the model and recognize the alphabet cards in the image.
 
-   <img class="common_img" src="../_static/media/chapter_8\section_7\media\image15.png" style="width:500px"  />
+<img class="common_img" src="../_static/media/chapter_8/section_7/media/image15.png" style="width:500px"  />
 
 3. Transfer the obtained data from GPU back to CPU.
 
-   <img class="common_img" src="../_static/media/chapter_8\section_7\media\image16.png" style="width:500px"  />
+<img class="common_img" src="../_static/media/chapter_8/section_7/media/image16.png" style="width:500px"  />
 
 - Obtain information
 
-  It is not convenient to use the detected result of the image directly. Hence, we need to convert and process the result with `post_process()` function later to obtain the visual information, including coordinate, confidence, category name, etc.
+It is not convenient to use the detected result of the image directly. Hence, we need to convert and process the result with `post_process()` function later to obtain the visual information, including coordinate, confidence, category name, etc.
 
-  <img class="common_img" src="../_static/media/chapter_8\section_7\media\image17.png" style="width:500px"  />
+<img class="common_img" src="../_static/media/chapter_8/section_7/media/image17.png" style="width:500px"  />
 
 Parameter `boxes` represents the coordinate of the card.
 
@@ -932,19 +934,19 @@ The process in `yolov5_chars.post_process()` is as follow.
 
 1. Firstly, segment and fit the original data obtained by `yolov5_chars.detect()`function to get the data of each card.
 
-<img class="common_img" src="../_static/media/chapter_8\section_7\media\image18.png" style="width:500px"  />
+<img class="common_img" src="../_static/media/chapter_8/section_7/media/image18.png" style="width:500px"  />
 
 2. Segment the data of each card to acquire the box, confidence and classification parameter of each card.
 
-<img class="common_img" src="../_static/media/chapter_8\section_7\media\image19.png" style="width:500px"  />
+<img class="common_img" src="../_static/media/chapter_8/section_7/media/image19.png" style="width:500px"  />
 
 3. Then filter out the recognized card which is below the confidence.
 
-<img class="common_img" src="../_static/media/chapter_8\section_7\media\image20.png" style="width:500px"  />
+<img class="common_img" src="../_static/media/chapter_8/section_7/media/image20.png" style="width:500px"  />
 
 4. Lastly, perform maximum value depression on matched cards to ensure there is one recognition box.
 
-<img class="common_img" src="../_static/media/chapter_8\section_7\media\image21.png" style="width:500px"  />
+<img class="common_img" src="../_static/media/chapter_8/section_7/media/image21.png" style="width:500px"  />
 
 - Feedback for obtained information
 
@@ -952,7 +954,7 @@ After obtaining the detected information, the related information will be given 
 
 1. Use `cv2.putText()` function to add text on picture to display the sequence and confidence of number.
 
-<img class="common_img" src="../_static/media/chapter_8\section_7\media\image22.png" style="width:500px"  />
+<img class="common_img" src="../_static/media/chapter_8/section_7/media/image22.png" style="width:500px"  />
 
 The first parameter `result_image` represents the specific picture adding text explanation.
 
@@ -970,7 +972,7 @@ The seventh parameter `2` represents the font weight of the added text.
 
 - Use `cv2.rectangle()` function to draw the rectangle frame to frame the alphabet card.
 
-<img class="common_img" src="../_static/media/chapter_8\section_7\media\image23.png" style="width:500px"  />
+<img class="common_img" src="../_static/media/chapter_8/section_7/media/image23.png" style="width:500px"  />
 
 The first parameter `result_image` represents the specific image of the drawn frame.
 
@@ -984,7 +986,7 @@ The fifth parameter `3` represents the width of the rectangle border.
 
 - In program, use `print()` function to display the coordinate and name of the alphabet card in the terminal.
 
-<img class="common_img" src="../_static/media/chapter_8\section_7\media\image24.png" style="width:500px"  />
+<img class="common_img" src="../_static/media/chapter_8/section_7/media/image24.png" style="width:500px"  />
 
 Parameter `x1` represents the X-axis coordinate in the upper left corner of the alphabet card.
 
@@ -1024,23 +1026,23 @@ The source code of the program lies in **/Home/ros/src/jetmax_demos/scripts/alph
 
 ### 8.8.2 Operation steps
 
-<img class="common_img" src="../_static/media/chapter_8/section_8/media/image3.png" style="width:50px" />The entered command should be case sensitive. And the keywords can be complemented by Tab key.
+The entered command should be case sensitive. And the keywords can be complemented by Tab key.
 
-1. Double click <img class="common_img" src="../_static/media/chapter_8/section_8/media/image4.png" style="width:50px"  /> on the desktop.
+1. Double click <img src="../_static/media/chapter_8/section_8/media/image4.png" style="width:50px"  /> on the desktop.
 
-2. When into the interface, enter the command “**cd ros/src/jetmax_demos/scripts/**” to enter the directory storing the game program and press Enter.
+2. When into the interface, enter the command "**cd ros/src/jetmax_demos/scripts/**" to enter the directory storing the game program and press Enter.
 
-   ```py
-   cd ros/src/jetmax_demos/scripts/
-   ```
+```bash
+cd ros/src/jetmax_demos/scripts/
+```
 
-3. Enter command “**rosrun jetmax_demos alphabetically_main.py**” to run game program and press Enter.
+3. Enter command "**rosrun jetmax_demos alphabetically_main.py**" to run game program and press Enter.
 
-   ```py
-   rosrun jetmax_demos alphabetically_main.py
-   ```
+```bash
+rosrun jetmax_demos alphabetically_main.py
+```
 
-4)  If you want to close this program, you can press “**Ctrl+C**”. If it fails, you can try again.
+4)  If you want to close this program, you can press "**Ctrl+C**". If it fails, you can try again.
 
 ### 8.8.3 Function realization 
 
@@ -1082,21 +1084,21 @@ The process of processing image data is divided into these steps.
 
 1. Transfer the scaled data from the CPU to the GPU.
 
-   <img class="common_img" src="../_static/media/chapter_8/section_8/media/image13.png" style="width:500px"  />
+<img class="common_img" src="../_static/media/chapter_8/section_8/media/image13.png" style="width:500px"  />
 
 2. Run yolov5 inference process to traverse the alphabet material of the model and recognize the alphabet cards in the image.
 
-   <img class="common_img" src="../_static/media/chapter_8/section_8/media/image13.png" style="width:500px"  />
+<img class="common_img" src="../_static/media/chapter_8/section_8/media/image13.png" style="width:500px"  />
 
 3. Transfer the obtained data from GPU back to CPU.
 
-   <img class="common_img" src="../_static/media/chapter_8/section_8/media/image14.png" style="width:500px"  />
+<img class="common_img" src="../_static/media/chapter_8/section_8/media/image14.png" style="width:500px"  />
 
 - **Obtain information**
 
-  It is not convenient to use the detected result of the image directly. Hence, we need to convert and process the result with `post_process()` function later to obtain the visual information, including coordinate, confidence, category name, etc. The program is as follow.
+It is not convenient to use the detected result of the image directly. Hence, we need to convert and process the result with `post_process()` function later to obtain the visual information, including coordinate, confidence, category name, etc. The program is as follow.
 
-  <img class="common_img" src="../_static/media/chapter_8/section_8/media/image15.png" style="width:500px"  />
+<img class="common_img" src="../_static/media/chapter_8/section_8/media/image15.png" style="width:500px"  />
 
 Parameter `boxes` represents the coordinate of the card.
 
@@ -1192,11 +1194,13 @@ The second parameter `daemon=True` represents Daemon thread. If there is only da
 
 <img class="common_img" src="../_static/media/chapter_8/section_8/media/image25.png" style="width:500px"  />
 
-<img class="common_img" src="../_static/media/chapter_8\section_8/media/image26.png" style="width:500px"  />
+<img class="common_img" src="../_static/media/chapter_8/section_8/media/image26.png" style="width:500px"  />
+
+<p id="anchor_8_9"></p>
 
 ## 8.9 Mask Image Training
 
-<img class="common_img" src="../_static/media/chapter_8\section_9\media\image2.png" style="width:50px" />It is not recommended to use Jetson Nano for training when the data set is large, because the limit of I/O interface’s speed and memory makes the training process slow down. And it is recommended to use the computer with discrete graphics card for training under this situation. The training process on Jetson Nano and computer is the same, but you need to configure the related program operating environment.
+It is not recommended to use Jetson Nano for training when the data set is large, because the limit of I/O interface's speed and memory makes the training process slow down. And it is recommended to use the computer with discrete graphics card for training under this situation. The training process on Jetson Nano and computer is the same, but you need to configure the related program operating environment.
 
 The mask recognition image model has already been trained before delivery. If you want to train your own model, you can refer to this tutorial.
 
@@ -1204,7 +1208,7 @@ The mask recognition image model has already been trained before delivery. If yo
 
 1)  Prepare a laptop. If you are using desktop computer, wireless network card, mouse and other tools are needed.
 
-2)  Install and open the remote connection tool No Machine, according to the tutorial in “**[3. AI Vision Games Lesson->3.1 Set Development Environment->3.1.1 Remote Tool Installation and Connection]()**” .
+2)  Install and open the remote connection tool No Machine, according to the tutorial in "**[3. AI Vision Games Lesson->3.1 Set Development Environment->3.1.1 Remote Tool Installation and Connection](https://wiki.hiwonder.com/projects/JetMax/en/latest/docs/3_AI_Vision_Games_Lesson.html#set-development-environment)**" .
 
 ### 8.9.2 Training steps
 
@@ -1212,145 +1216,145 @@ The mask recognition image model has already been trained before delivery. If yo
 
 1)  Add a new folder, **facemask**, for storing data set under any path. But to prevent the normal use of other files during training operations, we advise you to add it to **Home** under **Files**.
 
-<img class="common_img" src="../_static/media/chapter_8\section_9\media\image3.png" style="width:500px" />
+<img class="common_img" src="../_static/media/chapter_8/section_9/media/image3.png" style="width:500px" />
 
-2)  Create three directories in “**facemask**” folder, namely Annotations, ImageSets and JPEGImages. “**Annotation**s” is used to store the annotated file. “**ImageSets**” is used to store path file of data set. And “**JPEGImages**” is used to store pictures of data set.
+2)  Create three directories in "**facemask**" folder, namely Annotations, ImageSets and JPEGImages. "**Annotation**s" is used to store the annotated file. "**ImageSets**" is used to store path file of data set. And "**JPEGImages**" is used to store pictures of data set.
 
-<img class="common_img" src="../_static/media/chapter_8\section_9\media\image4.png" style="width:500px" />
+<img class="common_img" src="../_static/media/chapter_8/section_9/media/image4.png" style="width:500px" />
 
 * **Prepare data set**
 
-<img class="common_img" src="../_static/media/chapter_8\section_9\media\image2.png" style="width:50px" />The pictures can be obtained from the Internet. But you need to modify the resolution rate as 640\*480 to degrade the performance required for subsequent annotation and training. The resolution rate of pictures taken by “**Capture**” is 640\*480 by default.
+The pictures can be obtained from the Internet. But you need to modify the resolution rate as 640\*480 to degrade the performance required for subsequent annotation and training. The resolution rate of pictures taken by "**Capture**" is 640\*480 by default.
 
-We will use the pictures from the Internet. If you want to use the personal pictures, you can refer to “**[8.3 Image Card Training]()**”.
+We will use the pictures from the Internet. If you want to use the personal pictures, you can refer to "**[8.3 Image Card Training](#anchor_8_3)**".
 
 When using the image materials from the Internet to train, you need to copy the downloaded pictures to this path, **/home/facemask/JPEGImage.**
 
-<img class="common_img" src="../_static/media/chapter_8\section_9\media\image5.png" style="width:500px" />
+<img class="common_img" src="../_static/media/chapter_8/section_9/media/image5.png" style="width:500px" />
 
 * **Annotate the picture**
 
-1)  Double click “**labellmg**” icon on the desktop to open annotation tool.
+1)  Double click "**labellmg**" icon on the desktop to open annotation tool.
 
-<img class="common_img" src="../_static/media/chapter_8\section_9\media\image6.png" style="width:100px"  />
+<img class="common_img" src="../_static/media/chapter_8/section_9/media/image6.png" style="width:100px"  />
 
-2)  Click “**Change Save Dir**” to set the path to save the annotated data. And I select “**/home/hiwonder/facemask/Annotations**”, then click “**Open**”.
+2)  Click "**Change Save Dir**" to set the path to save the annotated data. And I select "**/home/hiwonder/facemask/Annotations**", then click "**Open**".
 
-<img class="common_img" src="../_static/media/chapter_8\section_9\media\image7.png" style="width:500px"  />
+<img class="common_img" src="../_static/media/chapter_8/section_9/media/image7.png" style="width:500px"  />
 
-<img class="common_img" src="../_static/media/chapter_8\section_9\media\image8.png" style="width:500px"  />
+<img class="common_img" src="../_static/media/chapter_8/section_9/media/image8.png" style="width:500px"  />
 
-3)  Click “**Open Dir**” to open the folder saving the photos, select “**/home/hiwonder/facemask/JPEGImage**”, then click “Open”.
+3)  Click "**Open Dir**" to open the folder saving the photos, select "**/home/hiwonder/facemask/JPEGImage**", then click "Open".
 
-<img class="common_img" src="../_static/media/chapter_8\section_9\media\image9.png" style="width:500px"  />
+<img class="common_img" src="../_static/media/chapter_8/section_9/media/image9.png" style="width:500px"  />
 
-<img class="common_img" src="../_static/media/chapter_8\section_9\media\image10.png" style="width:500px"  />
+<img class="common_img" src="../_static/media/chapter_8/section_9/media/image10.png" style="width:500px"  />
 
-4)  Click “**Create RectBox**” to create a annotation box.
+4)  Click "**Create RectBox**" to create a annotation box.
 
-<img class="common_img" src="../_static/media/chapter_8\section_9\media\image11.png" style="width:500px" />
+<img class="common_img" src="../_static/media/chapter_8/section_9/media/image11.png" style="width:500px" />
 
-5)  Left press the mouse to drag the rectangular box to frame the target you want to train. Here, we frame the persons who don’t wear a mask.
+5)  Left press the mouse to drag the rectangular box to frame the target you want to train. Here, we frame the persons who don't wear a mask.
 
-<img class="common_img" src="../_static/media/chapter_8\section_9\media\image12.png" style="width:500px" />
+<img class="common_img" src="../_static/media/chapter_8/section_9/media/image12.png" style="width:500px" />
 
-6)  Release the mouse, and enter the name of this card in pop-up interface, then click “**OK**”. For example, if you are training image without mask, you can enter “**nofacemask**”. On the opposite, you can enter “**facemask**”.
+6)  Release the mouse, and enter the name of this card in pop-up interface, then click "**OK**". For example, if you are training image without mask, you can enter "**nofacemask**". On the opposite, you can enter "**facemask**".
 
-<img class="common_img" src="../_static/media/chapter_8\section_9\media\image13.png" style="width:500px" />
+<img class="common_img" src="../_static/media/chapter_8/section_9/media/image13.png" style="width:500px" />
 
-7)  After annotating one picture, click “**save**”, then click “**Next Image**”.
+7)  After annotating one picture, click "**save**", then click "**Next Image**".
 
-<img class="common_img" src="../_static/media/chapter_8\section_9\media\image14.png" style="width:500px"  />
+<img class="common_img" src="../_static/media/chapter_8/section_9/media/image14.png" style="width:500px"  />
 
-8)  When all the pictures are annotated, files, with the same name as the pictures, in xml format will be generated in “**Annotations**” folder. Pay attention to that only if the image materials reach a certain quantity, the model is reliable.
+8)  When all the pictures are annotated, files, with the same name as the pictures, in xml format will be generated in "**Annotations**" folder. Pay attention to that only if the image materials reach a certain quantity, the model is reliable.
 
-<img class="common_img" src="../_static/media/chapter_8\section_9\media\image15.png" style="width:500px" />
+<img class="common_img" src="../_static/media/chapter_8/section_9/media/image15.png" style="width:500px" />
 
 * **Generate related file**
 
-1)  Copy “**txt_gen.py**” and “**xml2yolo.py**” files to “**Home/facemask**” folder, and create file named “**classes.names**”.
+1)  Copy "**txt_gen.py**" and "**xml2yolo.py**" files to "**Home/facemask**" folder, and create file named "**classes.names**".
 
-<img class="common_img" src="../_static/media/chapter_8\section_9\media\image16.png" style="width:500px" />
+<img class="common_img" src="../_static/media/chapter_8/section_9/media/image16.png" style="width:500px" />
 
-2. Double click “**Terminal**” icon to enter the terminal interface.
+2. Double click "**Terminal**" icon to enter the terminal interface.
 
-3. Enter command “**cd facemask/**” and press Enter to enter the folder.
+3. Enter command "**cd facemask/**" and press Enter to enter the folder.
 
-   ```py
-   cd facemask/
-   ```
+```bash
+cd facemask/
+```
 
-4)  Enter command “**python3 txt_gen.py**” and press Enter to run the program. Scan the xml file and jpg file with the same name from “**Annotations**” and “ **JPEGImages**”, then write them to “**all.txt**” folder.
+4)  Enter command "**python3 txt_gen.py**" and press Enter to run the program. Scan the xml file and jpg file with the same name from "**Annotations**" and " **JPEGImages**", then write them to "**all.txt**" folder.
 
-<img class="common_img" src="../_static/media/chapter_8\section_9\media\image18.png" style="width:500px" />
+<img class="common_img" src="../_static/media/chapter_8/section_9/media/image18.png" style="width:500px" />
 
-5)  Next, the contents in **all.txt**” file are randomly allocated into three files: “**train.txt**”, “**val.txt**” and “**test.txt**” at a ratio of 80%:15%:5.
+5)  Next, the contents in **all.txt**" file are randomly allocated into three files: "**train.txt**", "**val.txt**" and "**test.txt**" at a ratio of 80%:15%:5.
 
-<img class="common_img" src="../_static/media/chapter_8\section_9\media\image19.png" style="width:500px" />
+<img class="common_img" src="../_static/media/chapter_8/section_9/media/image19.png" style="width:500px" />
 
-6)  Enter the data set directory “**facemask**”, then modify the “**classes.names**” content with text editor as the picture shown. Pay attention to that enter one card name in one line.
+6)  Enter the data set directory "**facemask**", then modify the "**classes.names**" content with text editor as the picture shown. Pay attention to that enter one card name in one line.
 
-<img class="common_img" src="../_static/media/chapter_8\section_9\media\image20.png" style="width:500px" />
+<img class="common_img" src="../_static/media/chapter_8/section_9/media/image20.png" style="width:500px" />
 
-7. Enter command “**python3 xml2yolo.py**” and press Enter to run the program. Covert the xml files, corresponding to the pictures in “**all.txt**”, into txt files required by yolo. Then synchronize the txt files to “**JPEGImages**” folder.
+7. Enter command "**python3 xml2yolo.py**" and press Enter to run the program. Covert the xml files, corresponding to the pictures in "**all.txt**", into txt files required by yolo. Then synchronize the txt files to "**JPEGImages**" folder.
 
-   ```py
-   python3 xml2yolo.py
-   ```
+```bash
+python3 xml2yolo.py
+```
 
-8)  When the files are generated, enter “**Home/yolov5/data**” under “**Files**” in File Explorer, then create “**facemask.yaml**” file. And write the following content to this file.
+8)  When the files are generated, enter "**Home/yolov5/data**" under "**Files**" in File Explorer, then create "**facemask.yaml**" file. And write the following content to this file.
 
-<img class="common_img" src="../_static/media/chapter_8\section_9\media\image22.png" style="width:500px" />
+<img class="common_img" src="../_static/media/chapter_8/section_9/media/image22.png" style="width:500px" />
 
-Note: the parameter order of name should be consistent with “**classes.names**”.
+Note: the parameter order of name should be consistent with "**classes.names**".
 
 * **Start training**
 
-1. Enter command “**cd yolov5/**” to enter yolov5 directory.
+1. Enter command "**cd yolov5/**" to enter yolov5 directory.
 
-   ```py
-   cd yolov5/
-   ```
+```bash
+cd yolov5/
+```
 
-2. Enter command “**python3 train.py --img-size 160 --weights yolov5s.pt --data data/facemask.yaml --batch-size 4 --epochs 10**” and press Enter to start training.
+2. Enter command "**python3 train.py --img-size 160 --weights yolov5s.pt --data data/facemask.yaml --batch-size 4 --epochs 10**" and press Enter to start training.
 
-   ```py
-   python3 train.py --img-size 160 --weights yolov5s.pt --data data/facemask.yaml --batch-size 4 --epochs 10
-   ```
+```bash
+python3 train.py --img-size 160 --weights yolov5s.pt --data data/facemask.yaml --batch-size 4 --epochs 10
+```
 
-3)  When the training is completed, related files will be generated in “**yolov5/runs/train//**”.
+3)  When the training is completed, related files will be generated in "**yolov5/runs/train//**".
 
-<img class="common_img" src="../_static/media/chapter_8\section_9\media\image25.png" style="width:500px" />
+<img class="common_img" src="../_static/media/chapter_8/section_9/media/image25.png" style="width:500px" />
 
 * **change the format**
 
 To ensure that the neural network data can convert in different architectures, we need to convert the weight file of pytorch into onnx format, then into tensorrt format.
 
-1. Enter command “**cd yolov5/**” to enter yolov5 directory.
+1. Enter command "**cd yolov5/**" to enter yolov5 directory.
 
-   ```py
-   cd yolov5/
-   ```
+```bash
+cd yolov5/
+```
 
-2. Enter command “**python3 models/export.py --weights runs/train/exp/weights/best.pt --img-size 160 --batch-size 1**” and press Enter to convert the weight file of pytorch into onnx format. Pay attention that “**exp**” in the command need to be modified according to the actual folder generated in “**yolov5/runs/train/**”.
+2. Enter command "**python3 models/export.py --weights runs/train/exp/weights/best.pt --img-size 160 --batch-size 1**" and press Enter to convert the weight file of pytorch into onnx format. Pay attention that "**exp**" in the command need to be modified according to the actual folder generated in "**yolov5/runs/train/**".
 
-   ```py
-   python3 models/export.py --weights runs/train/exp/weights/best.pt --img-size 160 --batch-size 1
-   ```
+```bash
+python3 models/export.py --weights runs/train/exp/weights/best.pt --img-size 160 --batch-size 1
+```
 
-3)  After the file was converted into onnx format, “**best.onnx**” file will generated in “**Home/yolov5/runs/train/exp/weights**”.
+3)  After the file was converted into onnx format, "**best.onnx**" file will generated in "**Home/yolov5/runs/train/exp/weights**".
 
-<img class="common_img" src="../_static/media/chapter_8\section_9\media\image27.png" style="width:500px" />
+<img class="common_img" src="../_static/media/chapter_8/section_9/media/image27.png" style="width:500px" />
 
-4. Enter command “**onnx2trt runs/train/exp/weights/best.onnx -o best.trt**” and press Enter to convert the file in onnx format into tensorrt format. Pay attention that “**exp**” in the command need to be modified according to the actual folder generated in “**yolov5/runs/train/**”.
+4. Enter command "**onnx2trt runs/train/exp/weights/best.onnx -o best.trt**" and press Enter to convert the file in onnx format into tensorrt format. Pay attention that "**exp**" in the command need to be modified according to the actual folder generated in "**yolov5/runs/train/**".
 
-   ```py
-   onnx2trt runs/train/exp/weights/best.onnx -o best.trt
-   ```
+```bash
+onnx2trt runs/train/exp/weights/best.onnx -o best.trt
+```
 
-5)  After the conversion, “**best.trt**” file will be generated in yolov5 directory.
+5)  After the conversion, "**best.trt**" file will be generated in yolov5 directory.
 
-<img class="common_img" src="../_static/media/chapter_8\section_9/media/image29.png" style="width:500px" />
+<img class="common_img" src="../_static/media/chapter_8/section_9/media/image29.png" style="width:500px" />
 
 ## **8.10 Mask Identification**
 
@@ -1360,7 +1364,7 @@ The process of mask identification is divided into 3 parts.
 
 **Step 1: obtain and process image**
 
-Firstly, subscribe to real-time image data released by camera node “**/usb_cam/image_rect_color**”. Next, convert it to numpy format, then perform color space conversion to obtain the image in BGR format.
+Firstly, subscribe to real-time image data released by camera node "**/usb_cam/image_rect_color**". Next, convert it to numpy format, then perform color space conversion to obtain the image in BGR format.
 
 **Step 2: recognize and process the mask**
 
@@ -1376,23 +1380,23 @@ The source code of this program is in **/Home/ros/src/jetmax_demos/scripts/face_
 
 ### 8.10.2 Operation steps
 
-<img class="common_img" src="../_static/media/chapter_8/section_10/media/image3.png" style="width:50px" />The entered command should be case-sensitive. And the keywords can be complemented by the **Tab** key.
+The entered command should be case-sensitive. And the keywords can be complemented by the **Tab** key.
 
-1. Double click <img class="common_img" src="../_static/media/chapter_8/section_10/media/image4.png" style="width:50px"  /> on the desktop.
+1. Double click <img src="../_static/media/chapter_8/section_10/media/image4.png" style="width:50px"  /> on the desktop.
 
-2. When into the interface, enter command “**cd ros/src/jetmax_demos/scripts**” to enter the directory storing the game program and press Enter.
+2. When into the interface, enter command "**cd ros/src/jetmax_demos/scripts**" to enter the directory storing the game program and press Enter.
 
-   ```py
-   cd ros/src/jetmax_demos/scripts
-   ```
+```bash
+cd ros/src/jetmax_demos/scripts
+```
 
-3. Enter “**rosrun jetmax_demos face_mask_main.py**” to run the game program and press Enter.
+3. Enter "**rosrun jetmax_demos face_mask_main.py**" to run the game program and press Enter.
 
-   ```py
-   rosrun jetmax_demos face_mask_main.py
-   ```
+```bash
+rosrun jetmax_demos face_mask_main.py
+```
 
-4)  If you want to close this program, you can press “**Ctrl+C**”.
+4)  If you want to close this program, you can press "**Ctrl+C**".
 
 ### 8.10.3 Function realization
 
@@ -1434,21 +1438,21 @@ Image processing is divided into these steps
 
 1. Transfer the scaled data from CPU to GPU.
 
-   <img class="common_img" src="../_static/media/chapter_8/section_10/media/image13.png" style="width:500px"  />
+<img class="common_img" src="../_static/media/chapter_8/section_10/media/image13.png" style="width:500px"  />
 
 2. Run yolov5 inference process and traverse the mask image material of the model to recognize the mask in the image.
 
-   <img class="common_img" src="../_static/media/chapter_8/section_10/media/image14.png" style="width:500px"  />
+<img class="common_img" src="../_static/media/chapter_8/section_10/media/image14.png" style="width:500px"  />
 
 3. Transmit the obtained data from GPU back to CPU.
 
-   <img class="common_img" src="../_static/media/chapter_8/section_10/media/image15.png" style="width:500px"  />
+<img class="common_img" src="../_static/media/chapter_8/section_10/media/image15.png" style="width:500px"  />
 
 - obtain information
 
-  It is not convenient to use the detected result of the image directly. Hence, we need to convert and process the result with `post_process()` function later to obtain the visual information, including coordinate, confidence, category name, etc.
+It is not convenient to use the detected result of the image directly. Hence, we need to convert and process the result with `post_process()` function later to obtain the visual information, including coordinate, confidence, category name, etc.
 
-  <img class="common_img" src="../_static/media/chapter_8/section_10/media/image16.png" style="width:500px"  />
+<img class="common_img" src="../_static/media/chapter_8/section_10/media/image16.png" style="width:500px"  />
 
 Parameter `boxes` represents the obtained coordinate of human face or mask
 
@@ -1494,7 +1498,7 @@ After obtaining the detected information, related information will display on VN
 
 The first parameter `result_image` represents the specific picture to which the text is added.
 
-The second parameter `FACEMASK_LABELS\[cls_id\] +** ” “ **+ str(float(cls_conf))[:4]` represents the added text content. `FACEMASK_LABELS[cls_id]` indicates whether the people wear a mask or not. `str(float(cls_conf))[:4]` represents the confidence of the detected human face or mask.
+The second parameter `FACEMASK_LABELS\[cls_id\] +** " " **+ str(float(cls_conf))[:4]` represents the added text content. `FACEMASK_LABELS[cls_id]` indicates whether the people wear a mask or not. `str(float(cls_conf))[:4]` represents the confidence of the detected human face or mask.
 
 The third parameter `(int(x1), int(y1) - 5)` represents the coordinate of the added text
 
@@ -1526,4 +1530,4 @@ The fifth parameter `3` represents the width of the rectangle border
 
 <img class="common_img" src="../_static/media/chapter_8/section_10/media/image24.png" style="width:500px"  />
 
-<img class="common_img" src="../_static/media/chapter_8\section_10/media/image25.png" style="width:500px"  />
+<img class="common_img" src="../_static/media/chapter_8/section_10/media/image25.png" style="width:500px"  />

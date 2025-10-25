@@ -30,7 +30,7 @@ Ros files consist of Packages and Manifest (package.xml).
 
 **Manifest (package.xml)**: The manifest is a description of the related information of software package, which is used to define the dependencies between related meta-information of the package, including the version, maintainer, and license agreement.
 
-### 9.2.2**Common documents** 
+### 9.2.2 Common documents
 
 **Urdf**: description document of robot can be applied in robot simulation software. It usually contains node, texture, collision, etc.
 
@@ -66,31 +66,31 @@ Turtlesim is used for Ros or Ros software teaching.
 
 1. Before using, please open the command line terminal.
 
-2. Enter “**roscore**” command and open **master,** mentioned before, which is used to manage nodes.
+2. Enter "**roscore**" command and open **master,** mentioned before, which is used to manage nodes.
 
-3. After opening master, we need to enter “**rosrun turtlesim turtlesim_node”** command to start Turtlesim. And now, we open a node also called a process.
+3. After opening master, we need to enter "**rosrun turtlesim turtlesim_node"** command to start Turtlesim. And now, we open a node also called a process.
 
-   <img class="common_img" src="../_static/media/chapter_9\section_2\media\image2.png" style="width:500px" />
+<img class="common_img" src="../_static/media/chapter_9/section_2/media/image2.png" style="width:500px" />
 
-4. Open a new terminal again and enter “**rosrun turtlesim turtle_teleop_key**” command. Control the movement of the tortoise with front, back, right and left key.
+4. Open a new terminal again and enter "**rosrun turtlesim turtle_teleop_key**" command. Control the movement of the tortoise with front, back, right and left key.
 
-   <img class="common_img" src="../_static/media/chapter_9\section_2\media\image3.png" style="width:500px" />
+<img class="common_img" src="../_static/media/chapter_9/section_2/media/image3.png" style="width:500px" />
 
-   Warm notice: pin top the terminal interface to control.
+Warm notice: pin top the terminal interface to control.
 
-   <img class="common_img" src="../_static/media/chapter_9\section_2\media\image4.png" style="width:500px" />
+<img class="common_img" src="../_static/media/chapter_9/section_2/media/image4.png" style="width:500px" />
 
 * **QT visual tool** 
 
-Open terminal and enter **“rosrun rqt”** command. Then press “**Tab**” key to unfold the following commands.
+Open terminal and enter **"rosrun rqt"** command. Then press "**Tab**" key to unfold the following commands.
 
-<img class="common_img" src="../_static/media/chapter_9\section_2\media\image5.png" style="width:500px" />
+<img class="common_img" src="../_static/media/chapter_9/section_2/media/image5.png" style="width:500px" />
 
-In “**[3. AI Vision Games Lesson]()**”, we have used **rqt_image_view** to turn on image returned by camera. And here, we introduce other tools to you.
+In "**[3. AI Vision Games Lesson](https://wiki.hiwonder.com/projects/JetMax/en/latest/docs/3_AI_Vision_Games_Lesson.html)**", we have used **rqt_image_view** to turn on image returned by camera. And here, we introduce other tools to you.
 
 1. **rqt_console**: toolkit for outputting log
 
-   <img class="common_img" src="../_static/media/chapter_9\section_2\media\image6.png" style="width:500px" />
+<img class="common_img" src="../_static/media/chapter_9/section_2/media/image6.png" style="width:500px" />
 
 2. **rqt_graph**: visual tool for calculation chart
 
@@ -100,17 +100,17 @@ In “**[3. AI Vision Games Lesson]()**”, we have used **rqt_image_view** to t
 
 Through building various models, it can make virtual robot work in a real scenario.
 
-Enter “**gazebo**” command and wait to open the gazebo.
+Enter "**gazebo**" command and wait to open the gazebo.
 
-<img class="common_img" src="../_static/media/chapter_9\section_2\media\image7.png" style="width:500px" />
+<img class="common_img" src="../_static/media/chapter_9/section_2/media/image7.png" style="width:500px" />
 
-<img class="common_img" src="../_static/media/chapter_9\section_2\media\image8.png" style="width:500px" />
+<img class="common_img" src="../_static/media/chapter_9/section_2/media/image8.png" style="width:500px" />
 
 * **Rviz visual platform**
 
 It is used to simulate a variety of data of robot, and can be combined with suitable plug-ins.
 
-<img class="common_img" src="../_static/media/chapter_9\section_2\media\image9.png" style="width:500px" />
+<img class="common_img" src="../_static/media/chapter_9/section_2/media/image9.png" style="width:500px" />
 
 ### 9.2.5 Common Command
 
@@ -131,6 +131,8 @@ Through previous explanation, we have a understanding of basic Ros command. And 
 | rosrun \[package_name\] \[node_name\] \[\_\_name:=new_name\] | Run the node.                                                |
 | rosmsg show message-type-name                                | View the details of message type.                            |
 
+<p id="anchor_9_3"></p>
+
 ## 9.3 Basic Ros Case 1- Creating messages and services
 
 ###  9.3.1 Message and service
@@ -143,148 +145,148 @@ srv (service): srv is used to describe the Ros service type. It, consisting of r
 
 We need to create a software package before creating message and service.
 
-1. First, create a catkin workspace. Double-click on “**Terminal**” in remote desktop of NoMachine to open the terminal.
+1. First, create a catkin workspace. Double-click on "**Terminal**" in remote desktop of NoMachine to open the terminal.
 
-   <img class="common_img" src="../_static/media/chapter_9\section_3\media\image2.jpeg" style="width:500px"  />
+<img class="common_img" src="../_static/media/chapter_9/section_3/media/image2.jpeg" style="width:500px"  />
 
-2. Enter “**mkdir -p ~/ros/src**” command in the terminal and press “**Enter**” to create a workspace named “**catkin_ws**” in the ~ directory.
+2. Enter "**mkdir -p ~/ros/src**" command in the terminal and press "**Enter**" to create a workspace named "**catkin_ws**" in the ~ directory.
 
-   ```py
-   mkdir -p ~/ros/src
-   ```
+```bash
+mkdir -p ~/ros/src
+```
 
-   <img class="common_img" src="../_static/media/chapter_9\section_3\media\image4.jpeg" style="width:500px"  />
+<img class="common_img" src="../_static/media/chapter_9/section_3/media/image4.jpeg" style="width:500px"  />
 
-3. Enter “**cd ~/catkin_ws/src**” command and press “**Enter**” to access the  
-   source file space (src) directory of catkin_ws.
+3. Enter "**cd ~/catkin_ws/src**" command and press "**Enter**" to access the  
+source file space (src) directory of catkin_ws.
 
-   ```py
-   cd ~/catkin_ws/src
-   ```
+```bash
+cd ~/catkin_ws/src
+```
 
-4. Enter “**catkin_create_pkg beginner_hiwonder std_msgs rospy roscpp**” command, and then press “**Enter**”. Create a software package named “**beginner_hiwonder**” and add dependency (msgs、rospy、roscpp).
+4. Enter "**catkin_create_pkg beginner_hiwonder std_msgs rospy roscpp**" command, and then press "**Enter**". Create a software package named "**beginner_hiwonder**" and add dependency (msgs、rospy、roscpp).
 
-   <img class="common_img" src="../_static/media/chapter_9\section_3\media\image6.jpeg" style="width:500px"  />
+<img class="common_img" src="../_static/media/chapter_9/section_3/media/image6.jpeg" style="width:500px"  />
 
-5. Enter “**cd ..**” command and press “**Enter**” to return to the previous directory ~/catkin_ws/.
+5. Enter "**cd ..**" command and press "**Enter**" to return to the previous directory ~/catkin_ws/.
 
-   ```py
-   cd ..
-   ```
+```bash
+cd ..
+```
 
-6. Enter “**catkin_make**” command and press “**Enter**” to complete the construction of software package in catkin workspace.
+6. Enter "**catkin_make**" command and press "**Enter**" to complete the construction of software package in catkin workspace.
 
-   <img class="common_img" src="../_static/media/chapter_9\section_3\media\image8.jpeg" style="width:500px"  />
+<img class="common_img" src="../_static/media/chapter_9/section_3/media/image8.jpeg" style="width:500px"  />
 
-7. Enter “**. ~/catkin_ws/devel/setup.bash**” command and press “**Enter**” to validate configuration file. Then, add “catkin_ws” workspace to the Ros environment.
+7. Enter "**. ~/catkin_ws/devel/setup.bash**" command and press "**Enter**" to validate configuration file. Then, add "catkin_ws" workspace to the Ros environment.
 
-   ```py
-   . ~/catkin_ws/devel/setup.bash
-   ```
+```bash
+. ~/catkin_ws/devel/setup.bash
+```
 
 ###  9.3.3 Create a Message 
 
-1. We need to define a new message in the software package created before. Initially, please open remote desktop of NoMachine, and double-click “**Teminal**” icon to open the terminal.
+1. We need to define a new message in the software package created before. Initially, please open remote desktop of NoMachine, and double-click "**Teminal**" icon to open the terminal.
 
-   <img class="common_img" src="../_static/media/chapter_9\section_3\media\image10.jpeg" style="width:500px"  />
+<img class="common_img" src="../_static/media/chapter_9/section_3/media/image10.jpeg" style="width:500px"  />
 
-2. Enter “**roscd beginner_hiwonder**” command and press “**Enter**” to access the software package path.
+2. Enter "**roscd beginner_hiwonder**" command and press "**Enter**" to access the software package path.
 
-   ```py
-   roscd beginner_hiwonder
-   ```
+```bash
+roscd beginner_hiwonder
+```
 
 > [!NOTE]
 >
-> Attention: If “**No such package/stack ‘beginner_hiwonder**” occurs, software package may be not stored in environment variable ROS_PACKAGE_PATH.
+> Attention: If "**No such package/stack 'beginner_hiwonder**" occurs, software package may be not stored in environment variable ROS_PACKAGE_PATH.
 
-<img class="common_img" src="../_static/media/chapter_9\section_3\media\image12.jpeg" style="width:500px"  />
+<img class="common_img" src="../_static/media/chapter_9/section_3/media/image12.jpeg" style="width:500px"  />
 
 And we need to add the path of the software package to the environment variable **ROS_PACKAGE_PATH**.
 
-3. Firstly, enter **“echo "source ~/catkin_ws/devel/setup.bash" \>\> ~/.bashrc**” command and press “**Enter**”.
+3. Firstly, enter **"echo "source ~/catkin_ws/devel/setup.bash" \>\> ~/.bashrc**" command and press "**Enter**".
 
-   ```py
-   echo "source ~/catkin_ws/devel/setup.bash" >> ~/.bashrc
-   ```
+```bash
+echo "source ~/catkin_ws/devel/setup.bash" >> ~/.bashrc
+```
 
-4. Then, enter “**source ~/.bashrc”** command and press “Enter” to complete.
+4. Then, enter "**source ~/.bashrc"** command and press "Enter" to complete.
 
-   ```py
-   source ~/.bashrc
-   ```
+```bash
+source ~/.bashrc
+```
 
-5. Enter “**mkdir msg**” command and press “Enter” to create a msg folder.
+5. Enter "**mkdir msg**" command and press "Enter" to create a msg folder.
 
-   ```py
-   mkdir msg
-   ```
+```bash
+mkdir msg
+```
 
-6. Enter “**echo "int64 num" \> msg/Num.msg”** command and press “Enter” to write int64 num message field to the Num.msg file.
+6. Enter "**echo "int64 num" \> msg/Num.msg"** command and press "Enter" to write int64 num message field to the Num.msg file.
 
-   ```py
-   echo "int64 num" > msg/Num.msg
-   ```
+```bash
+echo "int64 num" > msg/Num.msg
+```
 
-7. Open the package.xml saved in the path of “**/home/ubuntu/catkin_ws/src/beginner_hiwonder/”**, and ensure it contains following two lines, framed in the picture, and not be commented. If not contained, the following two lines should be added.
+7. Open the package.xml saved in the path of "**/home/ubuntu/catkin_ws/src/beginner_hiwonder/"**, and ensure it contains following two lines, framed in the picture, and not be commented. If not contained, the following two lines should be added.
 
-   <img class="common_img" src="../_static/media/chapter_9\section_3\media\image17.jpeg" style="width:500px"  />
+<img class="common_img" src="../_static/media/chapter_9/section_3/media/image17.jpeg" style="width:500px"  />
 
-   <img class="common_img" src="../_static/media/chapter_9\section_3\media\image18.png" style="width:500px"  />
+<img class="common_img" src="../_static/media/chapter_9/section_3/media/image18.png" style="width:500px"  />
 
-8. Open the CMakeLists.txt saved in the path of **“/Home/catkin_ws/src/beginner_hiwonder/”**, and call and add a message_generation dependency to an existing find_package.
+8. Open the CMakeLists.txt saved in the path of **"/Home/catkin_ws/src/beginner_hiwonder/"**, and call and add a message_generation dependency to an existing find_package.
 
-   <img class="common_img" src="../_static/media/chapter_9\section_3\media\image19.jpeg" style="width:500px"  />
+<img class="common_img" src="../_static/media/chapter_9/section_3/media/image19.jpeg" style="width:500px"  />
 
 9. In the same file, add the**. MSG** file manually. Find the corresponding program block and modify according to the following figure.
 
-   <img class="common_img" src="../_static/media/chapter_9\section_3\media\image20.jpeg" style="width:500px"  />
+<img class="common_img" src="../_static/media/chapter_9/section_3/media/image20.jpeg" style="width:500px"  />
 
-   <img class="common_img" src="../_static/media/chapter_9\section_3\media\image21.jpeg" style="width:500px"  />
+<img class="common_img" src="../_static/media/chapter_9/section_3/media/image21.jpeg" style="width:500px"  />
 
 10. To ensure `generate_messages()` is called, please modify in the same file according to the following figure.
 
-    <img class="common_img" src="../_static/media/chapter_9\section_3\media\image22.png" style="width:500px"  />
+<img class="common_img" src="../_static/media/chapter_9/section_3/media/image22.png" style="width:500px"  />
 
-    <img class="common_img" src="../_static/media/chapter_9\section_3\media\image23.png" style="width:500px"  />
+<img class="common_img" src="../_static/media/chapter_9/section_3/media/image23.png" style="width:500px"  />
 
-11. Enter “**rosmsg show beginner_hiwonder/Num**” command and press “**Enter**” to check whether the written message field is recognized by Ros system. If recognition is successful, the command shown in the red box will appear.
+11. Enter "**rosmsg show beginner_hiwonder/Num**" command and press "**Enter**" to check whether the written message field is recognized by Ros system. If recognition is successful, the command shown in the red box will appear.
 
-    <img class="common_img" src="../_static/media/chapter_9\section_3\media\image24.jpeg" style="width:500px"  />
+<img class="common_img" src="../_static/media/chapter_9/section_3/media/image24.jpeg" style="width:500px"  />
 
 ###  9.3.4 Create a Service
 
-1. Based on the software package created before, we need to create a service. Please open remote desktop of NoMachine, and Double-click “**Teminal**” icon to open the terminal.
+1. Based on the software package created before, we need to create a service. Please open remote desktop of NoMachine, and Double-click "**Teminal**" icon to open the terminal.
 
-   <img class="common_img" src="../_static/media/chapter_9\section_3\media\image10.jpeg" style="width:500px"  />
+<img class="common_img" src="../_static/media/chapter_9/section_3/media/image10.jpeg" style="width:500px"  />
 
-2. Enter “**roscd beginner_hiwonder**” command and press “**Enter**” to access the software package path.
+2. Enter "**roscd beginner_hiwonder**" command and press "**Enter**" to access the software package path.
 
-   ```py
-   roscd beginner_hiwonder
-   ```
+```bash
+roscd beginner_hiwonder
+```
 
-3. Enter “**mkdir srv**” command and press “**Enter**” to create a srv folder.
+3. Enter "**mkdir srv**" command and press "**Enter**" to create a srv folder.
 
-   ```py
-   mkdir srv
-   ```
+```bash
+mkdir srv
+```
 
-4. Enter “**roscp rospy_tutorials AddTwoInts.srv srv/AddTwoInts.srv”** command and press “**Enter**”. Copy **AddTwoInts** in rospy_tutorials and paste it to beginner_hiwonder.
+4. Enter "**roscp rospy_tutorials AddTwoInts.srv srv/AddTwoInts.srv"** command and press "**Enter**". Copy **AddTwoInts** in rospy_tutorials and paste it to beginner_hiwonder.
 
-   ```py
-   roscp rospy_tutorials AddTwoInts.srv srv/AddTwoInts.srv
-   ```
+```bash
+roscp rospy_tutorials AddTwoInts.srv srv/AddTwoInts.srv
+```
 
 5. Open CMakeLists.txt saved in the path of **/home/ubuntu/catkin_ws/src/beginner_hiwonder/ and add** .srv file manually. Then modify the corresponding program block as follows.
 
-   <img class="common_img" src="../_static/media/chapter_9\section_3\media\image28.jpeg" style="width:500px"  />
+<img class="common_img" src="../_static/media/chapter_9/section_3/media/image28.jpeg" style="width:500px"  />
 
-   <img class="common_img" src="../_static/media/chapter_9\section_3\media\image29.jpeg" style="width:500px"  />
+<img class="common_img" src="../_static/media/chapter_9/section_3/media/image29.jpeg" style="width:500px"  />
 
-6. Enter “**rossrv show beginner_hiwonder/AddTwoInts**” command and press “**Enter**” to check whether the written message field is recognized by Ros system.
+6. Enter "**rossrv show beginner_hiwonder/AddTwoInts**" command and press "**Enter**" to check whether the written message field is recognized by Ros system.
 
-   <img class="common_img" src="../_static/media/chapter_9\section_3/media/image30.png" style="width:500px"  />
+<img class="common_img" src="../_static/media/chapter_9/section_3/media/image30.png" style="width:500px"  />
 
 ##  9.4 Ros Basic Case 2- Write a Simple Publisher and Subscriber
 
@@ -292,136 +294,134 @@ And we need to add the path of the software package to the environment variable 
 
 In this lesson, we are going to create a talker node and the node source code is making references to github open source code.
 
-1. Enter “**roscd beginner_hiwonder**” command and press “**Enter**”. Then enter beginner_hiwonder software package newly created.
+1. Enter "**roscd beginner_hiwonder**" command and press "**Enter**". Then enter beginner_hiwonder software package newly created.
 
-   ```py
-   roscd beginner_hiwonder
-   ```
+```bash
+roscd beginner_hiwonder
+```
 
-2. Enter “**mkdir scripts**” command and press “**Enter**”. Then create a scripts directory to save Python script.
+2. Enter "**mkdir scripts**" command and press "**Enter**". Then create a scripts directory to save Python script.
 
-   ```py
-   mkdir scripts
-   ```
+```bash
+mkdir scripts
+```
 
-3. Drag the code file of publisher node, talker.py, to the desktop of NoMachine. The code file is under JexMax data path “**[9. ROS Basic Lesson/9.4 Ros Basic Case 2- Write a Simple Publisher and Subscriber/ Ros Related Program]()**”
+3. Drag the code file of publisher node, talker.py, to the desktop of NoMachine. The code file is under JexMax data path "**[9. ROS Basic Lesson/9.4 Ros Basic Case 2- Write a Simple Publisher and Subscriber/ Ros Related Program](https://drive.google.com/drive/folders/16MUWBT_kISX3Rwsn0URQVvEyDfL2NcNg?usp=sharing)**"
 
-   Then, move the talker.py to "**/home/ubuntu/catkin_ws/src/beginner_hiwonder/scripts/**".
+Then, move the talker.py to "**/home/ubuntu/catkin_ws/src/beginner_hiwonder/scripts/**".
 
-   <img class="common_img" src="../_static/media/chapter_9/section_4/media/image4.png" style="width:500px"  />
+<img class="common_img" src="../_static/media/chapter_9/section_4/media/image4.png" style="width:500px"  />
 
-4. On the terminal that has just opened, enter “**cd scripts**” command and press “**Enter**” to enter a new scripts directory.
+4. On the terminal that has just opened, enter "**cd scripts**" command and press "**Enter**" to enter a new scripts directory.
 
-   ```py
-   cd scripts
-   ```
+```bash
+cd scripts
+```
 
-5. Enter “**chmod +x talker.py**” command and press “Enter”. Give execute permission to talker.py.
+5. Enter "**chmod +x talker.py**" command and press "Enter". Give execute permission to talker.py.
 
-   ```py
-   chmod +x talker.py
-   ```
+```bash
+chmod +x talker.py
+```
 
-6. If wanting to revise or edit talker.py file, you need to enter “**rosed beginner_hiwonder talker.py**” command and press “Enter”.
+6. If wanting to revise or edit talker.py file, you need to enter "**rosed beginner_hiwonder talker.py**" command and press "Enter".
 
-   ```py
-   rosed beginner_hiwonder talker.py
-   ```
+```bash
+rosed beginner_hiwonder talker.py
+```
 
-7. Then press “i” to revise. When finishing revising, press “Ese” and enter “**：wq**” and save to quit.
+7. Then press "i" to revise. When finishing revising, press "Ese" and enter "**：wq**" and save to quit.
 
-   <img class="common_img" src="../_static/media/chapter_9/section_4/media/image8.png" style="width:500px"  />
+<img class="common_img" src="../_static/media/chapter_9/section_4/media/image8.png" style="width:500px"  />
 
 8. Add the following content to the cMakelists.txt file. Ensure that Python scripts are installed correctly and that the suitable Python interpreter is used.
 
-   ```py
-   catkin_install_python(PROGRAMS scripts/talker.py DESTINATION
-   \${CATKIN_PACKAGE_BIN_DESTINATION})
-   ```
+```bash
+catkin_install_python(PROGRAMS scripts/talker.py DESTINATION
+\${CATKIN_PACKAGE_BIN_DESTINATION})
+```
 
-   <img class="common_img" src="../_static/media/chapter_9/section_4/media/image9.jpeg" style="width:500px"  />
+<img class="common_img" src="../_static/media/chapter_9/section_4/media/image9.jpeg" style="width:500px"  />
 
-   <img class="common_img" src="../_static/media/chapter_9/section_4/media/image10.png" style="width:500px"  />
+<img class="common_img" src="../_static/media/chapter_9/section_4/media/image10.png" style="width:500px"  />
 
 ### 9.4.2 Write subscriber node 
 
 In this lesson, we are going to create a listener node and the node source code is making references to github open source code.
 
-1. Drag the code file of listener node, listener.py, to the desktop of NoMachine. The code file is under JexMax data path “**[9. ROS Basic Lesson/Lesson 4 Ros Basic Case 2- Write a Simple Publisher and Subscriber/ Ros Related Program]()**”
+1. Drag the code file of listener node, listener.py, to the desktop of NoMachine. The code file is under JexMax data path "**[9. ROS Basic Lesson/Lesson 4 Ros Basic Case 2- Write a Simple Publisher and Subscriber/ Ros Related Program](https://drive.google.com/drive/folders/16MUWBT_kISX3Rwsn0URQVvEyDfL2NcNg?usp=sharing)**"
 
-   Then, move listener.py to “**/home/ubuntu/catkin_ws/src/beginner_hiwonder/scripts/**”.
+Then, move listener.py to "**/home/ubuntu/catkin_ws/src/beginner_hiwonder/scripts/**".
 
-   <img class="common_img" src="../_static/media/chapter_9/section_4/media/image11.png" style="width:500px"  />
+<img class="common_img" src="../_static/media/chapter_9/section_4/media/image11.png" style="width:500px"  />
 
-2. Open command line terminal to enter
+2. Open command line terminal to enter "**cd ~/catkin_ws/src/beginner_hiwonder/scripts/**" command and press "**Enter**" to enter scripts directory newly created.
 
-   “**cd ~/catkin_ws/src/beginner_hiwonder/scripts/**” command and press “**Enter**” to enter scripts directory newly created.
+```bash
+cd ~/catkin_ws/src/beginner_hiwonder/scripts/
+```
 
-   ```py
-   cd ~/catkin_ws/src/beginner_hiwonder/scripts/
-   ```
+3. Enter "**chmod +x listener.py"** command and press "Enter"**.** Give execute permission to listener.py.
 
-3. Enter “**chmod +x listener.py”** command and press “Enter”**.** Give execute permission to listener.py.
+```bash
+chmod +x listener.py
+```
 
-   ```py
-   chmod +x listener.py
-   ```
+4. If wanting to revise or edit listener.py file, you need to enter "**rosed beginner_hiwonder listener.py**" command and press "Enter".
 
-4. If wanting to revise or edit listener.py file, you need to enter “**rosed beginner_hiwonder listener.py**” command and press “Enter”.
+```bash
+rosed beginner_hiwonder listener.py
+```
 
-   ```py
-   rosed beginner_hiwonder listener.py
-   ```
+5. Then press "i" to revise it. When finishing revising, press "Ese" and enter "**：wq**" and save to quit.
 
-5. Then press “i” to revise it. When finishing revising, press “Ese” and enter “**：wq**” and save to quit.
-
-   <img class="common_img" src="../_static/media/chapter_9/section_4/media/image15.png" style="width:500px"  />
+<img class="common_img" src="../_static/media/chapter_9/section_4/media/image15.png" style="width:500px"  />
 
 6. Add the following content to the cMakelists.txt file. Ensure that Python scripts are installed correctly and that the suitable Python interpreter is used.
 
-   ```py
-   catkin_install_python(PROGRAMS scripts/talker.py scripts/listener.py DESTINATION \${CATKIN_PACKAGE_BIN_DESTINATION})
-   ```
+```bash
+catkin_install_python(PROGRAMS scripts/talker.py scripts/listener.py DESTINATION \${CATKIN_PACKAGE_BIN_DESTINATION})
+```
 
-   <img class="common_img" src="../_static/media/chapter_9/section_4/media/image9.jpeg" style="width:500px"  />
+<img class="common_img" src="../_static/media/chapter_9/section_4/media/image9.jpeg" style="width:500px"  />
 
-   <img class="common_img" src="../_static/media/chapter_9/section_4/media/image16.png" style="width:500px"  />
+<img class="common_img" src="../_static/media/chapter_9/section_4/media/image16.png" style="width:500px"  />
 
 ### 9.4.3 Verify publisher and subscriber 
 
-1. To ensure the Python code is generated automatically for created message and service, we need to return to catkin workspace and enter “**cd ~/catkin_ws**” command, then press “**Enter**”.
+1. To ensure the Python code is generated automatically for created message and service, we need to return to catkin workspace and enter "**cd ~/catkin_ws**" command, then press "**Enter**".
 
-   ```py
-   cd ~/catkin_ws
-   ```
+```bash
+cd ~/catkin_ws
+```
 
-2. Next, enter “**catkin_make**” command and press “**Enter**”.
+2. Next, enter "**catkin_make**" command and press "**Enter**".
 
-   <img class="common_img" src="../_static/media/chapter_9/section_4/media/image18.jpeg" style="width:500px"  />
+<img class="common_img" src="../_static/media/chapter_9/section_4/media/image18.jpeg" style="width:500px"  />
 
-3. Enter “**roscore**” command and start the node manager.
+3. Enter "**roscore**" command and start the node manager.
 
-   ```py
-   roscore
-   ```
+```bash
+roscore
+```
 
-   If it is opened, the following prompt will appear.
+If it is opened, the following prompt will appear.
 
-   <img class="common_img" src="../_static/media/chapter_9/section_4/media/image20.jpeg" style="width:500px"  />
+<img class="common_img" src="../_static/media/chapter_9/section_4/media/image20.jpeg" style="width:500px"  />
 
-4. Before running the program, please make sure the setup.\*sh file of the workspace is sourced after calling catkin_make. If not, you need to return to the created workspace and make setup.\*sh take effect. Enter “**source ./devel/setup.bash**” command and then press “**Enter**”
+4. Before running the program, please make sure the setup.\*sh file of the workspace is sourced after calling catkin_make. If not, you need to return to the created workspace and make setup.\*sh take effect. Enter "**source ./devel/setup.bash**" command and then press "**Enter**"
 
-   ```py
-   source ./devel/setup.bash
-   ```
+```bash
+source ./devel/setup.bash
+```
 
-5. Enter “**rosrun beginner_hiwonder talker.py**” command to run publisher of talker. And you can quit the publisher node by pressing “**Ctrl+C**”.
+5. Enter "**rosrun beginner_hiwonder talker.py**" command to run publisher of talker. And you can quit the publisher node by pressing "**Ctrl+C**".
 
-   <img class="common_img" src="../_static/media/chapter_9/section_4/media/image22.png" style="width:500px"  />
+<img class="common_img" src="../_static/media/chapter_9/section_4/media/image22.png" style="width:500px"  />
 
-6. Open a new command line terminal and enter “**rosrun beginner_hiwonder listener.py**” to run subscriber of listener. And you can quit the subscriber node by pressing “**Ctrl+C**”.
+6. Open a new command line terminal and enter "**rosrun beginner_hiwonder listener.py**" to run subscriber of listener. And you can quit the subscriber node by pressing "**Ctrl+C**".
 
-   <img class="common_img" src="../_static/media/chapter_9/section_4/media/image23.png" style="width:500px"  />
+<img class="common_img" src="../_static/media/chapter_9/section_4/media/image23.png" style="width:500px"  />
 
 > [!NOTE]
 >
@@ -435,131 +435,131 @@ In this lesson, we are going to create a listener node and the node source code 
 
 In this lesson, we will create simple service node, **add_two_ints_server**. The node code is making reference to open-source code github. The node will receive two integers and return their sum.
 
-Firstly, we need to build the service, **AddTwoInts.srv**, according to “**[9.3 Ros Basic Case 1- Creating messages and services]()**”
+Firstly, we need to build the service, **AddTwoInts.srv**, according to "**[9.3 Ros Basic Case 1- Creating messages and services](#anchor_9_3)**"
 
-1. Drag the code file of server node, add_two_ints_server.py, to the desktop of NoMachine. The code file is under JetMax data path “**[9. ROS Basic Lesson/9.5 Ros Basic Case 3- Write simple server and client/ Ros Related Program]()**”
+1. Drag the code file of server node, add_two_ints_server.py, to the desktop of NoMachine. The code file is under JetMax data path "**[9. ROS Basic Lesson/9.5 Ros Basic Case 3- Write simple server and client/ Ros Related Program](https://drive.google.com/drive/folders/16MUWBT_kISX3Rwsn0URQVvEyDfL2NcNg?usp=sharing)**"
 
-   Then, move add_two_ints_server.py to "**/Home/catkin_ws/src/beginner_hiwonder/scripts/**".
+Then, move add_two_ints_server.py to "**/Home/catkin_ws/src/beginner_hiwonder/scripts/**".
 
-   <img class="common_img" src="../_static/media/chapter_9/section_5/media/image2.png" style="width:500px"  />
+<img class="common_img" src="../_static/media/chapter_9/section_5/media/image2.png" style="width:500px"  />
 
-2. Open terminal and enter “**cd ~/catkin_ws/src/beginner_hiwonder/scripts/**” command and press “Enter” to enter the scripts directory newly created.
+2. Open terminal and enter "**cd ~/catkin_ws/src/beginner_hiwonder/scripts/**" command and press "**Enter**" to enter the scripts directory newly created.
 
-   ```py
-   cd ~/catkin_ws/src/beginner_hiwonder/scripts/
+```bash
+cd ~/catkin_ws/src/beginner_hiwonder/scripts/
+```
 
-3. Open terminal and enter “**chmod +x add_two_ints_server.py**” command and press “**Enter**”. Give execute permission to **add_two_ints_server.py**.
+3. Open terminal and enter "**chmod +x add_two_ints_server.py**" command and press "**Enter**". Give execute permission to **add_two_ints_server.py**.
 
-   ```py
-   chmod +x add_two_ints_server.py
-   ```
+```bash
+chmod +x add_two_ints_server.py
+```
 
-4. If wanting to revise or edit **add_two_ints_server.py** file, you need to enter “**rosed beginner_hiwonder add_two_ints_server.py**” command and press “Enter”.
+4. If wanting to revise or edit **add_two_ints_server.py** file, you need to enter "**rosed beginner_hiwonder add_two_ints_server.py**" command and press "Enter".
 
-   ```py
-   rosed beginner_hiwonder add_two_ints_server.py
-   ```
+```bash
+rosed beginner_hiwonder add_two_ints_server.py
+```
 
-5. Then press “**i**” to revise. When finishing revising, press “**Esc**” and enter “**:wq**” and save to quit.
+5. Then press "**i**" to revise. When finishing revising, press "**Esc**" and enter "**:wq**" and save to quit.
 
-   <img class="common_img" src="../_static/media/chapter_9/section_5/media/image6.png" style="width:500px"  />
+<img class="common_img" src="../_static/media/chapter_9/section_5/media/image6.png" style="width:500px"  />
 
 6. Add the following content to the **CMakeLists.txt** file. Ensure that Python scripts are installed correctly and that the suitable Python interpreter is used.
 
-   ```py
-   catkin_install_python(PROGRAMS scripts/add_two_ints_server.py DESTINATION
-   ${CATKIN_PACKAGE_BIN_DESTINATION})
-   ```
+```bash
+catkin_install_python(PROGRAMS scripts/add_two_ints_server.py DESTINATION
+${CATKIN_PACKAGE_BIN_DESTINATION})
+```
 
-   <img class="common_img" src="../_static/media/chapter_9/section_5/media/image7.png" style="width:500px"  />
+<img class="common_img" src="../_static/media/chapter_9/section_5/media/image7.png" style="width:500px"  />
 
 ###  9.5.2 Write server node
 
 In this lesson, we will create simple client node, add_two_ints_server. The node code is making reference to open-source code github. The node will print the sum of the parameters read by add_two_ints_server.
 
-1. Drag the code file of client node, add_two_ints_client.py, to the desktop of NoMachine. The code file is under JetMax data path “**[9.ROS Basic Lesson/9.5 Ros Basic Case 3- Write simple server and client/ Ros Related Program]()**”.
+1. Drag the code file of client node, add_two_ints_client.py, to the desktop of NoMachine. The code file is under JetMax data path "**[9.ROS Basic Lesson/9.5 Ros Basic Case 3- Write simple server and client/ Ros Related Program](https://drive.google.com/drive/folders/16MUWBT_kISX3Rwsn0URQVvEyDfL2NcNg?usp=sharing)**".
 
-   Then, move **add_two_ints_client.py** to **“/home/ubuntu/catkin_ws/src/beginner_hiwonder/scripts/”.**
+Then, move **add_two_ints_client.py** to **"/home/ubuntu/catkin_ws/src/beginner_hiwonder/scripts/".**
 
-   <img class="common_img" src="../_static/media/chapter_9/section_5/media/image8.png" style="width:500px"  />
+<img class="common_img" src="../_static/media/chapter_9/section_5/media/image8.png" style="width:500px"  />
 
-2. Open terminal and enter “**cd ~/catkin_ws/src/beginner_hiwonder/scripts/”** command to switch to the directory where add_two_ints_client.py is saved.
+2. Open terminal and enter "**cd ~/catkin_ws/src/beginner_hiwonder/scripts/"** command to switch to the directory where add_two_ints_client.py is saved.
 
-   ```py
-   cd ~/catkin_ws/src/beginner_hiwonder/scripts/
-   ```
+```bash
+cd ~/catkin_ws/src/beginner_hiwonder/scripts/
+```
 
-3. Then enter “**chmod +x add_two_ints_server.py**” command and press “Enter”. Give execute permission to **add_two_ints_client.py**.
+3. Then enter "**chmod +x add_two_ints_server.py**" command and press "Enter". Give execute permission to **add_two_ints_client.py**.
 
-   ```py
-   chmod +x add_two_ints_server.py
-   ```
+```bash
+chmod +x add_two_ints_server.py
+```
 
-4. If wanting to revise or edit add_two_ints_client.py file, you need to enter “**rosed beginner_hiwonder add_two_ints_client.py**” command and press “**Enter**”. Then press “i”. When finishing revising, press “**Ese**” and enter “**:wq**” and save to quit.
+4. If wanting to revise or edit add_two_ints_client.py file, you need to enter "**rosed beginner_hiwonder add_two_ints_client.py**" command and press "**Enter**". Then press "i". When finishing revising, press "**Ese**" and enter "**:wq**" and save to quit.
 
-   ```py
-   rosed beginner_hiwonder add_two_ints_client.py
-   ```
+```bash
+rosed beginner_hiwonder add_two_ints_client.py
+```
 
-5. Then press “**i**” to modify. When finishing revising, press “**Ese**” and enter “**:wq**” and save to quit.
+5. Then press "**i**" to modify. When finishing revising, press "**Ese**" and enter "**:wq**" and save to quit.
 
-   <img class="common_img" src="../_static/media/chapter_9/section_5/media/image12.png" style="width:500px"  />
+<img class="common_img" src="../_static/media/chapter_9/section_5/media/image12.png" style="width:500px"  />
 
 6. Add the following content to the cMakelists.txt file. Ensure that Python scripts are installed correctly and that the suitable Python interpreter is used.
 
-   ```py
-   catkin_install_python(PROGRAMS scripts/add_two_ints_server.py scripts/add_two_ints_client.py
-   DESTINATION \${CATKIN_PACKAGE_BIN_DESTINATION})
-   ```
+```bash
+catkin_install_python(PROGRAMS scripts/add_two_ints_server.py scripts/add_two_ints_client.py
+DESTINATION \${CATKIN_PACKAGE_BIN_DESTINATION})
+```
 
-   <img class="common_img" src="../_static/media/chapter_9/section_5/media/image13.png" style="width:500px"  />
+<img class="common_img" src="../_static/media/chapter_9/section_5/media/image13.png" style="width:500px"  />
 
 ### 9.5.3 Verify simple server and client 
 
-1. To ensure the Python code is generated automatically for created message and service, we need to return to catkin workspace and enter “**cd ~/catkin_ws/**” command. Then, press “**Enter**”.
+1. To ensure the Python code is generated automatically for created message and service, we need to return to catkin workspace and enter "**cd ~/catkin_ws/**" command. Then, press "**Enter**".
 
-   ```py
-   cd ~/catkin_ws/
-   ```
+```bash
+cd ~/catkin_ws/
+```
 
-2. Run catkin_make. Enter “**catkin_make**” command and press “Enter”.
+2. Run catkin_make. Enter "**catkin_make**" command and press "Enter".
 
-   <img class="common_img" src="../_static/media/chapter_9/section_5/media/image15.jpeg" style="width:500px"  />
+<img class="common_img" src="../_static/media/chapter_9/section_5/media/image15.jpeg" style="width:500px"  />
 
-3. Enter “**roscore**” command and start the node manager. If turned on, the following prompt will appear.
+3. Enter "**roscore**" command and start the node manager. If turned on, the following prompt will appear.
 
-   ```py
-   roscore
-   ```
+```bash
+roscore
+```
 
-   <img class="common_img" src="../_static/media/chapter_9/section_5/media/image17.jpeg" style="width:500px"  />
+<img class="common_img" src="../_static/media/chapter_9/section_5/media/image17.jpeg" style="width:500px"  />
 
 4. Before running the program, please make sure the setup.\*sh file of the workspace is sourced after calling catkin_make. If not, you need to return to the created workspace and make setup.\*sh take effect.
 
-   ```py
-   source ./devel/setup.bash
-   ```
+```bash
+source ./devel/setup.bash
+```
 
-5. Enter “**rosrun beginner_hiwonder add_two_ints_server.py**” command to run the service.
+5. Enter "**rosrun beginner_hiwonder add_two_ints_server.py**" command to run the service.
 
-   ```py
-   rosrun beginner_hiwonder add_two_ints_server.py
-   ```
+```bash
+rosrun beginner_hiwonder add_two_ints_server.py
+```
 
-   <img class="common_img" src="../_static/media/chapter_9/section_5/media/image19.png" style="width:500px"  />
+<img class="common_img" src="../_static/media/chapter_9/section_5/media/image19.png" style="width:500px"  />
 
-6. Open a new command line terminal and enter “**rosrun beginner_hiwonder add_two_ints_client.py 1 3**” to run client.
+6. Open a new command line terminal and enter "**rosrun beginner_hiwonder add_two_ints_client.py 1 3**" to run client.
 
-   ```py
-   rosrun beginner_hiwonder add_two_ints_client.py 1 3
-   ```
+```bash
+rosrun beginner_hiwonder add_two_ints_client.py 1 3
+```
 
-   <img class="common_img" src="../_static/media/chapter_9/section_5/media/image20.png" style="width:500px"  />
+<img class="common_img" src="../_static/media/chapter_9/section_5/media/image20.png" style="width:500px"  />
 
-   > [!NOTE]
-   >
-   > **Parameters are required to run the client. For example, 1 and 3, framed in the picture.**
-
+> [!NOTE]
+>
+> **Parameters are required to run the client. For example, 1 and 3, framed in the picture.**
 
 ## 9.6 ROS Basic Command
 
@@ -575,60 +575,60 @@ ROS commands are divided into ROS shell command, ROS executive command, ROS info
 
 * **ROS shell command**
 
-  | Command | CommandInterpretation     | Description                                         |
-  | ------- | ------------------------- | --------------------------------------------------- |
-  | roscd   | ros+cd(changes directory) | Move to the designated directory of ROSfeature pack |
-  | rosls   | ros+ls(lists files)       | Display the file and directory of ROSfeature pack   |
-  | rosed   | ros+ed(editor)            | Edit the file of ROS feature pack                   |
-  | roscp   | ros+cp(copies files)      | Copy the file of ROS feature pack                   |
-  | rospd   | ros+pushd                 | Add the directory to ROS directory index            |
-  | rosd    | ros+directory             | Display the directory of ROS directoryindex         |
+| Command | CommandInterpretation     | Description                                         |
+| ------- | ------------------------- | --------------------------------------------------- |
+| roscd   | ros+cd(changes directory) | Move to the designated directory of ROSfeature pack |
+| rosls   | ros+ls(lists files)       | Display the file and directory of ROSfeature pack   |
+| rosed   | ros+ed(editor)            | Edit the file of ROS feature pack                   |
+| roscp   | ros+cp(copies files)      | Copy the file of ROS feature pack                   |
+| rospd   | ros+pushd                 | Add the directory to ROS directory index            |
+| rosd    | ros+directory             | Display the directory of ROS directoryindex         |
 
 * **ROS executive command**
 
-  | Command   | Command interpretation | Description                                                  |
-  | --------- | ---------------------- | ------------------------------------------------------------ |
-  | roscore   | ros+core               | Master(ROS name service) +   rosout (log record)+ parameter  server (parameter management) |
-  | rosrun    | ros+run                | Run node                                                     |
-  | roslaunch | ros+launch             | Run multiple nodes and set running option                    |
-  | rosclean  | rosclean               | Check or delete ROS log files                                |
+| Command   | Command interpretation | Description                                                  |
+| --------- | ---------------------- | ------------------------------------------------------------ |
+| roscore   | ros+core               | Master(ROS name service) +   rosout (log record)+ parameter  server (parameter management) |
+| rosrun    | ros+run                | Run node                                                     |
+| roslaunch | ros+launch             | Run multiple nodes and set running option                    |
+| rosclean  | rosclean               | Check or delete ROS log files                                |
 
 * **ROS information command**
 
-  | Command    | Command interpretation | Description                                     |
-  | ---------- | ---------------------- | ----------------------------------------------- |
-  | rostopic   | ros+topic              | Confirm ROS topic information                   |
-  | rosservice | ros+service            | Confirm ROS serviceinformation                  |
-  | rosnode    | ros+node               | Confirm ROS node information                    |
-  | rosparam   | ros+param(parameter)   | Confirm and modify ROS parameter information    |
-  | rosbag     | ros+bag                | Record and playback ROS information             |
-  | rosmsg     | ros+msg                | Display ROS information type                    |
-  | rossrv     | ros+srv                | Display ROS service type                        |
-  | rosversion | ros+version            | Display version information of ROS feature pack |
-  | roswtf     | ros+wtf                | Check ROS system                                |
+| Command    | Command interpretation | Description                                     |
+| ---------- | ---------------------- | ----------------------------------------------- |
+| rostopic   | ros+topic              | Confirm ROS topic information                   |
+| rosservice | ros+service            | Confirm ROS serviceinformation                  |
+| rosnode    | ros+node               | Confirm ROS node information                    |
+| rosparam   | ros+param(parameter)   | Confirm and modify ROS parameter information    |
+| rosbag     | ros+bag                | Record and playback ROS information             |
+| rosmsg     | ros+msg                | Display ROS information type                    |
+| rossrv     | ros+srv                | Display ROS service type                        |
+| rosversion | ros+version            | Display version information of ROS feature pack |
+| roswtf     | ros+wtf                | Check ROS system                                |
 
 * **ROS catkin command**
 
-  | Command                   | Description                                                  |
-  | ------------------------- | ------------------------------------------------------------ |
-  | catkin_create_pkg         | Generate feature pack automatically                          |
-  | catkin_make               | Build based on catkin build system                           |
-  | catkin_eclipse            | Modify the feature pack generated by catkin build system so as to use it in Eclipseenvironment |
-  | catkin_prepare_release    | Log cleanup and version tapping when publishing              |
-  | catkin_generate_changelog | Generate or update CHANGELOG.rst file                        |
-  | catkin_init_workspace     | Initialize the work directory of catkin build system         |
-  | catkin_find               | Search catkin                                                |
+| Command                   | Description                                                  |
+| ------------------------- | ------------------------------------------------------------ |
+| catkin_create_pkg         | Generate feature pack automatically                          |
+| catkin_make               | Build based on catkin build system                           |
+| catkin_eclipse            | Modify the feature pack generated by catkin build system so as to use it in Eclipseenvironment |
+| catkin_prepare_release    | Log cleanup and version tapping when publishing              |
+| catkin_generate_changelog | Generate or update CHANGELOG.rst file                        |
+| catkin_init_workspace     | Initialize the work directory of catkin build system         |
+| catkin_find               | Search catkin                                                |
 
 * **ROS feature pack command**
 
-  | Command       | Command interpretation | Description                                                  |
-  | ------------- | ---------------------- | ------------------------------------------------------------ |
-  | rospack       | ros+pack(age)          | Check the informationrelated to ROS feature pack             |
-  | rosinstall    | ros+install            | Install ROS additional feature pack                          |
-  | rosdep        | ros+dep(endencies)     | Install the dependency files for the feature pack            |
-  | roslocate     | ros+locate             | Command related to ROS feature pack information              |
-  | roscreate-pkg | ros+create-pkg         | Generate ROS feature pack automatically. It is used in   old rosbuild system |
-  | rosmake       | ros+make               | Build ROS feature pack. It is used in old rosbuild system    |
+| Command       | Command interpretation | Description                                                  |
+| ------------- | ---------------------- | ------------------------------------------------------------ |
+| rospack       | ros+pack(age)          | Check the informationrelated to ROS feature pack             |
+| rosinstall    | ros+install            | Install ROS additional feature pack                          |
+| rosdep        | ros+dep(endencies)     | Install the dependency files for the feature pack            |
+| roslocate     | ros+locate             | Command related to ROS feature pack information              |
+| roscreate-pkg | ros+create-pkg         | Generate ROS feature pack automatically. It is used in   old rosbuild system |
+| rosmake       | ros+make               | Build ROS feature pack. It is used in old rosbuild system    |
 
 ## 9.7 RQT Tool
 
@@ -636,23 +636,23 @@ ROS commands are divided into ROS shell command, ROS executive command, ROS info
 
 * **Description**
 
-  ROT is a set of tools for convenient graphical representation. It can implement the various graphical tools and interfaces in the form of plugins. Besides, it run all the existing GUI tools as dockable windows within rqt.
+ROT is a set of tools for convenient graphical representation. It can implement the various graphical tools and interfaces in the form of plugins. Besides, it run all the existing GUI tools as dockable windows within rqt.
 
-  You can send command to “**rqt**” to run RQT tool and plug-ins. GUI allows all plug-ins to load and run. And of course, you can run the plug-ins with the independent window.
+You can send command to "**rqt**" to run RQT tool and plug-ins. GUI allows all plug-ins to load and run. And of course, you can run the plug-ins with the independent window.
 
 * **Component structure**
 
-  RQT consists of three metapackages.
+RQT consists of three metapackages.
 
-  `rqt`：core basic structure module
+`rqt`：core basic structure module
 
-  `rqt_common_plugins`：used for bandend tool of build
+`rqt_common_plugins`：used for bandend tool of build
 
-  `rqt_robot_plugins`：used for the interactive tool with robot
+`rqt_robot_plugins`：used for the interactive tool with robot
 
 * **Advantage of the framework**
 
-  Compared with building GUI from zero, framework has the following advantages.
+Compared with building GUI from zero, framework has the following advantages.
 
 1. involve standardized public GUI routine
 
@@ -666,13 +666,13 @@ ROS commands are divided into ROS shell command, ROS executive command, ROS info
 
 6. Manageable life cycle. RQT plug-in adopts public API, which makes maintenance and reusing easier.
 
-  ### 9.7.2 RQT running 
+### 9.7.2 RQT running 
 
 > [!NOTE]
 >
 > **Note: if RQT tool has already been installed in the system, there is no need to install again.**
 
-  Open the terminal, enter command “**rosrun rqt\_**”, and press “**Tab**” key to unfold the following commands.
+  Open the terminal, enter command "**rosrun rqt\_**", and press "**Tab**" key to unfold the following commands.
 
 <img class="common_img" src="../_static/media/chapter_9/section_7/media/image2.png" style="width:500px"  />
 
@@ -682,7 +682,7 @@ ROS commands are divided into ROS shell command, ROS executive command, ROS info
 
   There are other useful tools.
 
-  1. **rqt_console**：log output toolbox
+1. **rqt_console**：log output toolbox
 
 <img class="common_img" src="../_static/media/chapter_9/section_7/media/image4.png" style="width:500px"  />
 
@@ -702,25 +702,25 @@ ROS commands are divided into ROS shell command, ROS executive command, ROS info
 
   ### 9.7.3 Function of plug-in 
 
-|       Plug-in       |                     Function description                     |
-| :-----------------: | :----------------------------------------------------------: |
-|   topics monitor    | It can monitor the transferring data of the current topic, including occupied bandwidth, topic frequency, etc. It is equal to **rostopic echo msg_name** |
-|  message publisher  | publish a topic with custom name, and specific the type of information published by the topic, published data and published frequency. |
-| message type brower | You can view all currently defined message types, including your own defined msg. Its function is equal to **rosmsg show msg_name** |
-|   robot steering    | publish a topic **cmd_vel** and publish **Twist** topic message. Speed and angle variables can be modified visually, which is convenient for controlling command. |
+|       Plug-in       |                                                                                                                      Function description                                                                                                                       |
+|:-------------------:|:---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|
+|   topics monitor    |                                                    It can monitor the transferring data of the current topic, including occupied bandwidth, topic frequency, etc. It is equal to **rostopic echo msg_name**                                                     |
+|  message publisher  |                                                             publish a topic with custom name, and specific the type of information published by the topic, published data and published frequency.                                                              |
+| message type brower |                                                               You can view all currently defined message types, including your own defined msg. Its function is equal to **rosmsg show msg_name**                                                               |
+|   robot steering    |                                                publish a topic **cmd_vel** and publish **Twist** topic message. Speed and angle variables can be modified visually, which is convenient for controlling command.                                                |
 |         bag         | It can be used to record a bag file package, and you can specify which topics to record. You can also open a bag file package which can easily control **play** of bag package to play or pause, and can specify the previous frame and the next frame to play. |
 
   the plug-in of bag is as follow.
 
-|   **Plug-in**   |                   **Function description**                   |
-| :-------------: | :----------------------------------------------------------: |
-|   node_graph    |        view all the nodes running on the current node        |
-| process monitor | view all current nodes, and PID, occupied CPU, occupied storage of the node |
-|     launch      | it is convenient to select package and launch file in the visual interface. Run and pause one node of launch |
+|   **Plug-in**   |                                                              **Function description**                                                               |
+|:---------------:|:---------------------------------------------------------------------------------------------------------------------------------------------------:|
+|   node_graph    |                                                   view all the nodes running on the current node                                                    |
+| process monitor |                                     view all current nodes, and PID, occupied CPU, occupied storage of the node                                     |
+|     launch      |                    it is convenient to select package and launch file in the visual interface. Run and pause one node of launch                     |
 |   image view    | It is convenient to check the transferred picture message in ROS topic, which is convenient for us to observe the image currently seen by the robot |
-|      plot       | Data of the topic can be display graphically, which makes the changes of topic message intuitive facilitating debugging |
-|     tf tree     |       Can display the current tree structure of **tf**       |
-|      rviz       | rviz tool is integrated in rqt and we can open rviz tool in rqt |
+|      plot       |               Data of the topic can be display graphically, which makes the changes of topic message intuitive facilitating debugging               |
+|     tf tree     |                                                  Can display the current tree structure of **tf**                                                   |
+|      rviz       |                                           rviz tool is integrated in rqt and we can open rviz tool in rqt                                           |
 
 
 
