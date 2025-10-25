@@ -412,7 +412,7 @@ The source code of the program is located in **/Home/ros/src/Ai_JetMax/scripts/c
 
 ### 7.6.4 Project Process
 
-<img class="common_img" src="../_static/media/chapter_7/section_6/media/image3.png" style="width:50px" />The entered command must be strictly distinguished among uppercase, lowercase and spaces. In addition, you can press "**Tab**" to complete the keyword.
+The entered command must be strictly distinguished among uppercase, lowercase and spaces. In addition, you can press "**Tab**" to complete the keyword.
 
 1. Double-click <img src="../_static/media/chapter_7/section_6/media/image4.png" style="width:50px"  /> on system desktop.
 
@@ -595,13 +595,13 @@ The disLacConfigClient interface is divided into image display area and recognit
 
 In recognition adjustment area, the color properties can be adjusted. The corresponding functions of each part are shown in the following table.
 
-|                           **Icon**                           |                   **Function Instruction**                   |
-| :----------------------------------------------------------: | :----------------------------------------------------------: |
-| <img src="../_static/media/chapter_7/section_7/media/image6.png" style="width:500px"  /> | Used to adjust the value of the L component of the image. (The function of A and B sliders bar is similar to this, both for adjusting the value of the corresponding component of the image.) |
-| <img src="../_static/media/chapter_7/section_7/media/image7.png" style="width:500px"  /> |         Select the recognition color to be adjusted          |
-| <img src="../_static/media/chapter_7/section_7/media/image8.png" style="width:500px"  /> |            Used to save the adjusted effect value            |
-| <img src="../_static/media/chapter_7/section_7/media/image9.png" style="width:500px"  /> |        Used to add the types of the color recognized         |
-| <img src="../_static/media/chapter_7/section_7/media/image10.png" style="width:500px"  /> |           Used to apply the adjusted effect value            |
+|                                         **Icon**                                          |                   **Function Instruction**                   |
+|:-----------------------------------------------------------------------------------------:| :----------------------------------------------------------: |
+| <img src="../_static/media/chapter_7/section_7/media/image6.png" style="width:200px"  />  | Used to adjust the value of the L component of the image. (The function of A and B sliders bar is similar to this, both for adjusting the value of the corresponding component of the image.) |
+| <img src="../_static/media/chapter_7/section_7/media/image7.png" style="width:200px"  />  |         Select the recognition color to be adjusted          |
+| <img src="../_static/media/chapter_7/section_7/media/image8.png" style="width:200px"  />  |            Used to save the adjusted effect value            |
+| <img src="../_static/media/chapter_7/section_7/media/image9.png" style="width:200px"  />  |        Used to add the types of the color recognized         |
+| <img src="../_static/media/chapter_7/section_7/media/image10.png" style="width:200px"  /> |           Used to apply the adjusted effect value            |
 
 ### 7.7.3 Adjust the Default Color Effect
 

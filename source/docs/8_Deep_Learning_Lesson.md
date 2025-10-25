@@ -270,7 +270,7 @@ The source code of the program lies in **/Home/ros/src/Ai_JetMax/scripts/number_
 
 ### 8.4.2 Operation steps
 
-<img class="common_img" src="../_static/media/chapter_8/section_4/media/image3.png" style="width:50px" />The entered command should be case sensitive. And the keywords can be complemented by Tab key.
+The entered command should be case sensitive. And the keywords can be complemented by Tab key.
 
 1. Double click <img src="../_static/media/chapter_8/section_4/media/image4.png" style="width:50px"  /> on the desktop.
 
@@ -840,7 +840,7 @@ The source code of this program lies in **/Home/ros/src/Ai_JetMax/scripts/letter
 
 ### 8.7.2 Operation steps
 
-<img class="common_img" src="../_static/media/chapter_8/section_7/media/image3.png" style="width:50px" />The entered command should be case sensitive. And the keywords can be complemented by Tab key.
+The entered command should be case sensitive. And the keywords can be complemented by Tab key.
 
 1. Double click <img src="../_static/media/chapter_8/section_7/media/image4.png" style="width:50px"  /> on the desktop.
 

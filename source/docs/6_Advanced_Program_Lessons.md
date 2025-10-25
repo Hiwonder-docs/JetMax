@@ -1558,7 +1558,7 @@ The source code of the program lies in **/Home/ros/src/Sensor/scripts/face_track
 
 * **Operation steps**
 
-<img class="common_img" src="../_static/media/chapter_6_3/section_1_2/media/image3.png" style="width:50px" />The entered command should be case sensitive. And the keywords can be complemented by Tab key.
+The entered command should be case sensitive. And the keywords can be complemented by Tab key.
 
 1. Double click "**Terminal**" icon on the desktop to open the command line terminal.
 
@@ -1618,7 +1618,7 @@ When the robotic arm rotates, the ultrasonic module will detect the object, then
 
 * **Operation steps**
 
-<img class="common_img" src="../_static/media/chapter_6_3/section_2_2/media/image3.png" style="width:50px" />The entered command should be case sensitive and the keywords can be complemented by Tab key.
+The entered command should be case sensitive and the keywords can be complemented by Tab key.
 
 1. Double click the "**Terminal**" icon on the desktop to open the terminal line terminal.
 
@@ -1700,7 +1700,7 @@ The source code of the program is stored in **/Home/ros/src/Sensor/scripts/face_
 
 * **Operation steps** 
 
-<img class="common_img" src="../_static/media/chapter_6_3/section_3_2/media/image3.png" style="width:50px" />The entered command should be case sensitive. And the keywords can be complemented by Tab key.
+The entered command should be case sensitive. And the keywords can be complemented by Tab key.
 
 1. Double click the "**Terminal**" icon on the desktop to open the command line terminal.
 
@@ -1784,7 +1784,7 @@ The source code of the program lies in **/Home/ros/src/Sensor/scripts/hand_gestu
 
 * **Operation steps**
 
-<img class="common_img" src="../_static/media/chapter_6_3/section_4_2/media/image3.png" style="width:50px" />The entered command should be case sensitive. And the keywords can be complemented by Tab key.
+The entered command should be case sensitive. And the keywords can be complemented by Tab key.
 
 1. Double click the "**Terminal**" icon on the desktop to open the command line terminal.
 

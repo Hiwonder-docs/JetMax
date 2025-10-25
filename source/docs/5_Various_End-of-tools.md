@@ -42,7 +42,7 @@ The source code of the program is stored in **/Home/ros/src/jetmax_demos/scripts
 
 * **Operation steps**
 
-<img class="common_img" src="../_static/media/chapter_5/section_1_1/media/image3.png" style="width:50px" />The entered command should be case sensitive and the keywords can be completed by Tab key.
+The entered command should be case sensitive and the keywords can be completed by Tab key.
 
 1. According to the previous tutorial, connect the computer to system desktop through NoMachine and double click <img src="../_static/media/chapter_5/section_1_1/media/image4.png" style="width:50px"  /> to open the terminal.
 
@@ -112,7 +112,7 @@ The source code of the program is stored in **/Home/ros/src/jetmax_demos/scripts
 
 * **Operation steps**
 
-<img class="common_img" src="../_static/media/chapter_5/section_2_2/media/image3.png" style="width:50px" />The entered command should be case sensitive and the key words can be complemented by Tab key.
+The entered command should be case sensitive and the key words can be complemented by Tab key.
 
 1. According to the previous tutorial, connect the computer to system desktop through NoMachine. Double click <img src="../_static/media/chapter_5/section_2_2/media/image4.png" style="width:50px"  /> and open the terminal.
 
@@ -252,7 +252,7 @@ The source code of the program is located in **/Home/ros/src/jetmax_demos/script
 
 * **Operation steps**
 
-<img class="common_img" src="../_static/media/chapter_5/section_3_3/media/image3.png" style="width:50px" />The entered command should case sensitive and the keywords can be complemented by **Tab** key.
+The entered command should case sensitive and the keywords can be complemented by **Tab** key.
 
 1. Connect to the system desktop through NoMachine. For detailed instruction, you can refer to "**[3.1 Set Development Environment](https://wiki.hiwonder.com/projects/JetMax/en/latest/docs/3_AI_Vision_Games_Lesson.html#set-development-environment)**". Double click <img src="../_static/media/chapter_5/section_3_3/media/image4.png" style="width:50px"  /> to open the terminal.
 
